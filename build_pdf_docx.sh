@@ -11,7 +11,7 @@ jb build . --builder pdfhtml #builds to _build/pdf
 # We can also generate output docs from the singlehtml doc
 # Source file - generated from jb singlehtml builder
 SINGLE_PAGE_HTML="root.html"
-jupyter-book build .  --builder singlehtml _build/singlehtml
+jupyter-book build .  --builder singlehtml #builds to _build/singlehtml
 
 cd _build/singlehtml
 
