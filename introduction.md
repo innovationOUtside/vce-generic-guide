@@ -1,16 +1,5 @@
 # Introduction
 
-- {{t_mcode_l}}: xy987
-- {{t_mcode_u}}: XY987
-- {{t_mcode_lc}}: "`xy987`"
-- {{t_mcode_uc}}: "`XY987`"
-- {{t_pcode_l}}: 23j
-- {{t_pcode_u}}: 23J
-- {{t_mpcode_u}}: abc23323j
-- {{t_mcode_U}}: uppered
-
-- combined {{t_mpcode_u}}
-
 In this module, you will use a module specific virtualised computing environment (VCE) for some or all of your practical work. We offer two ways of accessing the VCE: as an online hosted version using the Open University's Compute Home service, and as a locally run environment that you can install on your own computer.
 
 The VCE provides a customised computing environment appropriate for your module and an interactive browser based user interface to access the software running inside it. The VCE is implemented using the widely supported Docker container approach.
