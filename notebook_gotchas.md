@@ -1,0 +1,17 @@
+# Jupyter notebook gotchas
+
+In computer slang, a "gotcha" often refers to a situation where you may be caught out by expecting a system to behave in one way when it actually behaves in another. There are several "gotchas" that may catch out the unwary when using Jupyter notebooks.
+
+1. Typically, code cells are intended to be executed in linear order as you work through a notebook. However, code cells can be executed in any order. Take care not to execute cells out of order. If your code is not executing as expected, and you think it may be because of out of order code execution, restart the notebook kernel and execute the cells again in the correct order up to the cell you are working on.
+
+2. A displayed cell output may not reflect the current state of the code environment. If a cell is used to display the output of a variable, if the value of the variable is changed by code executing later in the notebook, the previously displayed is not updated. The output is the value of the variable at the time the cell generated the output.
+
+3. When you open a *new* notebook, the notebook server starts a new Jupyter kernel. However, opening a previously notebook does not necessarily create a new notebook kernel. If the notebook tab was closed without stopping the kernel, the previous kernel may still be running when the notebook is reopened. You can restart a kernel at any point to ensure you are working with a fresh kernel. The kernel will be restarted in a state where none of the code cells have run
+
+4. If you hibernate your computer and then wake it up again, any running Jupyter kernel processes should just hibernate and still retain their previous state. If you stop a notebook, either from the notebooks folder home page or by stopping and restarting the VCE, then the Jupyter kernel process will be stopped and all states (as far as the process is concerned) will be lost.
+
+5. If you open the same notebook in more than one browser tab (which is not necessarily a sensible thing to do!), all copies of the notebook will access the same Jupyter kernel. You can see this if you set a variable value in a notebook in one tab: you will be able to display the value in the notebook in the other tab. (Run a cell containing `a=5` in one tab, and run a cell containing print(a) in a second tab the same Jupyter kernel process is visible in both instances of the notebook.) If one of the tabbed copies of the notebook is saved, then the other may pop up an alert noticing the difference and ask what you want to do about it. Generally, it's a good idea to avoid this problem by only opening a given notebook in a single tab.
+
+6. If you open a notebook with a new kernel, the values of any previously run cell outputs have no necessary relation with the current state of the kernel. Clear all the cell outputs to prevent any confusion as to whether the cell output was generated in the current notebook session.
+
+7. It is possible that you may attempt to close the browser tab for a  notebook without the content changes having been saved. The browser     will usually display a warning and offer you the option of staying on the page, or leaving the page -- this warning will differ depending on your host browser, but will say something like 'Are you sure you want to leave this page?'. This is a sign that the most recent changes to the page haven't been saved -- usually you want to stay on the page, click the save icon, then close the tab.

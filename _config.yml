@@ -1,0 +1,82 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Virtual Computing Environment (VCE) Software Guide
+author: The Open University
+logo: _static/logo.svg
+lang: en
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book # Online location of your book
+  path_to_book: docs # Optional path to your book, relative to the repository root
+  branch: master # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  # use_issues_button: true
+  # use_repository_button: true
+  favicon: _static/favicon.svg
+
+sphinx:
+  extra_extensions:
+    - ou_book_theme
+    #- sphinxcontrib.mermaid
+  config:
+    html_theme: ou_book_theme
+    language: en
+    myst_heading_anchors: 3
+    numfig: true
+    html_permalinks: false
+    numfig_format: {'figure':'Figure %s'}
+    copyright: "2023 The Open University" # PRESENTATION CUSTOMISATION
+    myst_substitutions:
+      T_MCODE: XY987 # MODULE CUSTOMISATION
+      T_MNAME: "Test Module Name" # MODULE CUSTOMISATION
+      T_PCODE: 99Q # MODULE CUSTOMISATION ; PRESENTATION CUSTOMISATION
+      t_mcode_l: "{{T_MCODE|lower}}"
+      t_mcode_u: "{{T_MCODE|upper}}"
+      t_mcode_lc: "{{'`' + T_MCODE|lower + '`'}}"
+      t_mcode_uc: "{{'`' + T_MCODE|upper + '`'}}"
+      t_pcode_l: "{{T_PCODE|lower}}"
+      t_pcode_u: "{{T_PCODE|upper}}"
+      t_pcode_lc: "{{'`' + T_PCODE|lower + '`'}}"
+      t_pcode_uc: "{{'`' + T_PCODE|lower + '`'}}"
+      t_mpcode_u: "{{T_MCODE|upper + '-' + T_PCODE|upper}}"
+      t_mpcode_l: "{{T_MCODE|lower + '-' + T_PCODE|lower}}"
+      t_mpcode_uc: "{{'`' + T_MCODE|upper + '-' + T_PCODE|upper + '`'}}"
+      t_mpcode_lc: "{{'`' + T_MCODE|lower + '-' + T_PCODE|lower + '`'}}"
+      t_vce_name: "{{T_MCODE|lower + 'vce'}}"
+      t_vce_namec: "{{'`' + T_MCODE|lower + 'vce' + '`'}}"
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - substitution
+
+exclude_patterns: ["BUILD.md"]
+
+ou:
+  module_code: AB123 # MODULE CUSTOMISATION
+  module_title: Open University VCE Software Guide
+  block: 1
+  block_title: Introduction
+  presentation: "J" # PRESENTATION CUSTOMISATION
+  first_published: 2023 # PRESENTATION CUSTOMISATION
+  isbn:
+  edition:
