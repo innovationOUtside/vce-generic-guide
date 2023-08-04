@@ -1,0 +1,17 @@
+FROM python:3.11
+
+RUN  apt-get update \
+        && apt-get install -y \
+                texlive-latex-recommended \
+                texlive-latex-extra \
+                texlive-fonts-recommended \
+                texlive-fonts-extra \
+                texlive-luatex \
+                texlive-xetex \
+                latexmk \
+                pandoc \
+                librsvg2-bin \
+                imagemagick \
+        && apt-get clean
+
+RUN pip install jupyter-book ou-book-theme pandoc
