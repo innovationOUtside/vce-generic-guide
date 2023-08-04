@@ -46,24 +46,43 @@ sphinx:
     numfig_format: {'figure':'Figure %s'}
     copyright: "2023 The Open University" # PRESENTATION CUSTOMISATION
     myst_substitutions:
-      T_MCODE: XY987 # MODULE CUSTOMISATION
-      T_MNAME: "Test Module Name" # MODULE CUSTOMISATION
-      T_PCODE: 99Q # MODULE CUSTOMISATION ; PRESENTATION CUSTOMISATION
-      t_mcode_l: "{{T_MCODE|lower}}"
-      t_mcode_u: "{{T_MCODE|upper}}"
-      t_mcode_lc: "{{'`' + T_MCODE|lower + '`'}}"
-      t_mcode_uc: "{{'`' + T_MCODE|upper + '`'}}"
-      t_pcode_l: "{{T_PCODE|lower}}"
-      t_pcode_u: "{{T_PCODE|upper}}"
-      t_pcode_lc: "{{'`' + T_PCODE|lower + '`'}}"
-      t_pcode_uc: "{{'`' + T_PCODE|lower + '`'}}"
-      t_mpcode_u: "{{T_MCODE|upper + '-' + T_PCODE|upper}}"
-      t_mpcode_l: "{{T_MCODE|lower + '-' + T_PCODE|lower}}"
-      t_mpcode_uc: "{{'`' + T_MCODE|upper + '-' + T_PCODE|upper + '`'}}"
-      t_mpcode_lc: "{{'`' + T_MCODE|lower + '-' + T_PCODE|lower + '`'}}"
-      t_vce_name: "{{T_MCODE|lower + 'vce'}}"
-      t_vce_namec: "{{'`' + T_MCODE|lower + 'vce' + '`'}}"
-
+      MCODE: XY987 # MODULE CUSTOMISATION
+      NCODE: "987" # MODULE CUSTOMISATION
+      MNAME: "Test Module Name" # MODULE CUSTOMISATION
+      PCODE: 54Z # MODULE CUSTOMISATION ; PRESENTATION CUSTOMISATION
+      YEAR: "2023" # PRESENTATION CUSTOMISATION
+      # DEFAULT VALUES / RULES
+      # Alternatively, we could enter these explicitly
+      # and then check them against linting rules?
+      module_code: "{{'`' + MCODE|upper + '`'}}"
+      presentation_code: "{{'`' + PCODE|upper + '`'}}"
+      local_dirname: "{{'`' + MCODE|upper + 'VCE`'}}"
+      container_name: "{{'`' + MCODE|lower + 'vce`'}}"
+      vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      docker_image: "{{'`ousefulcoursecontainer/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
+      winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
+      macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"
+      macpath2: "{{'`~/Documents/' + MCODE|upper + 'VCE`'}}"
+      localhost_port: "{{'`http://localhost:8' + NCODE + '`'}}"
+      localhost_port2: "{{'`http://127.0.0.1:8' + NCODE + '`'}}"
+      jupyter_token: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      host_port: "{{'`8' + NCODE + '`'}}"
+      port_map: "{{'`8' + NCODE + ':8888`'}}"
+      dir_map: "{{'`\"$(pwd)'+ MCODE|upper + 'VCE:/home/ou/' + MCODE|upper + '-' + PCODE|upper+'\"`'}}"
+      # UTILITY SUBSTITUTIONS
+      mcode_l: "{{MCODE|lower}}"
+      mcode_u: "{{MCODE|upper}}"
+      mnamecode: "{{MNAME}} {{MCODE}}"
+      mcode_lc: "{{'`' + MCODE|lower + '`'}}"
+      mcode_uc: "{{'`' + MCODE|upper + '`'}}"
+      pcode_l: "{{PCODE|lower}}"
+      pcode_u: "{{PCODE|upper}}"
+      pcode_lc: "{{'`' + PCODE|lower + '`'}}"
+      pcode_uc: "{{'`' + PCODE|upper + '`'}}"
+      mpcode_u: "{{MCODE|upper + '-' + PCODE|upper}}"
+      mpcode_l: "{{MCODE|lower + '-' + PCODE|lower}}"
+      mpcode_uc: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      mpcode_lc: "{{'`' + MCODE|lower + '-' + PCODE|lower + '`'}}"
 parse:
   myst_enable_extensions:
     - colon_fence
