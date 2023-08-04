@@ -2,9 +2,10 @@
 
 While we have tried to ensure that the software installation process and all the software-related activities run smoothly, there is always a chance that you may encounter a problem or issue with the software.
 
-The section *Where to go for additional support* describes a general strategy for working through problems or raising technical issues. This section describes more specific guidance for working through issues with particular software elements.
+The section [](additional_support.md#additional-support) describes a general strategy for working through problems or raising technical issues. This section describes more specific guidance for working through issues with particular software elements.
 
 ```{admonition} Optional content
+:class: warning
 
 You shouldn't need to work though the following unless there are specific problems that you have encountered when working with the VCE.
 
@@ -14,9 +15,7 @@ You shouldn't need to work though the following unless there are specific proble
 
 When you first access or install the VCE, we suggest that you run through the `READ_ME_FIRST.ipynb` notebook as soon as you can. If you have problems installing Docker or the Docker container / VCE, please be sure to include details of your operating system when requesting assistance via the module forum.
 
-You can check whether your VCE container is currently running from the list of running containers displayed in the Docker Dashboard, or by entering the command `docker ps`in a terminal / command prompt.
-
-If you have followed the default guidance, the name of your container (represented as `CONTAINERNAME` in this section) will take the form `{modulecode}vce`; for example, for module with nodule code `AB123`, the recommended container name would be `ab123vce`.
+You can check whether your VCE container with name `CONTAINERNAME` (for examnple, {{container_name}}) is currently running from the list of running containers displayed in the Docker Dashboard, or by entering the command `docker ps`in a terminal / command prompt.
 
 If the container is not shown as running in the Docker dashboard, or you cannot see it reported as *Up* for a certain period of time in the `docker ps` listing, or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate web address then *restart* the VCE from the docker dashboard or by issuing the terminal command `docker restart CONTAINERNAME`.
 
@@ -35,7 +34,7 @@ To change directory to the desired location, open a terminal and use the `cd` co
 
 When running the docker run command, if you see the error message:
 
-`docker: Error response from daemon: Conflict. The container name "/CONTAINERNAME" is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.`
+`docker: Error response from daemon: Conflict. The container nameCONTAINERNAME is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.`
 
 you have already created a container with that container name. You should be able to restart it using the command `docker restart CONTAINERNAME` or from the Docker Desktop.
 

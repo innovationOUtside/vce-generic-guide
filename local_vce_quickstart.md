@@ -2,15 +2,15 @@
 
 Many Open University modules run over several years. In order to keep the software and applications used in a module VCE current, the a module VCE may be updated for each presentation.
 
-When installing or accessing the VCE, you will need to make use of the **module code** (`{MODULECODE}`, for example, `A123`) and the **module presentation code**. The module presentation code is constructed from the year and month of presentation. For example, the October 2023 presentation has the code `23J`, where `23` represents the year, and `J` the month (the 10th month of the year, mapped to the tenth letter of the alphabet). We use the convention `{YYX}` to denote the upper case module code (for example, `23J`), and `{yyx}` to represent the lower case module code (for example, `23j`).
+When installing or accessing the VCE, you will need to make use of the **module code** ({{module_code}}) and the **module presentation code** ({{presentation_code}}). The module presentation code is constructed from the year and month of presentation. For example, the October 2023 presentation has the code `23J`, where `23` represents the year, and `J` the month (the 10th month of the year, mapped to the tenth letter of the alphabet).
 
 In many cases, the following quick start instructions should be enough to get you going. Quick start instructions are provided for using the [Docker Desktop graphical user interface](#docker-desktop-quick-start), or, if you prefer, the [command line](#docker-command-line-quick-start).
 
-```{admonition} Creating a shared folder
+## Creating a shared folder
 
-To share files between your desktop computer and the local VCE, we recommend creating a shared directory in your home directory on your host computer with the name `{modulecode}vce`. See [](local_vce_detailed.md#creating-a-shared-folder).
+To share files between your desktop computer and the local VCE, we recommend creating a shared directory in your home directory on your host computer with the name {{local_dirname}}. 
 
-```
+We recommend creating the shared folder in your documents folder. On a Windows computer, this might be called something like {{winpath}} ; on a Mac, {{macpath}} or {{macpath2}}.
 
 ## Docker Desktop quick start
 
@@ -18,9 +18,9 @@ To share files between your desktop computer and the local VCE, we recommend cre
 
 - From the Docker Desktop search bar, {numref}`dockerhub_image_search`:
 
-  - search for `ou-{modulecode}` or `ousefulcoursecontainer/ou-{modulecode}`; for example, for dummy module `AB1123` search for `ou-ab123` or `ousefulcoursecontainer/ou-ab123`
+  - search for {{module_code}} or {{docker_image}}
 
-  - select the image with the tag corresponding to the current presentation code (for example, the October 2023 presentation has presentation code `23j`; February 2024 is `24b`) and pull the selected image
+  - select the image with the tag corresponding to the current presentation code ({{pcode_lc}}) and pull the selected image
 
 ```{figure} md_assets/media/image8.png
 :name: dockerhub_image_search
@@ -36,11 +36,11 @@ Screenshot showing results of searching for an image in Docker Desktop. A select
 
 - From the Docker Desktop images list, select the appropriate container and create a new container with the following optional settings, {numref}`docker_desktop_new_container_settings`:
 
-  - *container name:* `{modulecode}vce`, for example: `ab123vce`
+  - *container name:* {{container_name}}
 
-  - *ports:* use host port `8NNN` against the `:8888/tcp` port, where `NNN` are the three digits of the module code. For example, for `AB123`, use `8123`
+  - *ports:* use host port {{port_map}} as the port mapped from the Jupyer notebook port `:8888/tcp` inside the container
 
-  - *volumes:* select a folder you want to share into the container from your host computer; we recommend creating a shared folder called `{MODULECODE}VCE` on your computer (for example, `AB123VCE`) in the folder `C:/Users/your_username/` (Windows) or `/Users/your_username` (Mac/Linux). This folder should be mounted against a path of the form `/home/ou/{MODULECODE}-{YYX}` inside the container, where `{YYX}`is the upper case module presentation code. Note: the path is case sensitive. For the October 2023 presentation, the dummy module path would be:`/home/ou/AB123-23J`
+  - *volumes:* select a folder you want to share into the container from your host computer; we recommend creating a shared folder called {{local_dirname}} on your computer such as {{winpath}} (Windows) or {{macpath}} (Mac/Linux). This folder should be mounted against the path {{vce_homedir}} inside the container.
 
 ```{figure} md_assets/media/image10.png
 :name: docker_desktop_new_container_settings
@@ -53,9 +53,9 @@ Screenshot of the Docker Desktop form for configuring a new container with optio
 
 ```
 
-- From the running container page, {numref}`docker_desktop_running_container`, click on the link to the mapped port (using the above defaults, this should point to`<http://localhost:8{NNN}>`; for example, `http://localhost:8123` for `AB123`).
+- From the running container page, {numref}`docker_desktop_running_container`, click on the link to the mapped port (using the above defaults, this should point to {{localhost_port}}.
 
-  - Use a password / access token of the form `{MODULECODE}-YYX`, (which is to say, incorporating the upper case presentation code). For example, for the October 2023 presentation of `AB123`, use the token `AB123-23J` (all upper case).
+  - Use the password / access token {{jupyter_token}}  (all upper case) to access the notebooks.
 
 ```{figure} md_assets/media/image11.png
 :name: docker_desktop_running_container
@@ -68,49 +68,29 @@ Screenshot of the Docker Desktop panel for a running container. The link to a ma
 
 ```
 
-- Test the installation by running through the `READ_ME_FIRST.ipynb` notebook in the VCE `content/` folder.
+- Test the installation by running through any `READ_ME_FIRST.ipynb` style notebooks in the VCE `content/` folder.
 
 ## Docker command line quick start
 
-- Download and install Docker Desktop from the [Docker website](https://www.docker.com/products/docker-desktop/)
+1. Download and install Docker Desktop from the [Docker website](https://www.docker.com/products/docker-desktop/)
 
-- from a terminal, download the appropriately tagged Docker image using a command of the form:
+2. from a terminal, download the appropriately tagged Docker image using the command:
 
-`docker pull ousefulcoursecontainers/ou-{modulecode}:{yyx}`
+{{'`docker pull ousefulcoursecontainer/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}
 
-For example, for the October 2023 presentation of `AB123`, use `ousefulcoursecontainers/ou-ab123:23j`, replacing `{yyx}` with the lower case tag `23j`; for the February 2024 presentation, use the tag `24b`.
+3. from a terminal, create a working directory you want to share with container (for example, at {{winpath}} (Windows) or {{macpath}} (Mac/Linux)); change directory (`cd`) into the directory; create and run a container using a command of the form:
 
-- from a terminal, create a working directory you want to share with container (for example, at `C:/Users/your_username` (Windows) or `/Users/your_username` (Mac/Linux)); change directory (`cd`) into the directory; create and run a container using a command of the following form, replacing `{YYX}` and `{yyx}` with upper and lower case module presentation codes respectively; for example, for the October, 2023 presentation, replace `{YYX}` with `23J` , and `{yyx}` with `23j`:
+`docker run -d --name NAME -p PORTS -v VOLUMES IMAGE`
 
-- Windows:
+and substitute in the following values:
 
-```{code}
-    docker run --name {modulecode}vce -d -p 8{NNN}:8888 -v
-    "$pwd:/home/ou/{MODULECODE}-{YYX}"
-    ousefulcoursecontainers/ou-{modulecode}:{yyx}
-```
+- __NAME__: {{container_name}}
+- __PORTS__: {{port_map}}
+- __VOLUMES__: {{dir_map}} (You must retain the quaotation marks if there are any spaces in directory name paths. You can also pass in an explicit path rather than the "present working directory" (`$(pwd)`))
+- __IMAGE__: {{docker_image}}
 
-- Mac / Linux:
+4. In a browser, navigate to {{localhost_port}}
 
-```{code}
-docker run --name {modulecode}vce -d -p 8{NNN}:8888 -v
-    "$PWD:/home/ou/{MODULECODE}-{YYX}"
-    ousefulcoursecontainers/ou-{modulecode}:{yyx}
-```
+5. Use the password / access token {{jupyter_token}} to enter the notebook server.
 
-- For example, for `AB123` starting in October 2023, on a Windows
-    platform, use the following (all on a single line):
-
-```{code}
-
-    docker run --name ab123vce -d -p 8123:8888 
-        -v "$pwd:/home/ou/AB123-23J" 
-        ousefulcoursecontainers/ou-ab123:23j
-```
-
-- In a browser, navigate to `http://localhost:8{NNN}`, for example:
-`http://localhost:8123`
-
-- Use a password / access token of the form `{MODULECODE}-{YYX}` For example, for the October 2023 presentation of `AB123`, use the token `AB123-23J` (all upper case).
-
-- Test the installation by running through the `READ_ME_FIRST.ipynb` notebook in the VCE content/ folder.
+6. Test the installation by running through any `READ_ME_FIRST.ipynb` style notebooks in the VCE content/ folder.

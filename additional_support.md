@@ -1,4 +1,4 @@
-# Where to go for additional support
+# Additional support
 
 If you encounter any problems installing the VCE or accessing the services that it provides, or have problems running provided code or your own code, the first thing to remember is **don't panic**: in many cases, you may be able to fix the problem yourself; in others, a readily available helping hand should be able to resolve your problem.
 
@@ -10,10 +10,9 @@ In general, you may find it useful to work through the problem in the following 
 
 - Third, if a problem similar to yours has already been reported, but the suggested solution does not work for you, reply to the suggestion. In your reply, explain what you tried and what did or did not happen, including any error messages, if available, either as copied text or as a screenshot. Provide details of your operating system, if relevant. Sometimes you might find that trying to explain the issue identifies the solution. In such a case, if you think the problem may be a common one, you may want to post a message to the forum explaining the error you encountered and how you fixed it.
 
-- Fourth, if your problem has not already been identified, post a message to the appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum). Give the message a clear title that identifies the problem. Include in the body of the message a description of what you did and what did or did not happen, including any error messages, if available, either as copied text or as a screenshot.  
-Once again, provide details of your operating system and/or browser, if appropriate. As before, you may find that trying to  explain the problem reveals the solution. If you think that  sharing the issue — and the solution you discovered — may be of  some help to others, please do so via the appropriate forum.
+- Fourth, if your problem has not already been identified, post a message to the appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum). Give the message a clear title that identifies the problem. Include in the body of the message a description of what you did and what did or did not happen, including any error messages, if available, either as copied text or as a screenshot. Once again, provide details of your operating system and/or browser, if appropriate. As before, you may find that trying to  explain the problem reveals the solution. If you think that  sharing the issue — and the solution you discovered — may be of  some help to others, please do so via the appropriate forum.
 
-- Fifth, if you are struggling with identifying what the problem is  and would find it useful to talk to someone, get in contact with:
+- Fifth, if you are struggling with identifying what the problem is and would find it useful to talk to someone, get in contact with:
 
   - the [OU Computing Helpdesk](https://help.open.ac.uk/asking-for-help-with-it), for general IT and software installation enquiries
 

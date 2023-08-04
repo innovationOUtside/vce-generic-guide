@@ -2,7 +2,7 @@
 
 It is generally regarded as good practice to make backup copies of any files that you would not like to lose. This applies to the contents of the shared folder when using the local VCE, as well as the folders within the hosted VCE.
 
-Any files you save in the Jupyter notebook environment not rooted on the appropriate `/home/ou/{MODULECODE}-{PRESENTATIONCODE}` directory (or any other directories you have mounted into from the docker run command) *will not be saved on your desktop* although they will persist inside the container until the container is deleted or destroyed.
+In the local VCE, only the files you save inside the VCE directory that the shared folder has been mounted against (recommended as {{vce_homedir}}) will be saved to the shared folder on your desktop. All files inside the VCE will persist inside the container until the container is deleted or destroyed.
 
 You can download a single notebook to your computer desktop from either the hosted or the local VCE. To download a notebook your currently have open, use the `File -> Download as -> Notebook` menu option, {numref}`classic_nb_download_nb`. This will download the notebook, including all the outputs.
 

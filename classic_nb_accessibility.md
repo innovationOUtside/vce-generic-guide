@@ -22,10 +22,10 @@ dialogue box
 
 ```
 
-You can also add additional shortcuts and/or edit exist shortcuts via the Edit Keyboard Shortcuts menu item as shown in {numref}`classic_nb_shortcut_editor`.
+You can also add additional shortcuts and/or edit exist shortcuts via the Edit Keyboard Shortcuts menu item as shown in {numref}`classic_nb_shortcueditor`.
 
 ```{figure} md_assets/media/image23.png
-:name: classic_nb_shortcut_editor
+:name: classic_nb_shortcueditor
 :width: 5.7725098425196855in
 :height: 4.852255030621173in
 

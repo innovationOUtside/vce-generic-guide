@@ -8,8 +8,7 @@ The virtual computing environment can be installed onto any computer that can ru
 
 ## Creating a shared folder
 
-The VCE runs as an isolated virtual machine on your computer. You can share files between the VCE and your host operating system by means of a shared folder. For the shared folder, we recommend creating a folder on your computer using a name of the form `{MODULECODE}VCE`. For example, for the module `AB123`, you might create the folder `~/Documents/OU/AB123VCE`, where `~` refers to your home directory. On a Windows computer, this might point to something like `C:/Users/your_username` ; on a Mac,
-`/Users/your_username`.
+The VCE runs as an isolated virtual machine on your computer. You can share files between the VCE and your host operating system by means of a shared folder. For the shared folder, we recommend creating a folder on your computer called {{local_dirname}} in your documents folder. On a Windows computer, this might be called something like {{winpath}} ; on a Mac, {{macpath}} or {{macpath2}}.
 
 ## Installing the local VCE
 
@@ -134,19 +133,15 @@ Screenshot showing results of searching for an image in Docker Desktop. A select
 
 ```
 
-- select the appropriate `ousefulcoursecontainer/ou-{modulecode}` image from the search results; then from the drop down tag list select the tag that matches the presentation code for the module presentation you are studying. From October 2023, tags will be lower case by convention. *For example, for the October 2023 presentation, select the `23j` tag; for the February 2024 presentation, the `24b` tag.* Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download.* You should only need to download the image once.
+- search for and select the {{docker_image}} image from the search results; then from the drop down tag list select the tag that matches the presentation code for this presentation of the module: {{pcode_lc}}. Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download.* You should only need to download the image once.
 
 The download may take some time (up to 20 minutes depending on your network connection), but you should only need to download the original image once.
 
-You can also download an image from the command line by running a command of the following form:
+You can also download an image from the command line by running the following command from the command line:
 
-`docker pull ousefulcoursecontainers ou-{modulecode}}:{presentationcode}`
+{{'`docker pull ousefulcoursecontainer/ou-' + MCODE|lower + '`'}}
 
-Use a lower-cased `modulecode` and `presentationcode` associated with the current presentation of the module to pull the correct image. For example, if you are studying the presentation of dummy module `AB123` with start date October 2023, use the presentation code `23j`:
-
-`docker pull ousefulcoursecontainers/ou-ab123:23j`
-
-For a February 2024 start, you would use the presentation code `24b`.
+Enter the complete command using lower-cased characters.
 
 ## Running the Docker container
 
@@ -171,13 +166,13 @@ Screenshot of the Docker Desktop images view. The TM129 image is identified and 
 
 From the *Run a new container* dialogue, use settings of the following form:
 
-- *container name:* use the lower case pattern `{modulecode}vce`; for example, `ab123vce`
+- *container name:* {{container_name}} (all lower case)
 
-- *ports:* a mapping from the port number inside the container (for example, against `:8888/tcp` for a conventional Jupyter server) onto an location you can access in your browser; use host port 0 to randomly allocate a port, or a port number `8NNN` derived from the module code, (for `example 8123` for `AB123`).
+- *ports:* a mapping from the port number inside the container (for example, against `:8888/tcp` for a conventional Jupyter server) onto an location you can access in your browser; use host port 0 to randomly allocate a port, or a port number `8NNN` derived from the module code, (for example, {{'`8' + NCODE + '`'}}).
 
-- *volumes:* using the file dialogue (click on the three dots) select the folder you want to share into the container from your host computer, such as the folder you created in subsection 4.2. This folder can be shared by mounting it against a path of the form `/home/ou/AB123-YYX` inside the container (use your module code).
+- *volumes:* using the file dialogue (click on the three dots) select the folder you want to share into the container from your host computer, such as the folder you created in your home computer documents folder previously. This folder can be shared by mounting it against the path {{vce_homedir}} inside the container (use your module code).
 
-Note: the path inside the container is case sensitive. Use the upper case presentation code for the path inside the container. So for example, for the October 2023 presentation of AB123, the path would be: `/home/ou/AB123-23J`
+Note: the path inside the container is case sensitive. Use upper case for the module directory inside the container.
 
 ```{figure} md_assets/media/image10.png
 :name: docker_desktop_new_container_settings_2
@@ -199,7 +194,7 @@ Note:
 - once a container has been created, you cannot change the port
     mapping, or mount additional volumes into the container.
 
-You can view the UI published by the running container, click on the forwarded link that appears in the container status area at the top of the container information page, {numref}`docker_desktop_running_container_2`.
+You can view the user interface published by the running container, click on the forwarded link that appears in the container status area at the top of the container information page, {numref}`docker_desktop_running_container_2`.
 
 ```{figure} md_assets/media/image11.png
 :name: docker_desktop_running_container_2
@@ -212,7 +207,7 @@ Screenshot of the Docker Desktop panel for a running container. The link to a ma
 
 ```
 
-The first time you try to access the notebook user interface, you will be presented with a Jupyter server login screen. The password / access token takes the upper case form `{MODULECODE}-{YYX}`. So for example, the access token for the `AB123` October 2023 presentation would be `AB123-23J` (all upper case).
+The first time you try to access the notebook user interface, you will be presented with a Jupyter server login screen. The password / access token is {{jupyter_token}} (all upper case).
 
 ```{figure} md_assets/media/image12.png
 :width: 5.772222222222222in
@@ -241,7 +236,7 @@ As well as using the Docker Desktop to create and manage containers, you can als
 
 *Make sure that you use the correct module code and presentation tag and the correct case when specifying the image from which the container instance is created.*
 
-You should be able to access the VCE user interface in your browser at the URL `http://localhost:8{NNN}`, for example: `http://localhost:8123` for `AB123`.
+You should be able to access the VCE user interface in your browser at the URL {{localhost_port}}.
 
 See [](#managing-docker-from-the-terminal-command-line) for more examples of controlling Docker from the command line.
 
@@ -291,13 +286,13 @@ It is also possible to access the command-line *inside* a running container from
 
 `docker exec -it container_name /bin/bash`
 
-For example, to connect to a running container called `ab123vce`, use the command:
+For example, to connect to a running container with the container name {{container_name}}, use the command:
 
-`docker exec -it ab123vce /bin/bash`
+{{'`docker exec -it ' +  MCODE|lower + 'vce /bin/bash`'}}
 
 By default, you will be logged in to the container as the default container user. You can log in to the container as the root user by using the `-u/--user 0` (user ID `0`) or `-u/--user root` flag:
 
-`docker exec -it --user root ab123vce /bin/bash`
+{{'`docker exec -it --user root ' +  MCODE|lower + 'vce /bin/bash`'}}
 
 ### Managing Docker from the terminal command line
 
@@ -319,13 +314,13 @@ The core commands are as follows, although they may be modified using various fl
 | Access the command line inside a container  | `docker exec -it CONTAINER_NAME /bin/bash`   |
 | List all containers                   | `docker container --ls --all`                   |
 
-The following flags may also be used with the docker run command:
+The following flags may also be used with the `docker run` command:
 
 | Action                           | Flags                                                    |
 | -------------------------------- | -------------------------------------------------------- |
 | Create container name            | `--name CONTAINER_NAME`                                  |
 | Specify volume mount points      | `-v/--volume PATH/ON/HOST:/PATH/IN/CONTAINER`            |
-| Port mapping                     | `-p/--publish HOST_PORT:CONTAINER_PORT`                  |
+| Port mapping                     | `-p/--publish HOSPORT:CONTAINER_PORT`                  |
 | Automatically remove container when it exits  | `--rm`                                                   |
 | Run container in background      | `-d/--detach`                                            |
 | Set environment variable inside  container     | `-e/--env ENV_VARIABLE="ENV VALUE"`                      |
