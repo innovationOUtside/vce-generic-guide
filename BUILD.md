@@ -2,6 +2,8 @@
 
 The guide can be built into different putput formats as required. such as Microsoft Word (`docx`), `OU-XML`, or `HTML` book.
 
+Build everything: `./build_pdf_docx.sh`
+
 ## Microsoft Word
 
 Trying to publish the Jupyter book content rendered from MyST markdown seems a bit fraught.
@@ -20,7 +22,7 @@ pandoc -o user_guide.docx introduction.html
 
 ```
 
-## OU-XML (broken)
+## OU-XML
 
 Mark Hall's `ou-book-theme` package can transform Sphinx XML to OU-XML.
 
@@ -34,6 +36,20 @@ CLI command:
 
 Convert to OU-XML:
 
+NB - there are some file path elements we need to remove for generating the monolithic OU-XML - i.e. we can drop the file references before the `#`, as in the `build_pdf_docx.sh` processor.
+
+At the moment, the builder doesn't add `id` values to `<InternalSection>` elements; adding them manually seems to work ok.
+
 `obt convert-to-ouxml .`
 
 Resulting file is in `./_build/ouxml`
+
+TO DO - tidy up: replace `</ComputerCode><ComputerCode>` with nothing??
+
+## Running in devcontainer
+
+There is a devcontainer in this repo
+
+## Building a Docker Image
+
+`docker buildx build -f .devcontainer/Dockerfile --platform linux/amd64,linux/arm64 . --tag  outm351dev/ou-doc-builder --push`
