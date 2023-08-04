@@ -3,18 +3,12 @@ root: root
 #options:  # The options key will be applied to all chapters, but not sub-sections
 #  - numbered: True
 parts:
-  - caption: 
+  - caption: Test
     numbered: true
     chapters:
       - file: introduction
-  - caption: Quick Start
-    numbered: true
-    chapters:
       - file: compute_home
       - file: local_vce_quickstart
-  - caption: Detailed Guide
-    numbered: true
-    chapters:
       - file: local_vce_detailed
       - file: using_classic_nb
       - file: notebook_gotchas
@@ -22,6 +16,6 @@ parts:
       - file: classic_nb_accessibility
       - file: additional_support
       - file: troubleshooting
-  - caption: Appendices
-    chapters:
+      - file: useful
       - file: vce_technical_architecture
+
