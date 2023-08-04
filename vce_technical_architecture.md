@@ -1,15 +1,23 @@
 # Appendix — VCE technical architecture
 
-Many Open University modules require the use of third-party software tools, applications and programming environments. Though the use of virtual computing environments (VCEs), we are able to provide identical environments to students using remotely accessed VCEs hosted on the Open University's Compute Home servers or running locally on your own computer.
+Many Open University modules require the use of third-party software tools, applications and programming environments. Through the use of virtual computing environments (VCEs), we are able to provide identical environments to students using remotely accessed VCEs hosted on the Open University's Compute Home servers or running locally on your own computer.
 
-The VCE runs in a virtualised container under the Docker application as a *guest* Linux (Ubuntu) operating system on a host computer such as Compute Home or your own computer. The containers typically operate in a
-'headless' mode (that is, without a graphical desktop interface) and run a variety of application services. The applications are exposed as interactive, graphical web applications via an HTTP interface that you can access through a web browser.
+```{admonition} Optional content
+:class: warning
+
+You shouldn't need to work though the following unless there are specific problems that you have encountered when working with the VCE.
+
+```
+
+The VCE runs in a virtualised container under the Docker application as a *guest* Linux (Ubuntu) operating system on a host computer such as Compute Home or your own computer. The containers typically operate in a 'headless' mode (that is, without a graphical desktop interface) and run a variety of application services. The applications are exposed as interactive, graphical web applications via an HTTP interface that you can access through a web browser.
 
 The local and hosted VCEs both runs as a single user environment. The hosted VCE launches a separate containerised environment for each student using a JupyterHub multi-user server.
 
 Persistent file storage is available on both the hosted and local VCE.
-In the hosted VCE, files are saved to a persistent personal file storage area that is accessible through the hosted VCE. The local VCE can be configured to share a folder with the host computer. The contents of this folder are visible to both the host computer and the local VCE
-(that is, the guest machine); they also remain visible on the host even if the guest machine is not running. The shared folder thus provides a way of passing files from your host machine into the local VCE, as well as getting files (such as backup files) out of the local VCE and onto your host computer. {numref}`vce_arch_overview` broadly describes the architecture of a local VCE and its relationship with your host operating system.
+
+In the hosted VCE, files are saved to a persistent personal file storage area that is accessible through the hosted VCE. Exeprimental extensions are available for some Jupyter environments and in some browsers that can map a selected folder on a user's own computer into the browser and execute notebooks in that folder using the remote VCE.
+
+If a local VCE is created, it can be configured to share a folder with the host computer. The contents of this folder are visible to both the host computer and the local VCE (that is, the guest machine); they also remain visible on the host even if the guest machine is not running. The shared folder thus provides a way of passing files from your host machine into the local VCE, as well as getting files (such as backup files) out of the local VCE and onto your host computer. {numref}`vce_arch_overview` broadly describes the architecture of a local VCE and its relationship with your host operating system.
 
 ```{figure} md_assets/media/image20.png
 :name: vce_arch_overview
