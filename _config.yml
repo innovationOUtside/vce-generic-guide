@@ -1,0 +1,101 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Virtual Computing Environment (VCE) Software Guide
+author: The Open University
+logo: _static/logo.svg
+lang: en
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book # Online location of your book
+  path_to_book: docs # Optional path to your book, relative to the repository root
+  branch: master # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  # use_issues_button: true
+  # use_repository_button: true
+  favicon: _static/favicon.svg
+
+sphinx:
+  extra_extensions:
+    - ou_book_theme
+    #- sphinxcontrib.mermaid
+  config:
+    html_theme: ou_book_theme
+    language: en
+    myst_heading_anchors: 3
+    numfig: true
+    html_permalinks: false
+    numfig_format: {'figure':'Figure %s'}
+    copyright: "2023 The Open University" # PRESENTATION CUSTOMISATION
+    myst_substitutions:
+      MCODE: XY987 # MODULE CUSTOMISATION
+      NCODE: "987" # MODULE CUSTOMISATION
+      MNAME: "Test Module Name" # MODULE CUSTOMISATION
+      PCODE: 54Z # MODULE CUSTOMISATION ; PRESENTATION CUSTOMISATION
+      YEAR: "2023" # PRESENTATION CUSTOMISATION
+      # DEFAULT VALUES / RULES
+      # Alternatively, we could enter these explicitly
+      # and then check them against linting rules?
+      module_code: "{{'`' + MCODE|upper + '`'}}"
+      presentation_code: "{{'`' + PCODE|upper + '`'}}"
+      local_dirname: "{{'`' + MCODE|upper + 'VCE`'}}"
+      container_name: "{{'`' + MCODE|lower + 'vce`'}}"
+      vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      docker_image: "{{'`ousefulcoursecontainer/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
+      winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
+      macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"
+      macpath2: "{{'`~/Documents/' + MCODE|upper + 'VCE`'}}"
+      localhost_port: "{{'`http://localhost:8' + NCODE + '`'}}"
+      localhost_port2: "{{'`http://127.0.0.1:8' + NCODE + '`'}}"
+      jupyter_token: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      host_port: "{{'`8' + NCODE + '`'}}"
+      port_map: "{{'`8' + NCODE + ':8888`'}}"
+      dir_map: "{{'`\"$(pwd)'+ MCODE|upper + 'VCE:/home/ou/' + MCODE|upper + '-' + PCODE|upper+'\"`'}}"
+      # UTILITY SUBSTITUTIONS
+      mcode_l: "{{MCODE|lower}}"
+      mcode_u: "{{MCODE|upper}}"
+      mnamecode: "{{MNAME}} {{MCODE}}"
+      mcode_lc: "{{'`' + MCODE|lower + '`'}}"
+      mcode_uc: "{{'`' + MCODE|upper + '`'}}"
+      pcode_l: "{{PCODE|lower}}"
+      pcode_u: "{{PCODE|upper}}"
+      pcode_lc: "{{'`' + PCODE|lower + '`'}}"
+      pcode_uc: "{{'`' + PCODE|upper + '`'}}"
+      mpcode_u: "{{MCODE|upper + '-' + PCODE|upper}}"
+      mpcode_l: "{{MCODE|lower + '-' + PCODE|lower}}"
+      mpcode_uc: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      mpcode_lc: "{{'`' + MCODE|lower + '-' + PCODE|lower + '`'}}"
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - substitution
+
+exclude_patterns: ["BUILD.md"]
+
+ou:
+  module_code: AB123 # MODULE CUSTOMISATION
+  module_title: Open University VCE Software Guide
+  block: 1
+  block_title: Introduction
+  presentation: "J" # PRESENTATION CUSTOMISATION
+  first_published: 2023 # PRESENTATION CUSTOMISATION
+  isbn:
+  edition:

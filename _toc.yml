@@ -1,0 +1,21 @@
+format: jb-book
+root: root
+#options:  # The options key will be applied to all chapters, but not sub-sections
+#  - numbered: True
+parts:
+  - caption: Test
+    numbered: true
+    chapters:
+      - file: introduction
+      - file: compute_home
+      - file: local_vce_quickstart
+      - file: local_vce_detailed
+      - file: using_classic_nb
+      - file: notebook_gotchas
+      - file: backups
+      - file: classic_nb_accessibility
+      - file: additional_support
+      - file: troubleshooting
+      - file: useful
+      - file: vce_technical_architecture
+
