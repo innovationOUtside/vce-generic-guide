@@ -48,7 +48,7 @@ You might also want to check that you are trying to connect to the correct port.
 
 The port should by identifiable at the end of the string (e.g. TCP `:5432 (LISTEN)` shows that PostgreSQL is listening to port `5432`).
 
-If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Dashboard.)
+If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
 ### Backing up and restoring databases using PostgreSQL
 
@@ -91,9 +91,9 @@ You might also want to check that you are trying to connect to the correct port.
 
 The port should by identifiable at the end of the string (e.g. TCP `:27017 (LISTEN)` shows that PostgreSQL is listening to port `27017`).
 
-If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Dashboard.)
+If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
-If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Dashboard.)
+If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
 ### Backing up and restoring databases using MongoDB
 
