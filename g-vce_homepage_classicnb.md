@@ -33,7 +33,7 @@ To leave the Compute Home hosted VCE, click the *Logout* link towards the top ri
 
 When you return to the VCE and reopen a notebook, you will find your work saved from your previous sessions, although you may find you that a new kernel session has been started (see [](g-notebook_gotchas)).
 
-At the end of each block, or whenever you have submitted notebook related assessement material, we **strongly** recommend that you download a copy of the completed Jupyter notebooks. On completion of the module, you may lose access to the hosted VCE and your hosted work files. To keep access to any changes you have made to your notebooks, you will need to download copies of them to your own computer.
+At the end of each unit or block block, or whenever you have submitted notebook related assessement material, we **strongly** recommend that you download a copy of the completed Jupyter notebooks. On completion of the module, you may lose access to the hosted VCE and your hosted work files. To keep access to any changes you have made to your notebooks, you will need to download copies of them to your own computer.
 
 ## Non-appearance of notebooks in the local VCE
 
@@ -45,7 +45,7 @@ In the local VCE, if the classic Jupyter notebook server application is not avai
 
 3. the application *is* running, and on the correct port, *but* the port or the proxy used to expose it is being blocked in some way (for ewxample, by an overly aggressive anti-virus or firewall package).
 
-See [](g-troubleshooting) for more information.
+See [](g-troubleshooting) for more guidance on resolving problems or issues with the VCE.
 
 ## Using the classic Jupyter notebook environment
 
@@ -63,16 +63,18 @@ A screenshot of the Jupyter notebook home page showing a single directory called
 
 ```
 
-You will typically access the VCE related activities through the notebook home page. If the VCE has been preloaded with notebook materials, you should see a `content` folder. Click on the 'content' folder. Notebooks will typically be organised by block, unit, study week or topic and may be grouped into corresponding folders.
+You will typically access the VCE related activities through the notebook home page. Any preloaded materials will be available in the `content` folder. Materials that have been made available by other means, such as via the VLE, will need to be uploaded directly to the VCE, or added via the shared folder when running the local VCE.
 
-The listing should also include a notebook called `READ_ME_FIRST.ipynb`.
+ Notebooks will typically be organised by block, unit, study week or topic and may be grouped into corresponding folders.
+
+
 Click on that notebook to open it. Follow the instructions contained therein to test your VCE installation.
 
 When you open a new Jupyter notebook, it creates a new programming environment kernel (for example, a Python or R code environment). The kernel attached to a notebook executes the code contained within that notebook. Code executed in one notebook is isolated from code executed in every other notebook, unless you have open the same notebook in multiple tabs.
 
 The notebook execution model may lead to unexpected behaviours for the unwary if you have the same notebook open in multiple browser tabs, or if you execute code cells out of cell order. See [](g-notebook_gotchas) for more details.
 
-Follow the guidance on the study planner for a reminder as to which notebooks you should be studying each week.
+Follow the guidance on the study planner or in yoiur study materials for a reminder as to when it makes sense to study each notebook.
 
 ### Uploading files
 
@@ -115,98 +117,3 @@ Classic Jupyter notebook homepage, with download archive button highlighted
 Screenshot of the classic notebook home page, with the "Download as zip" button (a down arrow above a horizontal bar) highlighted.
 
 ```
-
-## Classic notebook accessibility
-
-The notebooks are rendered within a browser as HTML. Instructional text in notebook Markdown cells are directly readable by screen readers. Code cells are contained within HTML group elements and need to be internally navigated to.
-
-Most of the Jupyter notebook features are keyboard accessible. Several optional extensions provide further support in terms of visual styling and limited audio feedback support.
-
-If you struggle to use the VCE for any reason, including but not limited to incompatibility with any tools you may use to improve software access or usability, please raise an issue in the module forums or contact your tutor.
-
-### Keyboard interface
-
-The Jupyter notebook interface supports a wide range of pre-defined keyboard shortcuts to menu and toolbar options. The shortcuts can be displayed using the Keyboard Shortcuts item from the notebook Help menu or via the Esc-H keyboard shortcut {numref}`nbclassic_shortcuts_dialogue`.
-
-```{figure} md_assets/media/image22.png
-:name: nbclassic_shortcuts_dialogue
-:width: 5.772553587051618in
-:height: 4.863542213473316in
-
-The Jupyter notebook 'Keyboard shortcuts' dialogue box
-
-The Jupyter notebook 'Keyboard shortcuts'
-dialogue box
-
-```
-
-You can also add additional shortcuts and/or edit exist shortcuts via the Edit Keyboard Shortcuts menu item as shown in {numref}`classic_nb_shortcueditor`.
-
-```{figure} md_assets/media/image23.png
-:name: classic_nb_shortcueditor
-:width: 5.7725098425196855in
-:height: 4.852255030621173in
-
-The Jupyter notebook dialogue box for editing keyboard shortcuts
-
-The Jupyter notebook dialogue box for editing keyboard shortcuts
-
-```
-
-### Magnification
-
-The apparent size of the notebook contents in general can be zoomed using standard browser magnification tools.
-
-Alternatively, use operating systems tools such as Windows Magnify or the macOS Zoom Window, or other assistive software.
-
-### Accessibility Toolbar
-
-The Jupyter environment includes an experimental accessibility toolbar extension that allows you to control the presentation style of the Jupyter notebook; for example, you can change the font style, size and spacing, the notebook background colour, and so on.
-
-#### Enabling the Accessibility Toolbar
-
-The accessibility toolbar extension is **disabled** in the notebook environment by default. To use the accessibility extension, you need to enable it first. You can do this from the Nbextensions tab on the notebook home page: tick the *Accessibility Toolbar* extension to enable the toolbar ({numref}`nb_extensions_accessibility_toolbar`). When you open a new notebook, the toolbar should be displayed.
-
-```{figure} md_assets/media/image24.png
-:name: nb_extensions_accessibility_toolbar
-:width: 5.772455161854769in
-:height: 3.2653051181102364in
-
-The Jupyter Nbextensions tab showing the Accessibility Toolbar extension
-
-The Jupyter Nbextensions tab showing the Accessibility Toolbar extension
-
-```
-
-Check the accessibility toolbar documentation for more information.
-
-All of the styles are saved into local storage when refreshing the page.
-This means that if you use notebooks on different servers with the same browser, the same accessibility settings will be applied to notebooks on all servers within which you have enabled the accessibility extension.
-
-#### Controlling colours and fonts using the Accessibility Toolbar
-
-If you wish to change the font and interface colours used in RoboLab to improve readability, the accessibility toolbar allows you to select the font style, size and colour. You can also modify the line spacing and spacing between individual characters as shown in {numref}`accessibility_toolbar`.
-
-```{figure} md_assets/media/image25.png
-:name: accessibility_toolbar
-:width: 5.7726673228346455in
-:height: 2.802014435695538in
-
-Accessibility toolbar font style options
-
-Font style options offered by the accessibility toolbae
-
-```
-
-The font style applies to *all* text elements within the notebook itself. This includes the contents of Markdown (text) cells, code cells and code cell outputs.
-
-The toolbar can also be used to control the notebook's background colour and the cell background colour.
-
-You can also save a style you have defined from the *Add new style...*
-option in the *Predefined styles* menu. Once saved, it will be added to the menu list so you can apply it as required.
-
-### Other assistive software
-
-Please contact your tutor if you discover that the material does not work with a particular screen reader or dictation system that you would typically expect to be able to use.
-
-
