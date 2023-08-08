@@ -8,8 +8,9 @@ The TM351 VCE contains several applications and services in addition to the Jupy
 
 ## Working with OpenRefine
 
+OpenRefine is 
 
 ## Working with PostgreSQL
 
 
-## Working with MOngoDB
+## Working with MongoDB

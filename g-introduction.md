@@ -10,9 +10,9 @@ Your work in the VCE will be saved within the environment: either in the cloud o
 
 You should follow the appropriate instructions for the VCE type you require:
 
-- [](compute_home.md#compute-home-online-vce)
+- [](g-compute_home.md#compute-home-online-vce)
 
-- [](local_vce_quickstart.md#local-vce-quick-start)
+- [](g-local_vce_quickstart.md#local-vce-quick-start)
 
 ## Outline structure of this guide
 
@@ -22,7 +22,7 @@ The *{{MCODE}} Virtual Computing Environment Software Guide* contains the follow
 
 - accessing the hosted VCE
 
-- installing the VCE on your own computer -- including testing your installation
+- installing the VCE on your own computer, including testing your installation
 
 - keeping a backup of your work
 
@@ -50,6 +50,16 @@ If you need to access the VCE in an offline environment, or if you prefer not to
 
 The online hosted VCE and the locally run VCE provide the same working environment, so your decision as to which environment to use may depend on convenience as much as anything. You may want to make use of both environments, accessing each of them at different times or in different circumstances. Howeever, when doing so, you will have to manage how you synchronise your files across the environments yourself.
 
+## Backing up your work
+
+It is generally regarded as good practice to make backup copies of any files that you would not like to lose. This applies to the contents of the shared folder when using the local VCE, as well as the folders within the hosted VCE.
+
+In the local VCE, only the files you save inside the VCE directory that the shared folder has been mounted against (recommended as {{vce_homedir}}) will be saved to the shared folder on your desktop. All files inside the VCE will persist inside the container until the container is deleted or destroyed.
+
+Backups are regularly made of your files on the hosted VCE. For the local VCE, files will persist in the directory on your host computer that is mounted into the VCE, even if the VCE container is destroyed.
+
+However, it is still good practice, and beneficial to your own peace of mind if nothing else, particularly when working on TMAs or the EMA, for you to back up or grab an archival copy of your files every so often
+
 ## Updates and upgrades
 
 In putting together the VCE, we have tried to ensure that all the software packages and their interconnections run smoothly. Some of the configuration is software version specific, so you are strongly encouraged not to update or upgrade any of the software packages installed within the environment unless instructed to do so by the module team. Software updates and upgrades occasionally introduce changes that result in undesirable software behaviour, sometimes known as 'breaking changes', that cannot always be predicted in advance.
@@ -66,8 +76,10 @@ If something doesn't appear to be working, try to read through the error message
 
 Please remember when raising software issues that posting error logs can really help others to try to solve the problem. Saying 'My software is broken/doesn't work/prints out scary red or purple messages' is not helpful. However, sharing those scary messages probably is. Most importantly of all, **don't be embarrassed** about sharing error messages: they often contain the key to the solution of whatever problem caused them.
 
-If you do encounter a problem, the section [](additional_support.md#where-to-go-for-additional-support) describes a general strategy for working through the problem and how to ask for help. A later section, [](troubleshooting.md#troubleshooting), provides more specific guidance for working through particular sorts of issues with the different software applications.
+If you do encounter a problem, the section [](g-additional_support) describes a general strategy for working through the problem and how to ask for help. A later section, [](g-troubleshooting.md#troubleshooting), provides more specific guidance for working through particular sorts of issues with the different software applications.
 
 ## Where next?
 
-The next section, {numref}`compute_home.md#compute-home-online-vce`, {ref}`compute_home.md#compute-home-online-vce`, describes how to get started with the Open University online hosted VCE. There are then two sections — {numref}`local_vce_quickstart.md#local-vce-quick-start` ({ref}`local_vce_quickstart.md#local-vce-quick-start`) and {numref}`local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a locally run version of the VCE on your own computer. If you want to retain access to the VCE at the end of the module, the local VCE will remain available on your computer until you decide to delete it. You do not need to read those sections if you only wish to use the hosted Compute Home service. {numref}`using_classic_nb.md#using-the-classic-jupyter-notebook-environment` and {numref}`notebook_gotchas.md#jupyter-notebook-gotchas` describe {ref}`using_classic_nb.md#using-the-classic-jupyter-notebook-environment` and {ref}`notebook_gotchas.md#jupyter-notebook-gotchas` respectively. {numref}`backups.md#backing-up-your-work` reviews backup strategies, and {numref}`classic_nb_accessibility.md#classic-notebook-accessibility` considers {ref}`classic_nb_accessibility.md#classic-notebook-accessibility`. {numref}`troubleshooting.md#troubleshooting` provides further information on {ref}`troubleshooting.md#troubleshooting` and may prove helpful if you run into particular issues. The appendix material in {ref}`vce_technical_architecture.md#appendix--vce-technical-architecture` is purely optional reading that provides a brief technical overview of how the VCEs work.
+The next section, {numref}`g-compute_home.md#compute-home-online-vce`, {ref}`g-compute_home.md#compute-home-online-vce`, describes how to get started with the Open University online hosted VCE. There are then two sections — {numref}`g-local_vce_quickstart.md#local-vce-quick-start` ({ref}`g-local_vce_quickstart.md#local-vce-quick-start`) and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`g-local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a locally run version of the VCE on your own computer. If you want to retain access to the VCE at the end of the module, the local VCE will remain available on your computer until you decide to delete it. You do not need to read those sections if you only wish to use the hosted Compute Home service. 
+
+Several sections then follow that describe how to get started using the environment, how to make it more accessible to your needs, and how to troubleshoot any issues that arise.

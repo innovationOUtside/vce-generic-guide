@@ -78,7 +78,7 @@ Screenshot of the Docker Desktop panel for a running container. The link to a ma
 
 {{'`docker pull ousefulcoursecontainer/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}
 
-3. from a terminal, create a working directory you want to share with container (for example, at {{winpath}} (Windows) or {{macpath}} (Mac/Linux)); change directory (`cd`) into the directory; create and run a container using a command of the form:
+3. from a terminal, create a working directory you want to share with container (for example, at {{winpath}} (Windows) or {{macpath}} (Mac/Linux)); change directory (`cd`) into the directory you want to share, then create and run a container using a command of the form:
 
 `docker run -d --name NAME -p PORTS -v VOLUMES IMAGE`
 

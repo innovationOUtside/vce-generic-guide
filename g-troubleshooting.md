@@ -2,7 +2,7 @@
 
 While we have tried to ensure that the software installation process and all the software-related activities run smoothly, there is always a chance that you may encounter a problem or issue with the software.
 
-The section [](additional_support.md#additional-support) describes a general strategy for working through problems or raising technical issues. This section describes more specific guidance for working through issues with particular software elements.
+The section [](g-additional_support.md#additional-support) describes a general strategy for working through problems or raising technical issues. This section describes more specific guidance for working through issues with particular software elements.
 
 ```{admonition} Optional content
 :class: warning

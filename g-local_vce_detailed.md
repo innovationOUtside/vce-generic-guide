@@ -232,7 +232,7 @@ Finding the token to use with a running Jupyter notebook server
 
 ```
 
-As well as using the Docker Desktop to create and manage containers, you can also use the command line. See [](local_vce_quickstart.md#docker-command-line-quick-start).
+As well as using the Docker Desktop to create and manage containers, you can also use the command line. See [](g-local_vce_quickstart.md#docker-command-line-quick-start).
 
 *Make sure that you use the correct module code and presentation tag and the correct case when specifying the image from which the container instance is created.*
 

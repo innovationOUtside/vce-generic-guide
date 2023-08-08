@@ -20,4 +20,4 @@ In general, you may find it useful to work through the problem in the following 
 
 To give yourself the best chance of resolving any issue in a timely fashion, *plan ahead*. The assignments require you to make use of the VCE, so don't leave it until the last minute to try the VCE for the first time.
 
-More specific guidance for working through issues related to various software problems can be found in [](troubleshooting).
+More specific guidance for working through issues related to various software problems can be found in [](g-troubleshooting).
