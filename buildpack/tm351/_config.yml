@@ -87,6 +87,7 @@ sphinx:
       MNAME: "Data Management and Analysis"
       PCODE: 23J
       YEAR: "2023"
+      jupyter_help_forum: "appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum)"
       #####################
       ##                 ##
       ##       END       ##
