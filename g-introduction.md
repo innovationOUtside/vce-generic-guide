@@ -1,6 +1,6 @@
 # Introduction
 
-In this module, you will use a module specific virtualised computing environment (VCE) for some or all of your practical work. We offer two ways of accessing the VCE: as an online hosted version using the Open University's Compute Home service, and as a locally run environment that you can install on your own computer.
+In this module, you will use a module specific virtualised computing environment (VCE) for some of the module activities. We offer two ways of accessing the VCE: as an online hosted version using the Open University's Compute Home service, and as a locally run environment that you can install on your own computer.
 
 The VCE provides a customised computing environment appropriate for your module and an interactive browser based user interface to access the software running inside it. The VCE is implemented using the widely supported Docker container approach.
 
@@ -14,9 +14,7 @@ You should follow the appropriate instructions for the VCE type you require:
 
 - [](g-local_vce_quickstart.md#local-vce-quick-start)
 
-## Outline structure of this guide
-
-The *{{MCODE}} Virtual Computing Environment Software Guide* contains the following information:
+The *{{MCODE}} Virtual Computing Environment Software Guide* includes the following information:
 
 - choosing between the hosted or local VCE
 
@@ -28,13 +26,13 @@ The *{{MCODE}} Virtual Computing Environment Software Guide* contains the follow
 
 - accessibility information
 
-- information on where you can find additional support, and guidance on where to look for or ask for help
+- information on finding additional support, and guidance on where to look for or ask for help
 
 - troubleshooting
 
 ## Browser requirements
 
-You will access the software tools provided by the virtual computing environment (either the hosted VCE or the locally run VCE) via a web browser. For VCEs running Jupyter notebooks or JupyterLab, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
+You will access the software tools provided by the virtual computing environment (either the hosted VCE or the locally run VCE) via a web browser. For VCEs running Jupyter environments, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
 
 ```{admonition} Browser favourites or bookmarks
 
@@ -44,7 +42,7 @@ To make it easier to access a locally running VCE, we suggest that you add a bro
 
 ## Choosing between the OU hosted and the locally run VCE
 
-The online hosted Compute Home service provides the simplest and easiest way of accessing a module's VCE. All you need to access hosted service is an internet connection and a computer running a modern web browser. For the duration of the module, all your work will be stored online in a personal file storage area. However, at the end of the module, you will lose access to the hosted VCE. For many students, Compute Home provides the most convenient way of accessing a module VCE.
+The online hosted Compute Home service provides the simplest and easiest way of accessing a module's VCE. All you need to access hosted service is an internet connection and a computer running a modern web browser. For the duration of the module, all your work will be stored online in a personal file storage area. However, at the end of the module, you will lose access to the hosted VCE. For many students, Compute Home provides the most convenient way of accessing the {{MCODE}} VCE.
 
 If you need to access the VCE in an offline environment, or if you prefer not to use the hosted environment, you can run the VCE locally on your own computer. The local environment also provides a way of using the VCE when the module has finished and the online VCE is no longer available.
 

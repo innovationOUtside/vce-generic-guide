@@ -4,7 +4,7 @@ This section provides more detailed guidance on installing and troubleshooting t
 
 ## Hardware requirements
 
-The virtual computing environment can be installed onto any computer that can run the Docker application, such as a desktop operating system (Microsoft Windows, macOS, Linux) but not tablet computers or most Chromebooks. To run the virtual computing environment, you will need a 64-bit computer processor and at least 4 GB of memory. You will also need at least 20 GB of free disk space to store the virtual computing environment and the data files you will be working with as part of the block.
+The virtual computing environment can be installed onto any computer that can run the Docker application, such as a desktop operating system (Microsoft Windows, macOS, Linux) but not tablet computers or most Chromebooks. To run the virtual computing environment, you will need a 64-bit computer processor and at least 4 GB of memory. You will also need at least 20 GB of free disk space to store the virtual computing environment and the data files you will be working with using this VCE.
 
 ## Creating a shared folder
 
@@ -133,9 +133,7 @@ Screenshot showing results of searching for an image in Docker Desktop. A select
 
 ```
 
-- search for and select the {{docker_image}} image from the search results; then from the drop down tag list select the tag that matches the presentation code for this presentation of the module: {{pcode_lc}}. Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download.* You should only need to download the image once.
-
-The download may take some time (up to 20 minutes depending on your network connection), but you should only need to download the original image once.
+- search for and select the {{docker_image}} image from the search results; then from the drop down tag list select the tag that matches the presentation code for this presentation of the module: {{pcode_lc}}. Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download (up to 20 minutes depending on your network connection).* You should only need to download the image once.
 
 You can also download an image from the command line by running the following command from the command line:
 
@@ -147,7 +145,7 @@ Enter the complete command using lower-cased characters.
 
 The VCE is accessed from a running Docker container. A container is a virtual machine instance created from a previously downloaded Docker container image.
 
-The simplest way of running and managing containers is to use to the Docker Desktop.
+The simplest way of running and managing containers is to use the Docker Desktop application.
 
 ### Creating a new container
 
@@ -168,7 +166,7 @@ From the *Run a new container* dialogue, use settings of the following form:
 
 - *container name:* {{container_name}} (all lower case)
 
-- *ports:* a mapping from the port number inside the container (for example, against `:8888/tcp` for a conventional Jupyter server) onto an location you can access in your browser; use host port 0 to randomly allocate a port, or a port number `8NNN` derived from the module code, (for example, {{'`8' + NCODE + '`'}}).
+- *ports:* a mapping from the port number inside the container (for example, against `:8888/tcp` for a conventional Jupyter server) onto an location you can access in your browser; use host port 0 to randomly allocate a port, or a port number derived from the module code such as {{'`8' + NCODE + '`'}} (`8` followed by the numerical part of the {{MCODE}} module code)).
 
 - *volumes:* using the file dialogue (click on the three dots) select the folder you want to share into the container from your host computer, such as the folder you created in your home computer documents folder previously. This folder can be shared by mounting it against the path {{vce_homedir}} inside the container (use your module code).
 
@@ -232,7 +230,7 @@ Finding the token to use with a running Jupyter notebook server
 
 ```
 
-As well as using the Docker Desktop to create and manage containers, you can also use the command line. See [](g-local_vce_quickstart.md#docker-command-line-quick-start).
+As well as using Docker Desktop to create and manage containers, you can also use the command line. See [](g-local_vce_quickstart.md#docker-command-line-quick-start).
 
 *Make sure that you use the correct module code and presentation tag and the correct case when specifying the image from which the container instance is created.*
 
