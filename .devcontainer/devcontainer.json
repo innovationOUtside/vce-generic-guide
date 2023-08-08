@@ -7,7 +7,8 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "ExecutableBookProject.myst-highlight"
+                "ExecutableBookProject.myst-highlight",
+                "tomoki1207/vscode-pdfviewer"
             ]
         }
     }
