@@ -24,7 +24,7 @@
 title: TM351 (23J) Virtual Computing Environment (VCE) Software Guide
 author: The Open University
 include_patterns: ["g-*.md", "x-tm351*"] # also include x-modulecode*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*classicnb*"]
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*classicnb*"]
 #####################
 ##                 ##
 ##       END       ##

@@ -26,7 +26,7 @@ title: Virtual Computing Environment (VCE) Software Guide (M348-23J)
 author: The Open University
 
 include_patterns: ["g-*.md", "x-m348*"] # also include x-modulecode*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*jupyterlab*"] # "*classicnb*",
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*jupyterlab*"] # "*classicnb*",
 #####################
 ##                 ##
 ##       END       ##
