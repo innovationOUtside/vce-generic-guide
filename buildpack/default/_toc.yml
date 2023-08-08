@@ -11,6 +11,7 @@ parts:
       - file: g-introduction
       - file: g-compute_home
       - file: g-compute_home_nbclassic
+      - file: g-accessibility_classicnb
       - file: g-compute_home_jl
       - file: g-local_vce_quickstart
       - file: g-local_vce_detailed
