@@ -14,7 +14,7 @@ RUN  apt-get update \
                 imagemagick \
         && apt-get clean
 
-RUN pip install jupyter-book ou-book-theme pandoc \
+RUN pip install jupyter-book ou-book-theme pandoc pdfsak \
         pymupdf sphinx-jupyterbook-latex ou-print-pack-tools 
 
 # Build instructions for the container
