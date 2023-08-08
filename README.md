@@ -8,7 +8,7 @@ Example module configurations can be found in the [`buildpack`](buildpack/) dire
 
 The `generic` branch includes an original draft of a generic guide for OU virtual computing environment (VCE) users (Compute Home, local Docker containers) deployed with the classic Jupyter notebook UI as a the default UI. __This branch should be regarded as deprecated.__
 
-The `customisable` branch replaces (currently: *will replace*) the `generic` approach with a generic template that can be customised for a particular module and presentation. A new guide will need to be rendered for each module presentation. The guide will contain specific guidance on how to access or install the particular VCE required for that module for a particular presentation.
+The `customisable` branch replaces the `generic` approach with a template that can be customised for a particular module and presentation. A new guide will need to be rendered for each module presentation. The guide will contain specific guidance on how to access or install the particular VCE required for that module for a particular presentation.
 
 The `main` branch is updated from the `customisable` branch, although it may lag behind it.
 
