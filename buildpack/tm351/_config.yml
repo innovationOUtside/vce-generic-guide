@@ -24,7 +24,7 @@
 title: TM351 (23J) Virtual Computing Environment (VCE) Software Guide
 author: The Open University
 include_patterns: ["g-*.md", "x-tm351*"] # also include x-modulecode*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*classicnb*"]
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*classicnb*"]
 #####################
 ##                 ##
 ##       END       ##
@@ -100,6 +100,7 @@ sphinx:
       local_dirname: "{{'`' + MCODE|upper + 'VCE`'}}"
       container_name: "{{'`' + MCODE|lower + 'vce`'}}"
       vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      vce_db_backups: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '/backups`'}}"
       docker_image: "{{'`ousefulcoursecontainer/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
       winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
       macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"

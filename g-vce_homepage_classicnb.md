@@ -5,7 +5,6 @@ When the VCE is fully initialised, you will see the contents page for the Jupyte
 ```{figure} md_assets/media/image4.png
 :name: jupyter_classic_nb_home
 :width: 5.772370953630796in
-:height: 1.879740813648294in
 
 The Jupyter notebook contents page
 
