@@ -29,5 +29,5 @@ substituting in the following values:
 - __VOLUMES__: {{dir_map}} (You must retain the quotation marks if there are any spaces in directory name paths. You can also pass in an explicit path rather than the "present working directory" (`$(pwd)`))
 - __IMAGE__: {{docker_image}}
 
-Alternatively, use the Docker Desktop to launch a container from the required image using the above settings; select your {{local_dirname}} shared folder to be mounted against the {{vce_homedir}} directory.
+Alternatively, use Docker Desktop to launch a container from the required image using the above settings; select your {{local_dirname}} shared folder to be mounted against the {{vce_homedir}} directory.
 

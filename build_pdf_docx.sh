@@ -3,6 +3,9 @@
 # Script for building output documents
 # from sphinx/Jupyter Book souirce documents
 
+# Hack until devcontianer is updated
+pip install pdfsak
+
 # TOC sand config files in buildpack/MODULE
 # Run as something like:
 # ./build_pdf_docx.sh default
@@ -66,5 +69,10 @@ cp -rf _build/html $BUILDPACK/$OUT/
 cp -rf _build/ouxml $BUILDPACK/$OUT/
 cp _build/latex/book.pdf $BUILDPACK/$OUT/$MODULE.pdf
 
+# Brand PDF
 ou_nb_brandify -o $BUILDPACK/$OUT -y 2023
+
+# Single page cribsheet
+jb build . --config $CONFIG --toc buildpack/default/_toc_cribsheet.yml --builder pdflatex
+pdfsak --input-file _build/latex/book.pdf --output $BUILDPACK/$OUT/${MODULE}_cribsheet.pdf --extract-pages "5"
 

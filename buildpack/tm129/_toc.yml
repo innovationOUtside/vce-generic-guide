@@ -13,6 +13,7 @@ parts:
       - file: g-local_vce_quickstart
       - file: g-local_vce_detailed
       - file: g-vce_homepage_classicnb
+      - file: g-accessibility_classicnb
       - file: g-notebook_gotchas
       - file: g-additional_support
       - file: g-troubleshooting

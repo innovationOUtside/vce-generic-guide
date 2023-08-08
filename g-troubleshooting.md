@@ -15,9 +15,9 @@ You shouldn't need to work though the following unless there are specific proble
 
 When you first access or install the VCE, we suggest that you run through the `READ_ME_FIRST.ipynb` notebook as soon as you can. If you have problems installing Docker or the Docker container / VCE, please be sure to include details of your operating system when requesting assistance via the module forum.
 
-You can check whether your VCE container with name `CONTAINERNAME` (for examnple, {{container_name}}) is currently running from the list of running containers displayed in the Docker Dashboard, or by entering the command `docker ps`in a terminal / command prompt.
+You can check whether your VCE container with name `CONTAINERNAME` (for examnple, {{container_name}}) is currently running from the list of running containers displayed in the Docker Desktop, or by entering the command `docker ps` in a terminal / command prompt.
 
-If the container is not shown as running in the Docker dashboard, or you cannot see it reported as *Up* for a certain period of time in the `docker ps` listing, or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate web address then *restart* the VCE from the docker dashboard or by issuing the terminal command `docker restart CONTAINERNAME`.
+If the container is not shown as running in the Docker Desktop, or you cannot see it reported as *Up* for a certain period of time in the `docker ps` listing, or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate web address then *restart* the VCE from the Docker Desktop or by issuing the terminal command `docker restart CONTAINERNAME`.
 
 ## Issuing Docker commands on the command line
 
@@ -45,14 +45,14 @@ If you need to create a new instance of the container, delete the current instan
 If your computer goes to sleep, the container will also be hibernated.
 When you wake your computer, the container and the services it is running should also wake up, although you may have to restart any Jupyter notebook kernels you left running. In rare cases, you may find that the container has got stuck somehow. In such a case, check whether the VCE container is currently running by entering the command `docker ps` in a terminal / command prompt and looking for the appropriately named container.
 
-If the container is not running (you cannot see it reported as 'Up' for a certain period of time in the `docker ps` listing) or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate address, then *reatart* the VCE from the Docker Dashboard containers dispay or by issuing the terminal command `docker restart CONTAINERNAME`.
+If the container is not running (you cannot see it reported as 'Up' for a certain period of time in the `docker ps` listing) or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate address, then *reatart* the VCE from the Docker Desktop containers display or by issuing the terminal command `docker restart CONTAINERNAME`.
 
 ## Taking drastic action
 
 ```{admonition} Take a backup first
 :class: danger
 
-You might want to take a backup of the shared folder and any database content (described below) before attempting the following.
+You might want to download your files or make a backup of the shared folder before attempting the following.
 
 ```
 
@@ -60,7 +60,7 @@ If for any reason you need to delete a VCE container instance and create a repla
 
 `docker rm --force CONTAINERNAME`
 
-You should now create a new container using the Docker Desktop or by executing the original `docker run` command again.
+You should now create a new container using Docker Desktop or by executing the original `docker run` command again.
 
 Deleting the container will *not* delete any of the contents of the shared folder.
 
@@ -191,11 +191,11 @@ The OU Computing Helpdesk will not be able to help with detailed technical queri
 
 ## Finding version numbers for software in your VCE
 
-There may be occasions, such as when troubleshooting or debugging problems, when you are asked to confirm which versions of software and Python packages you have in your VCE. The following notebook commands will show you how to find most of the key versions:
+There may be occasions, such as when troubleshooting or debugging problems, when you are asked to confirm which versions of software applications your are running or programming packages you have installed in your VCE. The following notebook commands will show you how to find most of the key versions:
 
-- **VCE version:** run the following in a notebook code cell:
+- **VCE version:** run the following in a terminal inside the VCE:
 
-`! cat /etc/ouseful/.container_version`
+`cat /etc/ouseful/.container_version`
 
 ## Windows performance issues
 
@@ -213,4 +213,4 @@ Using an account with admin rights, from a PowerShell command line, restart WSL2
 
 `Restart-Service LxssManager`
 
-You should find that setting `memory=2GB` is enough to run the container although you may find things, particularly in the second half of the course, run more smoothly by setting `memory=4GB`.
+You should find that setting `memory=2GB` is enough to run the container although you may find things run more smoothly by setting `memory=4GB`.
