@@ -6,6 +6,7 @@ A script to generate the following assets can be run from the command line as: `
 
 - Jupyter Book html (built into `buildpack/MODULE/_generated/html`)
 - PDF (built into `buildpack/MODULE/_generated/MODULE_logo.pdf`)
+- PDF - 1 page cribsheet (built into `buildpack/MODULE/_generated/MODULE_cribsheet.pdf`)
 - OU-XML (built into `buildpack/MODULE/_generated/ouxml`)
 
 ## Microsoft Word
