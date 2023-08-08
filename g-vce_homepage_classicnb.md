@@ -74,7 +74,7 @@ When you open a new Jupyter notebook, it creates a new programming environment k
 
 The notebook execution model may lead to unexpected behaviours for the unwary if you have the same notebook open in multiple browser tabs, or if you execute code cells out of cell order. See [](g-notebook_gotchas) for more details.
 
-Follow the guidance on the study planner or in yoiur study materials for a reminder as to when it makes sense to study each notebook.
+Follow the guidance on the study planner or in your study materials for a reminder as to when it makes sense to study each notebook.
 
 ### Uploading files
 
