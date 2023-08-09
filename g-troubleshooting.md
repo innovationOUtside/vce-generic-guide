@@ -191,11 +191,9 @@ The OU Computing Helpdesk will not be able to help with detailed technical queri
 
 ## Finding version numbers for software in your VCE
 
-There may be occasions, such as when troubleshooting or debugging problems, when you are asked to confirm which versions of software applications your are running or programming packages you have installed in your VCE. The following notebook commands will show you how to find most of the key versions:
+There may be occasions, such as when troubleshooting or debugging problems, when you are asked to confirm which versions of software applications your are running or programming packages you have installed in your VCE. You will be provided with guidance on how to find the required version numbers.
 
-- **VCE version:** run the following in a terminal inside the VCE:
-
-`cat /etc/ouseful/.container_version`
+If you are running into repeated problems with an environment inside a local VCE, report the digest number for the image used to generate the container. You can find this by running the command `docker images --digests` from the command line on your computer. Look for the line corresponding to the {{docker_image}} image: the digest is the number starting with the prefix: `sha256:`.
 
 ## Windows performance issues
 
