@@ -1,0 +1,36 @@
+name: vce-guide-builder
+#.github/workflows/nbval.yml
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        type: choice
+        description: Week to test
+        options: 
+        - "m348"
+        - "tm351"
+        - "tm129"
+        - "default"
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    container:
+      image: outm351dev/ou-doc-builder
+    steps:
+    # https://github.com/myoung34/docker-github-actions-runner/issues/261
+    - uses: actions/checkout@v1
+    - name: Build documentation
+      run: |
+        ./build_pdf_docx.sh ${{ module }}
+        mkdir -p /var/tmp/dist
+        cp -rf _build/html /var/tmp/dist/
+        cp -rf _build/ouxml /var/tmp/dist/
+        cp _build/latex/book.pdf /var/tmp/dist/${{module}}.pdf
+        cp buildpack/{{module}}/_generated/${{module}}_cribsheet.pdf /var/tmp/dist/
+
+    - name: Archive test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: docs
+        path: /var/tmp/dist
