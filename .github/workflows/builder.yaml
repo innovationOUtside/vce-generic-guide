@@ -28,9 +28,9 @@ jobs:
         cp _build/latex/book.pdf /var/tmp/dist/${{github.event.inputs.module}}.pdf
         cp buildpack/${{github.event.inputs.module}}/_generated/${{github.event.inputs.module}}_cribsheet.pdf /var/tmp/dist/
 
-    - name: Archive test results
+    - name: Upload docs bundle
       if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: docs
+        name: ${{github.event.inputs.module}}_docs_bundle
         path: /var/tmp/dist
