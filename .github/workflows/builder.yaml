@@ -5,7 +5,7 @@ on:
     inputs:
       module:
         type: choice
-        description: Week to test
+        description: Module
         options: 
         - "m348"
         - "tm351"
@@ -21,12 +21,12 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build documentation
       run: |
-        ./build_pdf_docx.sh ${{ module }}
+        ./build_pdf_docx.sh ${{ github.event.inputs.module }}
         mkdir -p /var/tmp/dist
         cp -rf _build/html /var/tmp/dist/
         cp -rf _build/ouxml /var/tmp/dist/
-        cp _build/latex/book.pdf /var/tmp/dist/${{module}}.pdf
-        cp buildpack/{{module}}/_generated/${{module}}_cribsheet.pdf /var/tmp/dist/
+        cp _build/latex/book.pdf /var/tmp/dist/${{github.event.inputs.module}}.pdf
+        cp buildpack/${{github.event.inputs.module}}/_generated/${{github.event.inputs.module}}_cribsheet.pdf /var/tmp/dist/
 
     - name: Archive test results
       if: always()
