@@ -28,4 +28,4 @@ The `.devcontainer` can be launched locally (e.g. within VS Code from a cloned v
 
 See [`BUILD.md`](BUILD.md) for more details on the build process.
 
-A GitHub Action, [`builder.yaml`](.github/workflows/builder.yaml) is also defined that supports manually launched workflows that allow you to generate the output documents for a selected module. The generated documents can be downloaded from the action run report page as an action artifact.
+A GitHub Action, [`builder.yaml`](.github/workflows/builder.yaml), is also defined that supports manually launched workflows that allow you to generate the output documents for a selected module. The generated documents can be downloaded from the action run report page as an action artifact.
