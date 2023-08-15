@@ -1,6 +1,6 @@
 # Using the VCE
 
-When the VCE is fully initialised, you will see the contents page for the JupyterLab environment as shown in {numref}`jupyterlab_home`.
+When the VCE is fully initialised, you will see a default JupyterLab environment layout similar to that shown in {numref}`jupyterlab_home`.
 
 ```{figure} md_assets/media/jupyterlab_ui.png
 :name: jupyterlab_home
@@ -12,9 +12,9 @@ A screenshot of the JupyterLab interactive development environment (IDE) syle us
 
 ```
 
-JupyterLab provides an integrated development environment (IDE) that provides access to a file broiwser and a wide range of file editors, including a fully featured Jupyter notebook editor.
+JupyterLab provides an integrated development environment (IDE) that provides access to a file browser and a wide range of file editors, including a fully featured Jupyter notebook editor.
 
-The JupyterLab environment distributed as part of the VCE includes several preinstalled JupyterLab extensions to improve the usability of the environment and support your studies.
+The JupyterLab environment distributed as part of the VCE includes several pre-installed JupyterLab extensions that enhance the usability of the environment to support your studies.
 
 ```{note}
 The JupyterLab extensions that have been preinstalled into the VCE may differ from module to module.
@@ -27,7 +27,7 @@ For example, the Jupyterlab environment in the TM351 VCE is extended using the P
 
 ## Visual Design of Environments
 
-The visual environment is modified using several extensions:
+The JupyterLab environment used in OU VCEs is typically modified using several extensions:
 
 - [`innovationOUtside/jupyterlab_ou_brand_extension`](https://github.com/innovationOUtside/jupyterlab_ou_brand_extension)
 
@@ -104,16 +104,16 @@ Sidebar showing a table of contents navigation tool generated from the headings 
 
 ```
 
-The table of contents has two benefits:
+The table of contents offers two main benefits:
 
 - it provides an overview of the whole document and signposts key, headed elements within it;
+
 - it provides an effective way of navigating to different parts of the document.
 
 Several extensions support the rendering of enriched markdown in JupyterLab and RetroLab notebooks, powered by the [`agoose77/jupyterlab-markup`](https://github.com/agoose77/jupyterlab-markup) package. These include:
 
-- the [`executablebooks/jupyterlab-myst`](https://github.com/executablebooks/jupyterlab-myst) extension is under active devleopment and renders MyST style admonition blocks included in markdown cells in an appropriately styled way;
+The [`executablebooks/jupyterlab-myst`](https://github.com/executablebooks/jupyterlab-myst) extension supports the rendering of enriched MyST flavoured markdown from notebook markdown cells [[docs](https://mystmd.org/guide/quickstart-jupyter-lab-myst)]. This includes styled admonition blocks, to do lists, and the rendering of diagrams defined using `mermaid.js` syntax [[docs](https://mystmd.org/guide/diagrams)]. 
 
-- [`agoose77/markdown-it-mermaid`](https://github.com/agoose77/markdown-it-mermaid), which is imported natively by `jupyterlab-markup`; this extension allows you to render a wide varietyy of text defined diagrams expressed in code fenced markdown using the [`mermaid.js` package](https://mermaid-js.github.io/mermaid/). Diagram types include flowcharts, sequence diagrams, class diagrams, state diagrams, entity relationship diagrams, Gantt charts and other diagram types.
 
 For example, the following MyST styled admonition block will be rendered as show in {numref}`jl_myst_warning`:
 
@@ -151,7 +151,12 @@ MyST syntax admonition block with a title, styled as a warning,m betewwen two ot
 
 ```
 
-The MyST syntax also supports various other rich presentation features, such as panels and tabs, rendering support for which may also become available in JupyterLab notebok editors.
+```{admonition} Complete MyST Syntax Guide
+:class: seealso
+
+The [full MyST syntax](https://mystmd.org/guide/quickstart-myst-markdown) supports various other rich presentation features, such as panels and tabs, rendering support for which may also become available in JupyterLab notebok editors through future updates to the extension.
+
+```
 
 MyST also supports simple diagramming using [mermaid.js](https://mermaid.js.org/intro/) scripts:
 
@@ -182,16 +187,9 @@ Being able to *write* diagrams that are then automatically rendered provides an 
 
 ## File Management
 
-If you are working in a local VCE environment, you can mount files directly from your deskop/host environment into the VCE and then save any changes back to the desktop environment.
+If you are working in a local VCE environment, you can used a shared folder to mount files directly from your deskop/host environment into the VCE and then save any changes back to the desktop environment.
 
 However, accessing materials that would you like to save on your personal machine from a hosted enviroment, or accessing materials from one or more devices, presents a significant challenge if we are to prevent inconsistencies arising in the files that are being worked on.
-
-There are two main ways we can address this:
-
-- provide a means of accessing files on the local filesystem;
-- provide a means for synchronising files with a file repository.
-
-## Directory / Archive Downloading
 
 The [`jupyterlab-contrib/jupyter-archive`](https://github.com/jupyterlab-contrib/jupyter-archive) extension provides a convenient way of downloading and zipping files from a selected directory, {numref}`jl_download_archive`.
 
@@ -199,16 +197,13 @@ The [`jupyterlab-contrib/jupyter-archive`](https://github.com/jupyterlab-contrib
 :name: jl_download_archive
 :width: 4in
 
-Download a folder as a zuipped file archive.
+Download a folder as a zipped file archive.
 
 Screenshot of context sensitive menu for file directory, with "Download Current Folder as Archive" option selected.
 
 ```
 
-This works for local and hosted environments and provides a convenient way to save the contents of a working TMA related directory for use as a submission to the ETMA system.
-
-*Note — this extension could be used as the basis for a custom extension that could run additional quality checks over the contents of a directory to ensure that it meets the requirements of the eTMA system, for example as regards file name validity, size of upload, etc. It might also warn users about the presence of possibly inappropriate files to include in the upload. See the [`innovationOUtside/nb_workflow_tools](https://github.com/innovationOUtside/nb_workflow_tools) package for zip tools that will report on the contents of a zip file.*
-
+This works for local and hosted environments and provides a convenient way to save the contents of a working TMA related directory, for example, for use as a submission to the ETMA system.
 
 ## Launcher Buttons
 
@@ -223,66 +218,3 @@ The JupyterLab application and new document launcher. *Options may vary by VCE.*
 Screenshot showing three launcher buttons: Python3 (ipykernel) notebook, nbsearch and OpenRefine.
 
 ```
-
-
-## Integrated Applications and Editors
-
-The JupyterLab environment allows multiple notebooks, and other applications, to be rendered, and arranged as required, within the lab "desktop".
-
-```{note}
-Installed and available options may vary by VCE.
-```
-
-A couple of applications that might be generally useful for diagrams or annotating images are the `jlab-image-editor` simple image editor and the `draw.io` drawing package.
-
-### Image Editor
-
-The [`jupyterlab-contrib/jlab-image-editor`](https://github.com/jupyterlab-contrib/jlab-image-editor) provides a range of additional image editing tool the the image previewer.
-
-Double clicking an image file in the file listing opens a preview window displaying it containing the image editro controls, {numref}`jl_image_editor`. Simple lines and rectangular shapes can be drawa over the image, and the image can be cropped, rotated etc. Currently, there is no option to add text.
-
-```{figure} md_assets/media/jl_image_editor.png
-:name: jl_image_editor
-:width: 5.772370953630796in
-
-JupyterLab image editor.
-
-Screenshot showing the JupyterLab UI in which a paintbrush icon in the left hand vertical application toolbar is selected. In the center panel an image editor is displayed, depicting an omage that has been drawn over with a pen stroke. Image efitor menu options can also be seen: crop, rotate, save image as..., filter, flip, draw and clear.,
-
-```
-
-
-### draw.io Drawing Package
-
-The [`QuantStack//jupyterlab-drawio`](https://github.com/QuantStack/jupyterlab-drawio/) package is an old demostration that might still be useful. It embeds the [`draw.io`](https://drawio-app.com/) app inside JuptyerLab. The application is opened from the Launcher *Diagram* icon, {numref}`jl_diagram_launcher`.
-
-```{figure} md_assets/media/jl_diagram_launcher.png
-:name: jl_diagram_launcher
-:width: 5.772370953630796in
-
-JupyterLab diagram launcher button.
-
-Screenshot showing the launcher with four buttons displayed in the "Other" launcher section: terminal, diagram (highlighted), text file, markdown file, csv file.
-
-```
-
-Within the editor, you can create your own diagrams using a wide range of diagram primitives, {numref}`jl_drawio_ui`.
-
-```{figure} md_assets/media/jl_drawio.png
-:name: jl_drawio_ui
-:width: 5.772370953630796in
-
-The draw.io application opened in JupyterLab.
-
-```
-
-Raw (editable) files are saved to the current environment directory as `.dio` files. Unfortunately, there doesnlt appear to be a way to export images, so having drawn a diagram, you would have to screenshot it in order to get an image file corresponding to your diagram.
-
-
-## Jupyter Notebook Templates
-
-Providing notebook templates opens up a range of possibilities for defining reusable "worksheets" for particular sorts of activity.
-
-Templated notebooks might include boilerplate package imports, as well as offering a notebook structure that models a particular sequence of tasks.
-
-Template notebooks can be added to a full server distribution of JupyerLab using the [`jpmorganchase/jupyterlab_templates`](https://github.com/jpmorganchase/jupyterlab_templates) extension.
