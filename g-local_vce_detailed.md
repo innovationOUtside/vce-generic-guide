@@ -6,7 +6,7 @@ This section provides more detailed guidance on installing and troubleshooting t
 
 The virtual computing environment can be installed onto any computer that can run the Docker application, such as a desktop operating system (Microsoft Windows, macOS, Linux) but not tablet computers or most Chromebooks. To run the virtual computing environment, you will need a 64-bit computer processor and at least 4 GB of memory. You will also need at least 20 GB of free disk space to store the virtual computing environment and the data files you will be working with using this VCE.
 
-## Creating a shared folder
+## Creating your shared folder
 
 The VCE runs as an isolated virtual machine on your computer. You can share files between the VCE and your host operating system by means of a shared folder. For the shared folder, we recommend creating a folder on your computer called {{local_dirname}} in your documents folder. On a Windows computer, this might be called something like {{winpath}} ; on a Mac, {{macpath}} or {{macpath2}}.
 
@@ -36,11 +36,7 @@ For Windows 10 or 11 Home or Pro, Enterprise or Education, all at version 21H2 
 
   - note: the 'Turn Windows features on or off dialog box can be obtained by doing the following: Click on Start and start typing 'Turn Windows features on or off' into the search bar;
 
-  - ensure the following Windows settings are enabled:
-
-    - Virtual machine Platform
-
-    - Windows Subsystem for Linux
+  - ensure the following Windows settings are enabled: *Virtual Machine Platform* and *Windows Subsystem for Linux*
 
 - start the Docker application:
 
