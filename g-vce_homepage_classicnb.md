@@ -31,7 +31,7 @@ Many VCEs will include a `READ_ME_FIRST.ipynb` notebook in the `content/` folder
 
 To leave the Compute Home hosted VCE, click the *Logout* link towards the top right-hand corner of the page. This will shut down the VCE, saving your work before it does so. You will also be automatically logged out of the hosted VCE after a period of inactivity.
 
-When you return to the VCE and reopen a notebook, you will find your work saved from your previous sessions, although you may find you that a new kernel session has been started (see [](g-notebook_gotchas)).
+When you return to the VCE and reopen a notebook, you will find your work saved from your previous sessions, although you may find you that a new kernel session has been started (see [](g-jupyter-notebook-gotchas)).
 
 At the end of each unit or block block, or whenever you have submitted notebook related assessement material, we **strongly** recommend that you download a copy of the completed Jupyter notebooks. On completion of the module, you may lose access to the hosted VCE and your hosted work files. To keep access to any changes you have made to your notebooks, you will need to download copies of them to your own computer.
 
@@ -72,7 +72,7 @@ Click on that notebook to open it. Follow the instructions contained therein to 
 
 When you open a new Jupyter notebook, it creates a new programming environment kernel (for example, a Python or R code environment). The kernel attached to a notebook executes the code contained within that notebook. Code executed in one notebook is isolated from code executed in every other notebook, unless you have open the same notebook in multiple tabs.
 
-The notebook execution model may lead to unexpected behaviours for the unwary if you have the same notebook open in multiple browser tabs, or if you execute code cells out of cell order. See [](g-notebook_gotchas) for more details.
+The notebook execution model may lead to unexpected behaviours for the unwary if you have the same notebook open in multiple browser tabs, or if you execute code cells out of cell order. See [](g-jupyter-notebook-gotchas) for more details.
 
 Follow the guidance on the study planner or in your study materials for a reminder as to when it makes sense to study each notebook.
 
