@@ -14,13 +14,14 @@ OpenRefine is a powerful application for cleaning messy data, which we will use 
 ```{figure} md_assets/media/jl_openrefine_launcher.png
 :name: jl_openrefine_launcher
 :width: 5.772370953630796in
-:height: 1.879740813648294in
 
 OpenRefine Launcher button within JupyterLab.
 
 ```
 
 OpenRefine provides a browser based user interface that allows you to upload and clean tabular data files.
+
+The OpenRefine application runs in its own browser tab or browser window and should be opened from the JuypterLab *Launcher*.
 
 ## Working with PostgreSQL
 
