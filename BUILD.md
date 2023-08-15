@@ -2,12 +2,14 @@
 
 The guide can be built into different output formats as required. such as Microsoft Word (`docx`), `OU-XML`, or `HTML` book.
 
-A script to generate the following assets can be run from the command line as: `./build_pdf_docx.sh`
+A script to generate the following assets can be run from the command line as: `./build_pdf_docx.sh MODULECODE`
 
-- Jupyter Book html (built into `buildpack/MODULE/_generated/html`)
-- PDF (built into `buildpack/MODULE/_generated/MODULE_logo.pdf`)
-- PDF - 1 page cribsheet (built into `buildpack/MODULE/_generated/MODULE_cribsheet.pdf`)
-- OU-XML (built into `buildpack/MODULE/_generated/ouxml`)
+The biold files for each module can be found in: `./buildpack/MODULECODE`
+
+- Jupyter Book html (built into `buildpack/MODULECODE/_generated/html`)
+- PDF (built into `buildpack/MODULE/_generated/MODULECODE.pdf`)
+- PDF - 1 page cribsheet (built into `buildpack/MODULECODE/_generated/MODULE_cribsheet.pdf`)
+- OU-XML (built into `buildpack/MODULECODE/_generated/ouxml`)
 
 ## Microsoft Word
 

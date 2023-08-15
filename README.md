@@ -2,7 +2,9 @@
 
 Source repository for creating OU virtual computing environment guidance on a module and preseantion basis from generic, customisable, and bespoke source documents. *See [`PHILOSOPHY.md`](PHILOSOPHY.md) for more details, including filenaming conventions.*
 
-Example module configurations can be found in the [`buildpack`](buildpack/) directory.
+Example module configurations can be found in the [`buildpack`](buildpack/) directory, with a subdirecotry containing the configuration and output files for each separate module. For example, the buld files for TM351 are in `./buildpack/tm351`.
+
+To build files for a module, run: `./build_pdf_docx.sh MODULECODE` (for example, `./build_pdf_docx.sh tm351`). The files are built into `./buildpack/MODULECODE/genarated/` (for example, `./buildpack/tm351/generated/`)
 
 ## Branches
 
