@@ -2,7 +2,7 @@
 
 While we have tried to ensure that the software installation process and all the software-related activities run smoothly, there is always a chance that you may encounter a problem or issue with the software.
 
-The section [](g-additional_support.md#additional-support) describes a general strategy for working through problems or raising technical issues. This section describes more specific guidance for working through issues with particular software elements.
+The section [](g-additional-support.md#additional-support) describes a general strategy for working through problems or raising technical issues. This section describes more specific guidance for working through issues with particular software elements.
 
 ```{admonition} Optional content
 :class: warning
@@ -21,18 +21,17 @@ If the container is not shown as running in the Docker Desktop, or you cannot se
 
 ## Issuing Docker commands on the command line
 
-### Microsoft Windows
+### Docker in Microsoft Windows
 
-To change directory to the desired location, open the command prompt and use the `CD` command, followed by the path to the directory (i.e. folder)
-you want to move to. To display the name of the current directory, enter `CD` without any parameters. To list the contents of the current directory, use the `DIR` command.
+To change directory to the desired location, open the command prompt and use the `CD` command, followed by the path to the directory (i.e. folder) you want to move to. To display the name of the current directory, enter `CD` without any parameters. To list the contents of the current directory, use the `DIR` command.
 
-### Mac and Linux
+### Docker with Mac and Linux
 
 To change directory to the desired location, open a terminal and use the `cd` command, followed by the path to the directory (i.e. folder) you want to move to. To display the name of the current directory, enter `pwd` without any parameters. To list the contents of the current directory, use the `ls` command.
 
-## Error messages
+## Docker Error messages
 
-When running the docker run command, if you see the error message:
+When running the `docker run` command, if you see the error message:
 
 `docker: Error response from daemon: Conflict. The container nameCONTAINERNAME is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.`
 
