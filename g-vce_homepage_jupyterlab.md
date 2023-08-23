@@ -206,6 +206,14 @@ Screenshot of context sensitive menu for file directory, with "Download Current 
 
 This works for local and hosted environments and provides a convenient way to save the contents of a working TMA related directory, for example, for use as a submission to the ETMA system.
 
+### Unzipping compressed archive files
+
+A common way of transporting large files or bundles of files is to compress them into a single compressed archive file, such as a `.zip` file.
+
+To unzip a file called `filename.zip` in the VCE, open a terminal by clicjing on the *Terminal* Launcher button. In the terminal, use the command `unzip filename.zip` and press enter: the file will be unzipped into the current directory. *Depending on the contents of the zip file, the unzipped files may be contained in a newly created directory within the current directory.* Close the terminal.
+
+If the `.zip` file is not in the VCE home directory, use the `cd PATH` command to change directory to the requierd location before running the `unzip` command, or specify the path to the file (`unzip PATH/TO/filename.zip`).
+
 ## Launcher Buttons
 
 Buttons for proxied applications used in a module can be added to the Launcher and used to launch the applications in new windows, {numref}`jl_launcher_buttons`.

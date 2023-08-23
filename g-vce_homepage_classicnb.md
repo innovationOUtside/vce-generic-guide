@@ -117,3 +117,11 @@ Classic Jupyter notebook homepage, with download archive button highlighted
 Screenshot of the classic notebook home page, with the "Download as zip" button (a down arrow above a horizontal bar) highlighted.
 
 ```
+
+## Unzipping compressed archive files
+
+A common way of transporting large files or bundles of files is to compress them into a single compressed archive file, such as a `.zip` file.
+
+To unzip a file called `filename.zip` in the VCE, click on the *New* button from the notebook homepage and select *Terminal* to open a terminal. In the terminal, use the command `unzip filename.zip` and press enter: the file will be unzipped into the current directory. *Depending on the contents of the zip file, the unzipped files may be contained in a newly created directory within the current directory.* Close the terminal.
+
+If the `.zip` file is not in the VCE home directory, use the `cd PATH` command to change directory to the requierd location before running the `unzip` command, or specify the path to the file (`unzip PATH/TO/filename.zip`).
