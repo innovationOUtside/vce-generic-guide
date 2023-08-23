@@ -39,6 +39,7 @@ This extension adds OU logos to the JupyterLab environment, {numref}`jl_branding
 
 JupyterLab environment with OU branding
 
+A screenshot of the JupyterLab environment that is branded wiuth an OU logo in the top left hand corner of the JuptyerLab user interface and an pen University logo as the icon for a browser tab that displays the JupyterLab interface.
 ```
 
 Part of the reason for using an OU branded JupyterLab environment is to give you the sense of a "place to go" when working on VCE based activities or materials. You should follow appropriate behaviour when working inside the environment, particularly if the documents that are produced are shared with others, either through live collaboration, or sumnitted as assessment materials.
