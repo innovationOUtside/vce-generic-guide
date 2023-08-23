@@ -3,7 +3,7 @@
 # Script for building output documents
 # from sphinx/Jupyter Book souirce documents
 
-# Hack until devcontianer is updated
+# Hack until devcontainer is updated
 pip install pdfsak
 
 # TOC sand config files in buildpack/MODULE
@@ -24,6 +24,9 @@ echo "- outputh path: $OUT"
 
 cp -f $BUILDPACK/$TOC .
 cp -f $BUILDPACK/$CONFIG .
+
+# Make sure we don't accidentally use any stale files for another module
+rm -r _build
 
 rm -r $BUILDPACK/$OUT/
 mkdir -p $BUILDPACK/$OUT/
