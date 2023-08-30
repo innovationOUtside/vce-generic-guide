@@ -31,8 +31,9 @@ You can also add additional shortcuts and/or edit exist shortcuts via the Edit K
 
 The Jupyter notebook dialogue box for editing keyboard shortcuts
 
-The Jupyter notebook dialogue box for editing keyboard shortcuts
+Screenshot of the Jupyter notebook settings dialog for editing keyboard shortcuts. Examples of several commands for which shortcuts are available are listed, along with the associated keyboard shortcut, if defined. 
 
+Example commands listed include: "shutdown kernel", "confirm shutdown kernel", "restart kernel", "restart kernel and ruin all cells", "reastart kernel and clear output", "interrupt kernel" and "run cell".
 ```
 
 ## Magnification
@@ -47,7 +48,7 @@ The Jupyter environment includes an experimental accessibility toolbar extension
 
 ### Enabling the Accessibility Toolbar
 
-If the accessibility toolbar extension is not displayed, you will need to enable it. You can do this from the `Nbextensions` tab on the notebook home page: tick the *Accessibility Toolbar* extension to enable the toolbar ({numref}`nb_extensions_accessibility_toolbar`). When you open a new notebook, the toolbar should be displayed.
+If the accessibility toolbar extension is not displayed, you will need to enable it. You can do this from the `Nbextensions` tab on the notebook home page (you may need to toggle the extension configurator *disable configuration* option first): tick the *Accessibility Toolbar* extension to enable the toolbar ({numref}`nb_extensions_accessibility_toolbar`). When you open a new notebook, the toolbar should be displayed.
 
 ```{figure} md_assets/media/image24.png
 :name: nb_extensions_accessibility_toolbar
@@ -56,7 +57,7 @@ If the accessibility toolbar extension is not displayed, you will need to enable
 
 The Jupyter Nbextensions tab showing the Accessibility Toolbar extension
 
-The Jupyter Nbextensions tab showing the Accessibility Toolbar extension
+Screenshot of the Jupyter Nbextensions tab listing all the installed ecxtensions and highlighting the option for enabling the Accessibility Toolbar extension.
 
 ```
 

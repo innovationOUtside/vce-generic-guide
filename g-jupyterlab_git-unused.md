@@ -1,4 +1,4 @@
-# Using Git and GitHub in Jupyterlab
+# Using Git and GitHub in JupyterLab
 
 The off-the-shelf [`jupyterlab/jupyterlab-git`](https://github.com/jupyterlab/jupyterlab-git) extension adds various tools to support working with files in `git` managed repositories.
 
@@ -22,7 +22,7 @@ The repository is cloned into a new directory with the same name as the reposito
 
 ![](md_assets/media/jl_git_cloned_dir.png)
 
-If we now enter the repository and select the `git` sidebar palette option, we are provided with a simple git user interface that allows us to satge and view staged files, make commits and make push and pull requests to the parent repository (an authentication prompt is raised for push and pull and actions).
+If we now enter the repository and select the `git` sidebar palette option, we are provided with a simple git user interface that allows us to stage and view staged files, make commits and make push and pull requests to the parent repository (an authentication prompt is raised for push and pull and actions).
 
 ![](md_assets/media/jl_git_file_status.png)
 
@@ -36,7 +36,7 @@ The `git` button on a notebook will compare the *saved* version of the notebook 
 
 ![](md_assets/media/jl_git_diff.png)
 
-*Note that the notebook is __not__ saved when you click the `git` button, so the the visible view of the notebook may differ from the (saved) version that is compared with the last committed version.*
+*Note that the notebook is __not__ saved when you click the `git` button, so the visible view of the notebook may differ from the (saved) version that is compared with the last committed version.*
 
 The "clock" icon gives a difference between the file and the last checkpointed version of the notebook. (The checkpointed version is a version that the notebook can be reverted back to. By default, the notebook autosaves regularly but checkpoints are only created by explicit (manual) saves..)
 

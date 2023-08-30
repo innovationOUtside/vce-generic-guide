@@ -38,7 +38,7 @@ Screenshot showing results of searching for an image in Docker Desktop. A select
 
   - *container name:* {{container_name}}
 
-  - *ports:* use host port {{port_map}} as the port mapped from the Jupyer notebook port `:8888/tcp` inside the container
+  - *ports:* use host port {{port_map}} as the port mapped from the Jupyter notebook port `:8888/tcp` inside the container
 
   - *volumes:* select a folder you want to share into the container from your host computer; we recommend creating a shared folder called {{local_dirname}} on your computer such as {{winpath}} (Windows) or {{macpath}} (Mac/Linux). This folder should be mounted against the path {{vce_homedir}} inside the container.
 
@@ -86,7 +86,7 @@ and substitute in the following values:
 
 - __NAME__: {{container_name}}
 - __PORTS__: {{port_map}}
-- __VOLUMES__: {{dir_map}} (You must retain the quaotation marks if there are any spaces in directory name paths. You can also pass in an explicit path rather than the "present working directory" (`$(pwd)`))
+- __VOLUMES__: {{dir_map}} (You must retain the quotation marks if there are any spaces in directory name paths. You can also pass in an explicit path rather than the "present working directory" (`$(pwd)`))
 - __IMAGE__: {{docker_image}}
 
 4. In a browser, navigate to {{localhost_port}}

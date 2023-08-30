@@ -17,7 +17,7 @@ The local and hosted VCEs both runs as a single user environment. The hosted VCE
 
 Persistent file storage is available on both the hosted and local VCE.
 
-In the hosted VCE, files are saved to a persistent personal file storage area that is accessible through the hosted VCE. Exeprimental extensions are available for some Jupyter environments and in some browsers that can map a selected folder on a user's own computer into the browser and execute notebooks in that folder using the remote VCE.
+In the hosted VCE, files are saved to a persistent personal file storage area that is accessible through the hosted VCE. Experimental extensions are available for some Jupyter environments and in some browsers that can map a selected folder on a user's own computer into the browser and execute notebooks in that folder using the remote VCE.
 
 If a local VCE is created, it can be configured to share a folder with the host computer. The contents of this folder are visible to both the host computer and the local VCE (that is, the guest machine); they also remain visible on the host even if the guest machine is not running. The shared folder thus provides a way of passing files from your host machine into the local VCE, as well as getting files (such as backup files) out of the local VCE and onto your host computer. {numref}`vce_arch_overview` broadly describes the architecture of a local VCE and its relationship with your host operating system.
 

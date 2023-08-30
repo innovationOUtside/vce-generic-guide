@@ -15,7 +15,7 @@ You shouldn't need to work though the following unless there are specific proble
 
 When you first access or install the VCE, we suggest that you run through the `READ_ME_FIRST.ipynb` notebook as soon as you can. If you have problems installing Docker or the Docker container / VCE, please be sure to include details of your operating system when requesting assistance via the module forum.
 
-You can check whether your VCE container with name `CONTAINERNAME` (for examnple, {{container_name}}) is currently running from the list of running containers displayed in the Docker Desktop, or by entering the command `docker ps` in a terminal / command prompt.
+You can check whether your VCE container with name `CONTAINERNAME` (for example, {{container_name}}) is currently running from the list of running containers displayed in the Docker Desktop, or by entering the command `docker ps` in a terminal / command prompt.
 
 If the container is not shown as running in the Docker Desktop, or you cannot see it reported as *Up* for a certain period of time in the `docker ps` listing, or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate web address then *restart* the VCE from the Docker Desktop or by issuing the terminal command `docker restart CONTAINERNAME`.
 
@@ -44,7 +44,7 @@ If you need to create a new instance of the container, delete the current instan
 If your computer goes to sleep, the container will also be hibernated.
 When you wake your computer, the container and the services it is running should also wake up, although you may have to restart any Jupyter notebook kernels you left running. In rare cases, you may find that the container has got stuck somehow. In such a case, check whether the VCE container is currently running by entering the command `docker ps` in a terminal / command prompt and looking for the appropriately named container.
 
-If the container is not running (you cannot see it reported as 'Up' for a certain period of time in the `docker ps` listing) or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate address, then *reatart* the VCE from the Docker Desktop containers display or by issuing the terminal command `docker restart CONTAINERNAME`.
+If the container is not running (you cannot see it reported as 'Up' for a certain period of time in the `docker ps` listing) or the services appear not to be running (your browser doesn't connect to the service after you have entered the appropriate address, then *restart* the VCE from the Docker Desktop containers display or by issuing the terminal command `docker restart CONTAINERNAME`.
 
 ## Taking drastic action
 
@@ -148,7 +148,7 @@ If you have tried to display a large amount of data in a notebook cell then you 
 
 You should first attempt to clear all the output cells using the notebook menu *Cell > All Output > Clear*. If you are entirely unable to run the notebook to access the menu, first try closing any other notebooks you have open then try opening the problem notebook. If that doesn't allow the notebook to open, then using a command-line command you can run the problem notebook through a separate process that will clear all the cell outputs.
 
-Open a terminal in the VCE. Then change direcory (`cd`) to the shared folder, and issue the following command (all on one line):
+Open a terminal in the VCE. Then change directory (`cd`) to the shared folder, and issue the following command (all on one line):
 
 `jupyter nbconvert --to notebook --ClearOutputPreprocessor.enabled=True YOURNOTEBOOK.ipynb`
 
@@ -160,7 +160,7 @@ The notebook server may also run into memory problems if you have a large number
 
 ## Problems associated with running out of memory
 
-If in a long running container, if you close a notebook but do not stop the associated kernel, you may end up with a large number of still running kernels even if you do not have any notebook tabs open in your browser. You can find a list of running notebooks from the the *Running*
+If in a long running container, if you close a notebook but do not stop the associated kernel, you may end up with a large number of still running kernels even if you do not have any notebook tabs open in your browser. You can find a list of running notebooks from the *Running*
 tab on the notebook homepage.
 
 You can also see an indication of which notebooks still have running kernels associated with them when viewing a file listing on the notebook home page, Figure 19.

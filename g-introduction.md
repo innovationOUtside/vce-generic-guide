@@ -46,7 +46,7 @@ The online hosted Compute Home service provides the simplest and easiest way of 
 
 If you need to access the VCE in an offline environment, or if you prefer not to use the hosted environment, you can run the VCE locally on your own computer. The local environment also provides a way of using the VCE when the module has finished and the online VCE is no longer available.
 
-The online hosted VCE and the locally run VCE provide the same working environment, so your decision as to which environment to use may depend on convenience as much as anything. You may want to make use of both environments, accessing each of them at different times or in different circumstances. Howeever, when doing so, you will have to manage how you synchronise your files across the environments yourself.
+The online hosted VCE and the locally run VCE provide the same working environment, so your decision as to which environment to use may depend on convenience as much as anything. You may want to make use of both environments, accessing each of them at different times or in different circumstances. However, when doing so, you will have to manage how you synchronise your files across the environments yourself.
 
 ## Backing up your work
 
@@ -56,7 +56,7 @@ In the local VCE, only the files you save inside the VCE directory that the shar
 
 Backups are regularly made of your files on the hosted VCE. For the local VCE, files will persist in the directory on your host computer that is mounted into the VCE, even if the VCE container is destroyed.
 
-However, it is still good practice, and beneficial to your own peace of mind if nothing else, particularly when working on TMAs or the EMA, for you to back up or grab an archival copy of your files every so often
+However, it is still good practice, and beneficial to your own peace of mind if nothing else, particularly when working on TMAs or the EMA, for you to back up or grab an archival copy of your files every so often.
 
 ## Updates and upgrades
 

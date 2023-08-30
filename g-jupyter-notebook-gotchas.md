@@ -6,7 +6,7 @@ In computer slang, a "gotcha" often refers to a situation where you may be caugh
 
 2. A displayed cell output may not reflect the current state of the code environment. If a cell is used to display the output of a variable, if the value of the variable is changed by code executing later in the notebook, the previously displayed is not updated. The output is the value of the variable at the time the cell generated the output.
 
-3. When you open a *new* notebook, the notebook server starts a new Jupyter kernel. However, opening a previously notebook does not necessarily create a new notebook kernel. If the notebook tab was closed without stopping the kernel, the previous kernel may still be running when the notebook is reopened. You can restart a kernel at any point to ensure you are working with a fresh kernel. The kernel will be restarted in a state where none of the code cells have run
+3. When you open a *new* notebook, the notebook server starts a new Jupyter kernel. However, opening a previously opened notebook does not necessarily create a new notebook kernel. If the notebook tab was closed without stopping the kernel, the previous kernel may still be running when the notebook is reopened. You can restart a kernel at any point to ensure you are working with a fresh kernel. The kernel will be restarted in a state where none of the code cells have run.
 
 4. If you hibernate your computer and then wake it up again, any running Jupyter kernel processes should just hibernate and still retain their previous state. If you stop a notebook, either from the notebooks folder home page or by stopping and restarting the VCE, then the Jupyter kernel process will be stopped and all states (as far as the process is concerned) will be lost.
 

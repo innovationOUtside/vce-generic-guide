@@ -21,7 +21,7 @@ The JupyterLab extensions that have been preinstalled into the VCE may differ fr
 
 Some modules may distribute a "JupyterLab configuration pack" as a separately installable Python package. Such packages can be used to extend your own JupyterLab environment outside of the VCE in a way that matches the customisation of the environment within the VCE.
 
-For example, the Jupyterlab environment in the TM351 VCE is extended using the Python package [`ou-tm351-jl-extensions`](https://pypi.org/project/ou-tm351-jl-extensions/).
+For example, the JupyterLab environment in the TM351 VCE is extended using the Python package [`ou-tm351-jl-extensions`](https://pypi.org/project/ou-tm351-jl-extensions/).
 
 ```
 
@@ -39,16 +39,16 @@ This extension adds OU logos to the JupyterLab environment, {numref}`jl_branding
 
 JupyterLab environment with OU branding
 
-A screenshot of the JupyterLab environment that is branded wiuth an OU logo in the top left hand corner of the JuptyerLab user interface and an pen University logo as the icon for a browser tab that displays the JupyterLab interface.
+A screenshot of the JupyterLab environment that is branded wiuth an OU logo in the top left hand corner of the JupyterLab user interface and an pen University logo as the icon for a browser tab that displays the JupyterLab interface.
 ```
 
-Part of the reason for using an OU branded JupyterLab environment is to give you the sense of a "place to go" when working on VCE based activities or materials. You should follow appropriate behaviour when working inside the environment, particularly if the documents that are produced are shared with others, either through live collaboration, or sumnitted as assessment materials.
+Part of the reason for using an OU branded JupyterLab environment is to give you the sense of a "place to go" when working on VCE based activities or materials. You should follow appropriate behaviour when working inside the environment, particularly if the documents that are produced are shared with others, either through live collaboration, or submitted as assessment materials.
 
 - [`innovationOUtside/jupyterlab_empinken_extension`](https://github.com/innovationOUtside/jupyterlab_empinken_extension)
 
 This extension supports four thematically coloured background cells that identify how to interpret different sections of a notebook, {numref}`jl_empinken`. Cell backgrounds are persistent and are toggled from notebook toolbar buttons.
 
-- *activity* (blue): cells that describe activities or exervcies;
+- *activity* (blue): cells that describe activities or exercises;
 - *learner* (yellow): calls yo action, where you are expected to modify the cell contents;
 - *tutor* (pink): warning text, or text added as feedback by a tutor on assessed material;
 - *solution/success* (green): occasionally used to signify a "correct" answer to a task. 
@@ -57,7 +57,7 @@ This extension supports four thematically coloured background cells that identif
 :name: jl_empinken
 :width: 5.772370953630796in
 
-A screenshot of "empinken" extension coloured background cells, used to identify differnt cell roles.
+A screenshot of "empinken" extension coloured background cells, used to identify different cell roles.
 
 Four coloured cell types (both markdown and code cells) are shown: blue, yellow, pink and green.
 
@@ -188,9 +188,9 @@ Being able to *write* diagrams that are then automatically rendered provides an 
 
 ## File Management
 
-If you are working in a local VCE environment, you can used a shared folder to mount files directly from your deskop/host environment into the VCE and then save any changes back to the desktop environment.
+If you are working in a local VCE environment, you can used a shared folder to mount files directly from your desktop/host environment into the VCE and then save any changes back to the desktop environment.
 
-However, accessing materials that would you like to save on your personal machine from a hosted enviroment, or accessing materials from one or more devices, presents a significant challenge if we are to prevent inconsistencies arising in the files that are being worked on.
+However, accessing materials that would you like to save on your personal machine from a hosted environment, or accessing materials from one or more devices, presents a significant challenge if we are to prevent inconsistencies arising in the files that are being worked on.
 
 The [`jupyterlab-contrib/jupyter-archive`](https://github.com/jupyterlab-contrib/jupyter-archive) extension provides a convenient way of downloading and zipping files from a selected directory, {numref}`jl_download_archive`.
 
@@ -210,9 +210,9 @@ This works for local and hosted environments and provides a convenient way to sa
 
 A common way of transporting large files or bundles of files is to compress them into a single compressed archive file, such as a `.zip` file.
 
-To unzip a file called `filename.zip` in the VCE, open a terminal by clicjing on the *Terminal* Launcher button. In the terminal, use the command `unzip filename.zip` and press enter: the file will be unzipped into the current directory. *Depending on the contents of the zip file, the unzipped files may be contained in a newly created directory within the current directory.* Close the terminal.
+To unzip a file called `filename.zip` in the VCE, open a terminal by clicking on the *Terminal* Launcher button. In the terminal, use the command `unzip filename.zip` and press enter: the file will be unzipped into the current directory. *Depending on the contents of the zip file, the unzipped files may be contained in a newly created directory within the current directory.* Close the terminal.
 
-If the `.zip` file is not in the VCE home directory, use the `cd PATH` command to change directory to the requierd location before running the `unzip` command, or specify the path to the file (`unzip PATH/TO/filename.zip`).
+If the `.zip` file is not in the VCE home directory, use the `cd PATH` command to change directory to the required location before running the `unzip` command, or specify the path to the file (`unzip PATH/TO/filename.zip`).
 
 ## Launcher Buttons
 

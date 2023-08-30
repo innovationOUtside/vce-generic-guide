@@ -4,7 +4,7 @@ The guide can be built into different output formats as required. such as Micros
 
 A script to generate the following assets can be run from the command line as: `./build_pdf_docx.sh MODULECODE`
 
-The biold files for each module can be found in: `./buildpack/MODULECODE`
+The build files for each module can be found in: `./buildpack/MODULECODE`
 
 - Jupyter Book html (built into `buildpack/MODULECODE/_generated/html`)
 - PDF (built into `buildpack/MODULE/_generated/MODULECODE.pdf`)
@@ -55,7 +55,7 @@ TO DO - tidy up: replace `</ComputerCode><ComputerCode>` with nothing??
 
 ## Running in devcontainer
 
-There is a `.devcontainer` confguration in this repository that loads a prebuilt container (`outm351dev/ou-doc-builder`) containing everything necessary to generate all output assets. *(A `Dockerfile` describing the image is also provided in the `.devcontainer` directory.)*
+There is a `.devcontainer` configuration in this repository that loads a prebuilt container (`outm351dev/ou-doc-builder`) containing everything necessary to generate all output assets. *(A `Dockerfile` describing the image is also provided in the `.devcontainer` directory.)*
 
 The `.devcontainer` can be used to build assets locally, e.g. in using VS Code, or in VS Code running in GitHub Codespaces.
 

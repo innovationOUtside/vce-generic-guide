@@ -15,13 +15,15 @@ OpenRefine is a powerful application for cleaning messy data, which we will use 
 :name: jl_openrefine_launcher
 :width: 5.772370953630796in
 
-OpenRefine Launcher button within JupyterLab.
+OpenRefine Launcher button within JupyterLab
+
+Screenshot of the JupyterLab launcher showing three launch buttons (*Python 3 (ipykernel)*, *nbsearch* and *OpenRefine*). The OpenRefine button, which uses a blue diamond as its logo, is highlighted.
 
 ```
 
 OpenRefine provides a browser based user interface that allows you to upload and clean tabular data files.
 
-The OpenRefine application runs in its own browser tab or browser window and should be opened from the JuypterLab *Launcher*.
+The OpenRefine application runs in its own browser tab or browser window and should be opened from the JupyterLab *Launcher*.
 
 ## Working with PostgreSQL
 
@@ -98,7 +100,7 @@ If you still cannot connect to the database, try restarting the VCE. (In a local
 
 ### Backing up and restoring databases using MongoDB
 
-To backup a MongoDB database such as the accidents, create a shared `backups` folder, in your {{local_dirname}} shared directory or as {{vce_db_backups}} inside inside the VCE, and run the following command (all on a single line) from a Notebook code cell:
+To backup a MongoDB database such as the accidents, create a shared `backups` folder, in your {{local_dirname}} shared directory or as {{vce_db_backups}} inside the VCE, and run the following command (all on a single line) from a Notebook code cell:
 
 ```bash
 ! mkdir -p ~/backups//postgres-backup/

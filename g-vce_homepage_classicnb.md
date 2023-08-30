@@ -33,7 +33,7 @@ To leave the Compute Home hosted VCE, click the *Logout* link towards the top ri
 
 When you return to the VCE and reopen a notebook, you will find your work saved from your previous sessions, although you may find you that a new kernel session has been started (see [](g-jupyter-notebook-gotchas)).
 
-At the end of each unit or block block, or whenever you have submitted notebook related assessement material, we **strongly** recommend that you download a copy of the completed Jupyter notebooks. On completion of the module, you may lose access to the hosted VCE and your hosted work files. To keep access to any changes you have made to your notebooks, you will need to download copies of them to your own computer.
+At the end of each unit or block, or whenever you have submitted notebook related assessment material, we **strongly** recommend that you download a copy of the completed Jupyter notebooks. On completion of the module, you may lose access to the hosted VCE and your hosted work files. To keep access to any changes you have made to your notebooks, you will need to download copies of them to your own computer.
 
 ## Non-appearance of notebooks in the local VCE
 
@@ -43,13 +43,13 @@ In the local VCE, if the classic Jupyter notebook server application is not avai
 
 2. the application *is* running, *but* on an incorrectly configured port inside the VCE
 
-3. the application *is* running, and on the correct port, *but* the port or the proxy used to expose it is being blocked in some way (for ewxample, by an overly aggressive anti-virus or firewall package).
+3. the application *is* running, and on the correct port, *but* the port or the proxy used to expose it is being blocked in some way (for example, by an overly aggressive anti-virus or firewall package).
 
 See [](g-troubleshooting) for more guidance on resolving problems or issues with the VCE.
 
 ## Using the classic Jupyter notebook environment
 
-The primary user interface for the the {{MCODE}} ({{PCODE}})  VCE is the classic Jupyter notebook home page, {numref}`nb_classic_homepage`.
+The primary user interface for the {{MCODE}} ({{PCODE}}) VCE is the classic Jupyter notebook home page, {numref}`nb_classic_homepage`.
 
 ```{figure} md_assets/media/nb_classic_homepage.png
 :name: nb_classic_homepage
@@ -124,4 +124,4 @@ A common way of transporting large files or bundles of files is to compress them
 
 To unzip a file called `filename.zip` in the VCE, click on the *New* button from the notebook homepage and select *Terminal* to open a terminal. In the terminal, use the command `unzip filename.zip` and press enter: the file will be unzipped into the current directory. *Depending on the contents of the zip file, the unzipped files may be contained in a newly created directory within the current directory.* Close the terminal.
 
-If the `.zip` file is not in the VCE home directory, use the `cd PATH` command to change directory to the requierd location before running the `unzip` command, or specify the path to the file (`unzip PATH/TO/filename.zip`).
+If the `.zip` file is not in the VCE home directory, use the `cd PATH` command to change directory to the required location before running the `unzip` command, or specify the path to the file (`unzip PATH/TO/filename.zip`).

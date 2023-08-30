@@ -34,7 +34,7 @@ For Windows 10 or 11 Home or Pro, Enterprise or Education, all at version 21H2 
 
 - check your [virtualisation settings](https://docs.docker.com/desktop/troubleshoot/topics/#virtualization):
 
-  - note: the 'Turn Windows features on or off dialog box can be obtained by doing the following: Click on Start and start typing 'Turn Windows features on or off' into the search bar;
+  - note: the 'Turn Windows features on or off' dialog box can be obtained by doing the following: Click on Start and start typing 'Turn Windows features on or off' into the search bar;
 
   - ensure the following Windows settings are enabled: *Virtual Machine Platform* and *Windows Subsystem for Linux*
 
@@ -162,7 +162,7 @@ From the *Run a new container* dialogue, use settings of the following form:
 
 - *container name:* {{container_name}} (all lower case)
 
-- *ports:* a mapping from the port number inside the container (for example, against `:8888/tcp` for a conventional Jupyter server) onto an location you can access in your browser; use host port 0 to randomly allocate a port, or a port number derived from the module code such as {{'`8' + NCODE + '`'}} (`8` followed by the numerical part of the {{MCODE}} module code)).
+- *ports:* a mapping from the port number inside the container (for example, against `:8888/tcp` for a conventional Jupyter server) onto a location you can access in your browser; use host port 0 to randomly allocate a port, or a port number derived from the module code such as {{'`8' + NCODE + '`'}} (`8` followed by the numerical part of the {{MCODE}} module code)).
 
 - *volumes:* using the file dialogue (click on the three dots) select the folder you want to share into the container from your host computer, such as the folder you created in your home computer documents folder previously. This folder can be shared by mounting it against the path {{vce_homedir}} inside the container (use your module code).
 
@@ -207,7 +207,7 @@ The first time you try to access the notebook user interface, you will be presen
 :width: 5.772222222222222in
 :height: 2.365972222222222in
 
-The Jupyter server password tolken prompt when the notebook server is first accessed
+The Jupyter server password token prompt when the notebook server is first accessed
 
 Screenshot of the Jupyter notebook server password / prompt page when the notebook server is first accessed. No suggested password / prompt is indicated.
 

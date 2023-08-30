@@ -1,8 +1,8 @@
 # Philosophy
 
-This repository attempts to provide a worflow for the production of OU virtual computing environment (VCE) guides that can be customised for different modules and differnt presentations of modules from generic, yet customisable, source documents and, where necessary, module specific compontents.
+This repository attempts to provide a workflow for the production of OU virtual computing environment (VCE) guides that can be customised for different modules and different presentations of modules from generic, yet customisable, source documents and, where necessary, module specific components.
 
-The workflow is based on a [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) / Sphinx workflow, with source documents created using 'MyST flavoured markdwon](https://mystmd.org/).
+The workflow is based on a [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) / Sphinx workflow, with source documents created using 'MyST flavoured markdown](https://mystmd.org/).
 
 Source documents may be considered to be of two main types:
 
@@ -24,7 +24,7 @@ The workflow currently supports the generation of the following output formats:
 
 The following conventions are suggested, and can be exploited in Sphinx `include_patterns` and `exclude_patterns` configuration settings:
 
-- reusable (cross-module) content uses filemanmes of the form `g-TOPIC.md`
+- reusable (cross-module) content uses filenames of the form `g-TOPIC.md`
 - module specific content uses filenames of the form `x-MODULECODE-TOPIC.md`
 
 ## Cross-document Referencing

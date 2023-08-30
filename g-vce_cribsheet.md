@@ -1,4 +1,4 @@
-# Virtual Computing Enviroment Cribsheet ({{module_code}}, {{presentation_code}} Presentation)
+# Virtual Computing Environment Cribsheet ({{module_code}}, {{presentation_code}} Presentation)
 
 ## VCE Cribsheet
 
