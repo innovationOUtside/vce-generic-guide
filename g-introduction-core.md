@@ -4,17 +4,11 @@ In this module, you will use a module specific virtualised computing environment
 
 The VCE provides a customised computing environment appropriate for your module and an interactive browser based user interface to access the software running inside it. The VCE is implemented using the widely supported Docker container approach.
 
-The hosted online environment is straightforward to use, and is suitable for most students. If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtualised computing environment using Docker containers, then you should choose to download and install the local environment.
+The hosted online environment is straightforward to use, and is suitable for most students ([](g-compute_home.md#compute-home-online-vce)). If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtualised computing environment using Docker containers, then you should choose to download and install the local environment ([](g-local_vce_quickstart.md#local-vce-quick-start)). Further advice on choosing between the two environments is provided below.
 
 Your work in the VCE will be saved within the environment: either in the cloud or on your local machine. If you are using the cloud environment, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
 
-You should follow the appropriate instructions for the VCE type you require:
-
-- [](g-compute_home.md#compute-home-online-vce)
-
-- [](g-local_vce_quickstart.md#local-vce-quick-start)
-
-The *{{MCODE}} Virtual Computing Environment Software Guide* includes the following information:
+This *{{MCODE}} Virtual Computing Environment Software Guide* includes the following information:
 
 - choosing between the hosted or local VCE
 
@@ -34,11 +28,7 @@ The *{{MCODE}} Virtual Computing Environment Software Guide* includes the follow
 
 You will access the software tools provided by the virtual computing environment (either the hosted VCE or the locally run VCE) via a web browser. For VCEs running Jupyter environments, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
 
-```{admonition} Browser favourites or bookmarks
-
-To make it easier to access a locally running VCE, we suggest that you add a browser bookmark for the default web page published by the locally running VCE container. For the remotely hosted VCE, we suggest that you access Compute Home via a bookmark for the module *Resources* page on the VLE.
-
-```
+*To make it easier to access a locally running VCE, we suggest that you add a browser bookmark for the default web page published by the locally running VCE container. For the remotely hosted VCE, we suggest that you access Compute Home via a bookmark for the module *Resources* page on the VLE.*
 
 ## Choosing between the OU hosted and the locally run VCE
 
@@ -79,5 +69,3 @@ If you do encounter a problem, the section [](g-additional-support.md#additional
 ## Where next?
 
 The next section, {numref}`g-compute_home.md#compute-home-online-vce`, {ref}`g-compute_home.md#compute-home-online-vce`, describes how to get started with the Open University online hosted VCE. There are then two sections — {numref}`g-local_vce_quickstart.md#local-vce-quick-start` ({ref}`g-local_vce_quickstart.md#local-vce-quick-start`) and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`g-local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a locally run version of the VCE on your own computer. If you want to retain access to the VCE at the end of the module, the local VCE will remain available on your computer until you decide to delete it. You do not need to read those sections if you only wish to use the hosted Compute Home service. 
-
-Several sections then follow that describe how to get started using the environment, how to make it more accessible to your needs, and how to troubleshoot any issues that arise.
