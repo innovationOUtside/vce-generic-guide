@@ -31,9 +31,16 @@ rm -r _build
 rm -r $BUILDPACK/$OUT/
 mkdir -p $BUILDPACK/$OUT/
 
+# There is also an -all switch that forces rebuild
 JB_BUILD="jb build . --config $CONFIG --toc $TOC" # --path-output $OUT"
 
 echo "Using base command: $JB_BUILD"
+
+# Single page cribsheet
+jb build . --config $CONFIG --toc buildpack/default/_toc_cribsheet.yml --builder pdflatex
+pdfsak --input-file _build/latex/book.pdf --output $BUILDPACK/$OUT/${MODULE}_cribsheet_logo.pdf --extract-pages "5"
+
+rm -r _build
 
 # Default build of HTML book
 $JB_BUILD
@@ -50,7 +57,9 @@ $JB_BUILD  --builder custom --custom-builder xml #builds to _build/xml
 
 
 # OU-XML conversion
+rm -rf _build/ouxml
 obt convert-to-ouxml . #builds to _build/ouxml
+zip -r $BUILDPACK/$OUT/$MODULE-ouxml.zip _build/ouxml
 
 # We can also generate output docs from the singlehtml doc
 # Source file - generated from jb singlehtml builder
@@ -75,7 +84,4 @@ cp _build/latex/book.pdf $BUILDPACK/$OUT/$MODULE.pdf
 # Brand PDF
 ou_nb_brandify -o $BUILDPACK/$OUT -y 2023
 
-# Single page cribsheet
-jb build . --config $CONFIG --toc buildpack/default/_toc_cribsheet.yml --builder pdflatex
-pdfsak --input-file _build/latex/book.pdf --output $BUILDPACK/$OUT/${MODULE}_cribsheet.pdf --extract-pages "5"
 
