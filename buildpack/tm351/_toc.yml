@@ -3,20 +3,20 @@
 format: jb-book
 root: g-vce_cribsheet
 #options:  # The options key will be applied to all chapters, but not sub-sections
-#  - numbered: True
+#  numbered: True
 parts:
-  - caption: Virtual Computing Environment Guide
+  - caption: VCE computing guide
     numbered: true
     chapters:
-      - file: g-introduction
+      - file: g-introduction-core
       - file: g-compute_home
       - file: g-local_vce_quickstart
       - file: g-local_vce_detailed
       - file: g-vce_homepage_jupyterlab
       #- file: g-jupyterlab_git
       - file: x-tm351-extras
-      - file: g-notebook_gotchas
-      - file: g-additional_support
+      - file: g-jupyter-notebook-gotchas
+      - file: g-additional-support
       - file: g-troubleshooting
       - file: g-vce_technical_architecture
 

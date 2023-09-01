@@ -39,14 +39,16 @@ lang: en
 execute:
   execute_notebooks: force
 
+only_build_toc_files: true
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+#bibtex_bibfiles:
+#  - references.bib
 
 # Information about where the book exists on the web
 repository:
@@ -141,7 +143,7 @@ ou:
   module_code: TM351
   module_title: Data Management and Analysis
   block: 0
-  block_title: VCE Software Guide
+  block_title: VCE Computing Guide
   presentation: "J"
   first_published: 2023
   isbn:

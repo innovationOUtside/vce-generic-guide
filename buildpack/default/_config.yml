@@ -40,14 +40,16 @@ lang: en
 execute:
   execute_notebooks: force
 
+only_build_toc_files: true
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+#bibtex_bibfiles:
+#  - references.bib
 
 # Information about where the book exists on the web
 repository:
@@ -141,6 +143,9 @@ ou:
   module_title: Open University VCE Software Guide
   block: 1
   block_title: Introduction
+  # item_title*: 
+  # caption_as_title*:
+  # image_path_prefix: https://openuniv.sharepoint.com/sites/mmodules/m348/lmimages/
   presentation: "J"
   first_published: 2023
   isbn:

@@ -22,7 +22,7 @@
 ##     UPDATES     ##
 ##                 ##
 #####################
-title: Virtual Computing Environment (VCE) Software Guide
+title: VCE Computing Guide
 author: The Open University
 
 include_patterns: ["g-*.md", "x-tm129*"] # also include x-modulecode*
@@ -42,14 +42,16 @@ lang: en
 execute:
   execute_notebooks: force
 
+only_build_toc_files: true
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+#bibtex_bibfiles:
+#  - references.bib
 
 # Information about where the book exists on the web
 repository:

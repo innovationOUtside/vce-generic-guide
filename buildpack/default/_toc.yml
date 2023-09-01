@@ -3,9 +3,9 @@
 format: jb-book
 root: _copyright_notice
 #options:  # The options key will be applied to all chapters, but not sub-sections
-#  - numbered: True
+#  numbered: True
 parts:
-  - caption: Virtual Computing Environment Guide
+  - caption: VCE computing guide
     numbered: true
     chapters:
       - file: g-introduction
@@ -15,10 +15,10 @@ parts:
       - file: g-compute_home_jl
       - file: g-local_vce_quickstart
       - file: g-local_vce_detailed
-      - file: g-notebook_gotchas
+      - file: g-jupyter-notebook-gotchas
       - file: g-jupyterlab
       - file: g-jl_git
-      - file: g-additional_support
+      - file: g-additional-support
       - file: g-troubleshooting
       - file: g-vce-cribsheet
       - file: g-vce_technical_architecture
