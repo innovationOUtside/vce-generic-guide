@@ -4,10 +4,16 @@ This repository attempts to provide a workflow for the production of OU virtual 
 
 The workflow is based on a [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) / Sphinx workflow, with source documents created using 'MyST flavoured markdown](https://mystmd.org/).
 
-Source documents may be considered to be of two main types:
+Source documents may be considered to be of three main types:
 
 - *generic documents* (`g-TOPIC.md`), containing content relevant to two or more modules;
 - *module specific documents (`x-MODULECODE-TOPIC.md`), containing content specific to a particular module
+- *generic transcluded documents* containing generic content that may be transcluded in a module specific document. Transclusion is support by importing content using the construction:
+
+````
+```{include} ./g-introduction-core.md
+```
+````
 
 All documents (generic and module specific) are customisable using substitution labels defined in the appropriate `config.yml` file as `myst_substitutions`. These include things like module code, module name and module presentation,
 
