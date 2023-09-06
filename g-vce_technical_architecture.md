@@ -37,9 +37,10 @@ The shared folder is accessible from your browser (so you can upload files from 
 Many VCEs provide access to the Jupyter classic notebook or Jupyter Lab interactive environment via a web browser. The Jupyter notebook user interfaces provides an interactive notebook style environment for writing, executing and capturing the output of executable program code using a wide variety of programming languages, such as Python or R.
 
 Within the VCE, applications publish services on port numbers associated with the 'localhost' network *inside* the virtual environment. Docker then *forwards* the traffic on published ports to another set of port numbers that are visible on the localhost network relative to the host.
-The localhost network within the VCE is *not* the same network as the localhost network on the host. This is shown in Figure 18.
+The localhost network within the VCE is *not* the same network as the localhost network on the host. This is shown in {numref}`port_mapping`.
 
 ```{figure} md_assets/media/image21.png
+:name: port_mapping
 :width: 5.772279090113736in
 :height: 3.119663167104112in
 
