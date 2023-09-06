@@ -8,21 +8,6 @@ The hosted online environment is straightforward to use, and is suitable for mos
 
 Your work in the VCE will be saved within the environment: either in the cloud or on your local machine. If you are using the cloud environment, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
 
-This *{{MCODE}} Virtual Computing Environment Software Guide* includes the following information:
-
-- choosing between the hosted or local VCE
-
-- accessing the hosted VCE
-
-- installing the VCE on your own computer, including testing your installation
-
-- keeping a backup of your work
-
-- accessibility information
-
-- information on finding additional support, and guidance on where to look for or ask for help
-
-- troubleshooting
 
 ## Browser requirements
 
