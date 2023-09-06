@@ -31,7 +31,7 @@ You can also add additional shortcuts and/or edit exist shortcuts via the Edit K
 
 The Jupyter notebook dialogue box for editing keyboard shortcuts
 
-Screenshot of the Jupyter notebook settings dialog for editing keyboard shortcuts. Examples of several commands for which shortcuts are available are listed, along with the associated keyboard shortcut, if defined. 
+Screenshot of the Jupyter notebook settings dialog for editing keyboard shortcuts. Examples of several commands for which shortcuts are available are listed, along with the associated keyboard shortcut, if defined.
 
 Example commands listed include: "shutdown kernel", "confirm shutdown kernel", "restart kernel", "restart kernel and ruin all cells", "reastart kernel and clear output", "interrupt kernel" and "run cell".
 ```

@@ -29,8 +29,6 @@ This extension works for both the hosted and local container environments, with 
   - advantages: for students who always access the remote environment using the same physical, computer, they will work with copies of files that exist on that computer; this means that a student can use a local environment *and* the hosted environment to work on *exactly* the same files.
   - disadvantages: if a student accesses the hosted environment from a different computer, their previously worked on files *will not* be available unless they were manually copied into the persistent file storage provided by the hosted environment.
 
-
-
 ### Image Editor
 
 The [`jupyterlab-contrib/jlab-image-editor`](https://github.com/jupyterlab-contrib/jlab-image-editor) provides a range of additional image editing tools.
@@ -46,7 +44,6 @@ JupyterLab image editor.
 Screenshot showing the JupyterLab UI in which a paintbrush icon in the left hand vertical application toolbar is selected. In the center panel an image editor is displayed, depicting an omage that has been drawn over with a pen stroke. Image efitor menu options can also be seen: crop, rotate, save image as..., filter, flip, draw and clear.,
 
 ```
-
 
 ### draw.io Drawing Package
 
@@ -73,7 +70,6 @@ The draw.io application opened in JupyterLab.
 ```
 
 Raw (editable) files are saved to the current environment directory as `.dio` files. Unfortunately, there doesn't appear to be a way to export images, so having drawn a diagram, you would have to screenshot it in order to get an image file corresponding to your diagram.
-
 
 ## Jupyter Notebook Templates
 

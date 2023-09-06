@@ -9,7 +9,6 @@ The RoboLab environment provides:
 - a browser based two dimensional graphical robot simulation environment widget that runs inside a classic Jupyter notebook environment;
 - several IPython magic commands that allow code entered in the notebook from which the simulator is launched to control the simulator.
 
-
 ```{figure} md_assets/media/tm129_nbev3devsim.png
 :name: tm129_nbev3devsim.png
 :width: 100%
@@ -23,7 +22,6 @@ The top panel shows a range of buttons that toggle the display of settings and p
 The *Simulator Controls* panel depicts a further range of buttons for controlling the simulator and its display (*World* (selected), *Positioning*, and *Code Display*); a pen up / down slider button and pen colour selection list, with "red" selected; a simulator "Start" / "Stop" slider button, and a *Clear trace* button.
 
 The selected *World* button is responsible for the display of the *Simulator world* panel. This depecits the 2D simulator world. A similated robot is sowho in plan view with two wheels, one on each side, and two sensor "eyes" at the front of the robot, positioned quite close together. The robot is facing to the right. The world background (white) shows three separate vertical stripes, with space between them, coloured red green and blue respectively.
-
 
 ```
 

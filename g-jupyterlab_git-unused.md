@@ -4,7 +4,7 @@ The off-the-shelf [`jupyterlab/jupyterlab-git`](https://github.com/jupyterlab/ju
 
 ##  `git` Repository and File Management
 
-If the `git` managed repository is configured by cloning a private remote repository on Github, the user is automatically prompted for their GitHub username and token (tokens can be set from https://github.com/settings/tokens/new; the only permissions that need granting are the permissions over working with repositories).
+If the `git` managed repository is configured by cloning a private remote repository on Github, the user is automatically prompted for their GitHub username and token (tokens can be set from `https://github.com/settings/tokens/new`; the only permissions that need granting are the permissions over working with repositories).
 
 ![](md_assets/media/jl_git_menu.png)
 
