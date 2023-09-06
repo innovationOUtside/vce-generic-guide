@@ -37,9 +37,9 @@ JB_BUILD="jb build . --config $CONFIG --toc $TOC" # --path-output $OUT"
 echo "Using base command: $JB_BUILD"
 
 # Single page cribsheet
-jb build . --config $CONFIG --toc buildpack/default/_toc_cribsheet.yml --builder pdflatex
+jb build . --config $BUILDPACK/_config_cribsheet.yml --toc $BUILDPACK/_toc_cribsheet.yml --builder pdflatex
 pdfsak --input-file _build/latex/book.pdf --output $BUILDPACK/$OUT/${MODULE}_cribsheet_logo.pdf --extract-pages "5"
-
+#ou_pdf_brandify -o . -X 22 -Y 5 -S L -s 0.2
 rm -r _build
 
 # Default build of HTML book

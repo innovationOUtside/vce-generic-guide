@@ -1,4 +1,5 @@
-# Book settings
+# Configuration file for : M348 2023J
+
 # Learn more at https://jupyterbook.org/customize/config.html
 
 #############################################
@@ -16,16 +17,16 @@
 #############################################
 
 
-
 #####################
 ##                 ##
 ##     UPDATES     ##
 ##                 ##
 #####################
-title: Virtual Computing Environment (VCE) Software Guide
+title: VCE Computing Guide (M348-23J)
 author: The Open University
-include_patterns: ["g-*.md"] # also include: x-modulecode*, eg x-ab123*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*"] # "*classicnb*", "*jupyterlab*"
+
+include_patterns: ["g-*.md", "x-m348*"] # also include x-modulecode*
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*jupyterlab*", "*extras*"] # "*classicnb*",
 #####################
 ##                 ##
 ##       END       ##
@@ -44,6 +45,7 @@ only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds
 latex:
+  latex_engine: "xelatex"
   latex_documents:
     targetname: book.tex
 
@@ -67,35 +69,37 @@ html:
 sphinx:
   extra_extensions:
     - ou_book_theme
+    - sphinx_jupyterbook_latex
     #- sphinxcontrib.mermaid
   config:
     html_theme: ou_book_theme
     language: en
     myst_heading_anchors: 3
     numfig: true
+    numfig_format: {'figure':'Figure %s'}
+    numfig_secnum_depth: 1 #eg 0:1 1:2.1 2:3.2.1
     latex_elements:
       pointsize: 12pt # Supported? 10pt, 11pt, 12pt
       geometry: \usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
     html_permalinks: false
-    numfig_format: {'figure':'Figure %s'}
-    #########################################
-    ##                                     ##
-    ##   MODULE AND PRESENTATION UPDATES   ##
-    ##                                     ##
-    #########################################
+    #####################
+    ##                 ##
+    ##     UPDATES     ##
+    ##                 ##
+    #####################
     copyright: "2023 The Open University"
     myst_substitutions:
-      MCODE: XY987
-      NCODE: "987"
-      MNAME: "TO DO REPLACE ME Module Name"
-      PCODE: 54Z
+      MCODE: M348
+      NCODE: "348"
+      MNAME: "Applied Statistical Modelling"
+      PCODE: 23J
       YEAR: "2023"
-      jupyter_help_forum: "appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum)"
-      #######################
-      ##                   ##
-      ##         END       ##
-      ##                   ##
-      #######################
+      jupyter_help_forum: "'Jupyter notebooks' forum"
+    #####################
+    ##                 ##
+    ##       END       ##
+    ##                 ##
+    #####################
       # DEFAULT VALUES / RULES
       # Alternatively, we could enter these explicitly
       # and then check them against linting rules?
@@ -139,15 +143,14 @@ parse:
 ##                 ##
 #####################
 ou:
-  module_code: AB123
-  module_title: Open University VCE Software Guide
-  block: 1
-  block_title: Introduction
-  # item_title*: 
-  # caption_as_title*:
-  # image_path_prefix: https://openuniv.sharepoint.com/sites/mmodules/m348/lmimages/
+  module_code: M348
+  module_title: Applied Statistical Modelling
+  block: 0
+  item_title: VCE Computing Guide
+  block_title: VCE Computing Guide
   presentation: "J"
   first_published: 2023
+  image_path_prefix: https://openuniv.sharepoint.com/sites/mmodules/m348/lmimages/
   isbn:
   edition:
 #####################

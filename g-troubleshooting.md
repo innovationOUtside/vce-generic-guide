@@ -33,11 +33,15 @@ To change directory to the desired location, open a terminal and use the `cd` co
 
 When running the `docker run` command, if you see the error message:
 
-`docker: Error response from daemon: Conflict. The container nameCONTAINERNAME is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.`
+`docker: Error response from daemon: Conflict. The container name CONTAINERNAME is already in use by container "...". You have to remove (or rename) that container to be able to reuse that name.`
 
 you have already created a container with that container name. You should be able to restart it using the command `docker restart CONTAINERNAME` or from the Docker Desktop.
 
 If you need to create a new instance of the container, delete the current instance by running the command `docker rm -f CONTAINERNAME` or using the Docker Desktop, and then try running the `docker run` command again.
+
+## Docker container hangs on startup or raises "out of space" error
+
+If the Docker container hangs on startup, or raises an "out of space" error, on the command line run the command: `docker system prune`. When prompted, accepting the request to continue will delete any stopped containers and cached Docker files. Restart the container.
 
 ## Recovering a Docker container after sleep
 
@@ -163,15 +167,16 @@ The notebook server may also run into memory problems if you have a large number
 If in a long running container, if you close a notebook but do not stop the associated kernel, you may end up with a large number of still running kernels even if you do not have any notebook tabs open in your browser. You can find a list of running notebooks from the *Running*
 tab on the notebook homepage.
 
-You can also see an indication of which notebooks still have running kernels associated with them when viewing a file listing on the notebook home page, Figure 19.
+You can also see an indication of which notebooks still have running kernels associated with them when viewing a file listing on the notebook home page, {numref}`notebook_running_indicator`.
 
 ```{figure} md_assets/media/image26.png
+:name: notebook_running_indicator
 :width: 5.772270341207349in
 :height: 3.6662806211723535in
 
-Figure 20 An example of the notebooks folder home page. The actual directory file path and file listing is indicative only.
+An example of the notebooks folder home page. The actual directory file path and file listing is indicative only.
 
-DESCRIPTION: A screenshot of a web browser showing the 'Files' tab of the Jupyter notebook environment. A number of items are shown pixellated, but the one with a green icon has an arrow pointing to it labelled 'Running notebook'.
+A screenshot of a web browser showing the 'Files' tab of the Jupyter notebook environment. A number of items are shown pixellated, but the one with a green icon has an arrow pointing to it labelled 'Running notebook'.
 
 ```
 

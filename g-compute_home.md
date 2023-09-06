@@ -8,8 +8,6 @@ Click the *Start* button for the *{{mnamecode}} {{PCODE}}* VCE to launch the env
 
 ```{figure} md_assets/media/compute_home.png
 :name: your_compute_home_page
-:width: 5.772510936132983in
-:height: 1.571953193350831in
 
 Your Compute Home page. The presentation code will reflect the presentation you are enrolled on
 
@@ -21,7 +19,6 @@ You may have to wait for several minutes while the environment is set up for you
 
 ```{figure} md_assets/media/compute_home_starting.png
 :name: wait_on_vce_start
-:width: 4.511154855643045in
 
 Waiting while the VCE is set up
 

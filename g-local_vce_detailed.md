@@ -133,7 +133,7 @@ Screenshot showing results of searching for an image in Docker Desktop. A select
 
 You can also download an image from the command line by running the following command from the command line:
 
-{{'`docker pull ousefulcoursecontainer/ou-' + MCODE|lower + '`'}}
+{{'`docker pull ousefulcoursecontainers/ou-' + MCODE|lower + '`'}}
 
 Enter the complete command using lower-cased characters.
 
