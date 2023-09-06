@@ -8,22 +8,6 @@ The hosted online environment is straightforward to use, and is suitable for mos
 
 Your work in the VCE will be saved within the environment: either in the cloud or on your local machine. If you are using the cloud environment, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
 
-This *{{MCODE}} Virtual Computing Environment Software Guide* includes the following information:
-
-- choosing between the hosted or local VCE
-
-- accessing the hosted VCE
-
-- installing the VCE on your own computer, including testing your installation
-
-- keeping a backup of your work
-
-- accessibility information
-
-- information on finding additional support, and guidance on where to look for or ask for help
-
-- troubleshooting
-
 ## Browser requirements
 
 You will access the software tools provided by the virtual computing environment (either the hosted VCE or the locally run VCE) via a web browser. For VCEs running Jupyter environments, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
@@ -65,6 +49,24 @@ If something doesn't appear to be working, try to read through the error message
 Please remember when raising software issues that posting error logs can really help others to try to solve the problem. Saying 'My software is broken/doesn't work/prints out scary red or purple messages' is not helpful. However, sharing those scary messages probably is. Most importantly of all, **don't be embarrassed** about sharing error messages: they often contain the key to the solution of whatever problem caused them.
 
 If you do encounter a problem, the section [](g-additional-support.md#additional-support) describes a general strategy for working through the problem and how to ask for help. A later section, [](g-troubleshooting.md#troubleshooting), provides more specific guidance for working through particular sorts of issues with the different software applications.
+
+## How the VCE computing] guide is structured
+
+This guide includes the following information:
+
+- choosing between the hosted or local VCE
+
+- accessing the hosted VCE
+
+- installing the VCE on your own computer, including testing your installation
+
+- keeping a backup of your work
+
+- accessibility information
+
+- information on finding additional support, and guidance on where to look for or ask for help
+
+- troubleshooting
 
 ## Where next?
 
