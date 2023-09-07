@@ -8,7 +8,7 @@ In many cases, the following quick start instructions should be enough to get yo
 
 ## Creating a shared folder
 
-To share files between your desktop computer and the local VCE, we recommend creating a shared directory in your home directory on your host computer with the name {{local_dirname}}. 
+To share files between your desktop computer and the local VCE, we recommend creating a shared directory in your home directory on your host computer with the name {{local_dirname}}.
 
 We recommend creating the shared folder in your documents folder. On a Windows computer, this might be called something like {{winpath}} ; on a Mac, {{macpath}} or {{macpath2}}.
 

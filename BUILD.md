@@ -19,7 +19,7 @@ The following workaround generates some sort of Microsoft Word document but it's
 
 ```bash
 # Build a single HTML page bview of the book
-jupyter-book build . --builder singlehtml 
+jupyter-book build . --builder singlehtml
 
 # cd into the book dir
 cd _build/singlehtml

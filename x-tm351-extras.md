@@ -10,7 +10,6 @@ The {{MCODE}} ({{PCODE}}) VCE contains several applications and services in addi
 
 OpenRefine is a powerful application for cleaning messy data, which we will use later in the module. OpenRefine can be started from the JupyterLab launcher, {numref}`jl_openrefine_launcher`.
 
-
 ```{figure} md_assets/media/jl_openrefine_launcher.png
 :name: jl_openrefine_launcher
 :width: 5.772370953630796in
@@ -55,7 +54,7 @@ If you still cannot connect to the database, try restarting the VCE. (In a local
 
 ### Backing up and restoring databases using PostgreSQL
 
-To back up a PostgreSQL database such as a movies database into a folder postgres-backup create a shared `backups` folder, in your {{local_dirname}} shared directory or as {{vce_db_backups}} inside the VCE and run the following command from a Notebook code cell (all on a single line): 
+To back up a PostgreSQL database such as a movies database into a folder postgres-backup create a shared `backups` folder, in your {{local_dirname}} shared directory or as {{vce_db_backups}} inside the VCE and run the following command from a Notebook code cell (all on a single line):
 
 ```bash
 ! mkdir -p ~/backups//postgres-backup/
@@ -64,7 +63,7 @@ To back up a PostgreSQL database such as a movies database into a folder postgre
 
 Note that if the `movies` database does not exist, you will get an error if you try to back it up.
 
-To restore a PostgreSQL database from a previously taken backup, such as a backup of the movies database, run the command (all on a single line): 
+To restore a PostgreSQL database from a previously taken backup, such as a backup of the movies database, run the command (all on a single line):
 
 `! psql tm351    < ~/backups/postgres-backup/tm351.sql`
 
@@ -107,6 +106,6 @@ To backup a MongoDB database such as the accidents, create a shared `backups` fo
 ! mongodump --port=27017 --db accidents --out ~/backups/mongo-backup/accidents
 ```
 
-To restore a MongoDB database from a previously taken backup, such as a backup of the accidents database, run the command (all on a single line): 
+To restore a MongoDB database from a previously taken backup, such as a backup of the accidents database, run the command (all on a single line):
 
 `mongorestore --port=27017 --drop ~/backups/mongo-backup/accidents`

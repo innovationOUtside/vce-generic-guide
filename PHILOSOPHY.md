@@ -25,7 +25,6 @@ The workflow currently supports the generation of the following output formats:
 - OU branded PDF
 - OU-XML
 
-
 ## File naming conventions
 
 The following conventions are suggested, and can be exploited in Sphinx `include_patterns` and `exclude_patterns` configuration settings:
@@ -49,4 +48,3 @@ The MyST parser supports referencing within and across documents. References can
 Ideally, if content is reused across two or more modules, it should be produced as a generic customisable content file.
 
 *We could increase the complexity of the source documents to include richer linking, conditional content, etc., but the intention is to try to limit the computational complexity of the source documents.*
-

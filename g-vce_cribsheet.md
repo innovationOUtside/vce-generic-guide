@@ -30,4 +30,3 @@ substituting in the following values:
 - __IMAGE__: {{docker_image}}
 
 Alternatively, use Docker Desktop to launch a container from the required image using the above settings; select your {{local_dirname}} shared folder to be mounted against the {{vce_homedir}} directory.
-

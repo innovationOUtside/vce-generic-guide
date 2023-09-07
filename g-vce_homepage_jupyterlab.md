@@ -51,7 +51,7 @@ This extension supports four thematically coloured background cells that identif
 - *activity* (blue): cells that describe activities or exercises;
 - *learner* (yellow): calls yo action, where you are expected to modify the cell contents;
 - *tutor* (pink): warning text, or text added as feedback by a tutor on assessed material;
-- *solution/success* (green): occasionally used to signify a "correct" answer to a task. 
+- *solution/success* (green): occasionally used to signify a "correct" answer to a task.
 
 ```{figure} md_assets/media/empinken_jl.png
 :name: jl_empinken
@@ -113,8 +113,7 @@ The table of contents offers two main benefits:
 
 Several extensions support the rendering of enriched markdown in JupyterLab and RetroLab notebooks, powered by the [`agoose77/jupyterlab-markup`](https://github.com/agoose77/jupyterlab-markup) package. These include:
 
-The [`executablebooks/jupyterlab-myst`](https://github.com/executablebooks/jupyterlab-myst) extension supports the rendering of enriched MyST flavoured markdown from notebook markdown cells [[docs](https://mystmd.org/guide/quickstart-jupyter-lab-myst)]. This includes styled admonition blocks, to do lists, and the rendering of diagrams defined using `mermaid.js` syntax [[docs](https://mystmd.org/guide/diagrams)]. 
-
+The [`executablebooks/jupyterlab-myst`](https://github.com/executablebooks/jupyterlab-myst) extension supports the rendering of enriched MyST flavoured markdown from notebook markdown cells [[docs](https://mystmd.org/guide/quickstart-jupyter-lab-myst)]. This includes styled admonition blocks, to do lists, and the rendering of diagrams defined using `mermaid.js` syntax [[docs](https://mystmd.org/guide/diagrams)].
 
 For example, the following MyST styled admonition block will be rendered as show in {numref}`jl_myst_warning`:
 

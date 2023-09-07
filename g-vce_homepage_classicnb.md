@@ -91,12 +91,10 @@ Screenshot of a classic Jupyter notebook homepage, with the "Upload" button indi
 
 ### Downloading files
 
-
 You can download a single notebook to your computer desktop from either the hosted or the local VCE. To download a notebook your currently have open, use the `File -> Download as -> Notebook` menu option, {numref}`classic_nb_download_nb`. This will download the notebook, including all the outputs.
 
 ```{figure} md_assets/media/nbclassic_nb_download.png
 :name: classic_nb_download_nb
-:alt: 
 
 Classic Jupyter notebook homepage, with download archive button highlighted
 
@@ -108,7 +106,6 @@ You can also download multiple notebooks from the hosted VCE, or export notebook
 
 ```{figure} md_assets/media/image19.png
 :name: classc_nb_download_multiple
-:alt: 
 :width: 5.772222222222222in
 :height: 1.211111111111111in
 
