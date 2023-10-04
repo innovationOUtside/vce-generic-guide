@@ -1,4 +1,4 @@
-# Additional Software for {{MCODE}}
+# Additional Software
 
 The {{MCODE}} ({{PCODE}}) VCE contains several applications and services in addition to the Jupyter environment, in particular:
 
