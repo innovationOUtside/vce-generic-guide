@@ -129,7 +129,7 @@ Screenshot showing results of searching for an image in Docker Desktop. A select
 
 ```
 
-- search for and select the {{docker_image}} image from the search results; then from the drop down tag list select the tag that matches the presentation code for this presentation of the module: {{pcode_lc}}. Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download (up to 20 minutes depending on your network connection).* You should only need to download the image once.
+- search for {{docker_image_name}} and select the {{docker_image_base}} image from the search results; then from the drop down tag list select the tag that matches the presentation code for this presentation of the module: {{pcode_lc}}. Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download (up to 20 minutes depending on your network connection).* You should only need to download the image once.
 
 You can also download an image from the command line by running the following command from the command line:
 
