@@ -6,7 +6,7 @@ The VCE provides a customised computing environment appropriate for your module 
 
 The hosted online environment is straightforward to use, and is suitable for most students ([](g-compute_home.md#compute-home-online-vce)). If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtualised computing environment using Docker containers, then you should choose to download and install the local environment ([](g-local_vce_quickstart.md#local-vce-quick-start)). Further advice on choosing between the two environments is provided below.
 
-Your work in the VCE will be saved within the environment: either in the cloud or on your local machine. If you are using the cloud environment, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
+Your work in the VCE will be saved within the environment: either in the cloud (for the hosted VCE) or on your local machine (for the local VCE). If you are using the hosted VCE, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
 
 ## Browser requirements
 
@@ -20,7 +20,7 @@ The online hosted Compute Home service provides the simplest and easiest way of 
 
 If you need to access the VCE in an offline environment, or if you prefer not to use the hosted environment, you can run the VCE locally on your own computer. The local environment also provides a way of using the VCE when the module has finished and the online VCE is no longer available.
 
-The online hosted VCE and the locally run VCE provide the same working environment, so your decision as to which environment to use may depend on convenience as much as anything. You may want to make use of both environments, accessing each of them at different times or in different circumstances. However, when doing so, you will have to manage how you synchronise your files across the environments yourself.
+The hosted VCE and the local VCE provide the same working environment, so your decision as to which environment to use may depend on convenience as much as anything. You may want to make use of both environments, accessing each of them at different times or in different circumstances. However, when doing so, you will have to manage how you synchronise your files across the environments yourself.
 
 ## Backing up your work
 
@@ -54,20 +54,22 @@ If you do encounter a problem, the section [](g-additional-support.md#additional
 
 This guide includes the following information:
 
-- choosing between the hosted or local VCE
+- choosing between the hosted or local VCE (Subsection {numref}`g-introduction-core.md#Choosing-between-the-OU-hosted-and-the-locally-run-VCE`)
 
-- accessing the hosted VCE
+- accessing the hosted VCE (Section {numref}`g-compute_home.md#compute-home-online-vce`)
 
-- installing the VCE on your own computer, including testing your installation
+- installing the VCE on your own computer, including testing your installation (Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance`)
 
-- keeping a backup of your work
+- working with the VCE, including uploading and downloading files (Section {numref}`
 
-- accessibility information
+- accessibility information (Section {numref}`g-accessibility_classicnb#classic-notebook-accessibility`)
 
-- information on finding additional support, and guidance on where to look for or ask for help
+- information on finding additional support, and guidance on where to look for or ask for help (Section {numref}`g-additional-support#additional-support`)
 
-- troubleshooting
+- troubleshooting (Section {numref}`g-troubleshooting#troubleshooting`
 
 ## Where next?
 
-The next section, {numref}`g-compute_home.md#compute-home-online-vce`, {ref}`g-compute_home.md#compute-home-online-vce`, describes how to get started with the Open University online hosted VCE. There are then two sections — {numref}`g-local_vce_quickstart.md#local-vce-quick-start` ({ref}`g-local_vce_quickstart.md#local-vce-quick-start`) and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`g-local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a locally run version of the VCE on your own computer. If you want to retain access to the VCE at the end of the module, the local VCE will remain available on your computer until you decide to delete it. You do not need to read those sections if you only wish to use the hosted Compute Home service.
+The next section, Section {numref}`g-compute_home.md#compute-home-online-vce`, {ref}`g-compute_home.md#compute-home-online-vce`, describes how to get started with the hosted VCE. You do not need to read those sections if you only wish to use the local VCE.
+
+There are then two sections — Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` ({ref}`g-local_vce_quickstart.md#local-vce-quick-start`) and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`g-local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a locally run version of the VCE on your own computer. If you want to retain access to the VCE at the end of the module, the local VCE will remain available on your computer until you decide to delete it. You do not need to read those sections if you only wish to use the hosted VCE.
