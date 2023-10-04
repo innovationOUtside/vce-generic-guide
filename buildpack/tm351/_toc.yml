@@ -8,15 +8,17 @@ parts:
   - caption: VCE computing guide
     numbered: true
     chapters:
-      - file: g-introduction-core
+      - file: g-introduction-tm351
       - file: g-compute_home
       - file: g-local_vce_quickstart
       - file: g-local_vce_detailed
+      - file: g-vce_homepage_classicnb
+      - file: g-accessibility_classicnb
       - file: g-vce_homepage_jupyterlab
       #- file: g-jupyterlab_git
       - file: x-tm351-extras
       - file: g-jupyter-notebook-gotchas
-      - file: g-additional-support
       - file: g-troubleshooting
+      - file: g-additional-support
       - file: g-vce_technical_architecture
 

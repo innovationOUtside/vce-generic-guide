@@ -21,10 +21,10 @@
 ##     UPDATES     ##
 ##                 ##
 #####################
-title: TM351 (23J) Virtual Computing Environment (VCE) Software Guide
+title: Virtual Computing Environment (VCE) Software Guide (TM351-23J)
 author: The Open University
 include_patterns: ["g-*.md", "x-tm351*"] # also include x-modulecode*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*classicnb*"]
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*"]
 #####################
 ##                 ##
 ##       END       ##
@@ -104,12 +104,18 @@ sphinx:
       container_name: "{{'`' + MCODE|lower + 'vce`'}}"
       vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
       vce_db_backups: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '/backups`'}}"
+      docker_image_name: "{{'`ou-' + MCODE|lower + '`'}}"
+      docker_image_base: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + '`'}}"
       docker_image: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
       winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
       macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"
       macpath2: "{{'`~/Documents/' + MCODE|upper + 'VCE`'}}"
       localhost_port: "{{'`http://localhost:8' + NCODE + '`'}}"
       localhost_port2: "{{'`http://127.0.0.1:8' + NCODE + '`'}}"
+      localhost_lab: "{{'`http://localhost:8' + NCODE + '/lab`'}}"
+      localhost_lab2: "{{'`http://127.0.0.1:8' + NCODE + '/lab`'}}"
+      localhost_tree: "{{'`http://localhost:8' + NCODE + '/tree`'}}"
+      localhost_tree2: "{{'`http://127.0.0.1:8' + NCODE + '/tree`'}}"
       jupyter_token: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
       host_port: "{{'`8' + NCODE + '`'}}"
       port_map: "{{'`8' + NCODE + ':8888`'}}"
@@ -143,9 +149,11 @@ ou:
   module_code: TM351
   module_title: Data Management and Analysis
   block: 0
+  item_title: VCE Computing Guide
   block_title: VCE Computing Guide
   presentation: "J"
   first_published: 2023
+  image_path_prefix: https://openuniv.sharepoint.com/sites/tmodules/tm351/lmimages/
   isbn:
   edition:
 #####################
