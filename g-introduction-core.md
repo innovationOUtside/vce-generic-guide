@@ -8,6 +8,28 @@ The hosted VCE is straightforward to use, and is suitable for most students ([](
 
 Your work in the VCE will be saved within the environment: either in the cloud (by the hosted VCE) or on your local machine (by the local VCE). If you are using the hosted VCE, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
 
+## How the VCE computing guide is structured
+
+This guide includes the following information:
+
+- some general comments and tips, inclduing choosing between the hosted or local VCE (Section {numref}`g-introduction-core.md#general-comments-and-tips`)
+
+- accessing the hosted VCE (Section {numref}`g-compute_home.md#compute-home-online-vce`)
+
+- installing the local VCE on your own computer, including testing your installation (Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance`)
+
+- working with the VCE, including uploading and downloading files (Section {numref}`g-vce_homepage_classicnb.md#using-the-vce`)
+
+- accessibility information (Section {numref}`g-accessibility_classicnb.md#classic-notebook-accessibility`)
+
+- information on finding additional support, and guidance on where to look for or ask for help (Section {numref}`g-additional-support,md#additional-support`)
+
+- troubleshooting (Section {numref}`g-troubleshooting.md#troubleshooting`
+
+# General comments and tips
+In this section you will find some general comments and tips associated with using the VCE.
+
+
 ## Browser requirements
 
 You will access the software tools provided by the virtual computing environment (either the hosted VCE or the local VCE) via a web browser. For VCEs running Jupyter environments, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
@@ -50,23 +72,6 @@ Please remember when raising software issues that posting error logs can really 
 
 If you do encounter a problem, the section [](g-additional-support.md#additional-support) describes a general strategy for working through the problem and how to ask for help. A later section, [](g-troubleshooting.md#troubleshooting), provides more specific guidance for working through particular sorts of issues with the different software applications.
 
-## How the VCE computing guide is structured
-
-This guide includes the following information:
-
-- choosing between the hosted or local VCE (Subsection {numref}`g-introduction-core.md#Choosing-between-the-OU-hosted-and-the-locally-run-VCE`)
-
-- accessing the hosted VCE (Section {numref}`g-compute_home.md#compute-home-online-vce`)
-
-- installing the VCE on your own computer, including testing your installation (Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance`)
-
-- working with the VCE, including uploading and downloading files (Section {numref}`g-vce_homepage_classicnb.md#using-the-vce`)
-
-- accessibility information (Section {numref}`g-accessibility_classicnb.md#classic-notebook-accessibility`)
-
-- information on finding additional support, and guidance on where to look for or ask for help (Section {numref}`g-additional-support,md#additional-support`)
-
-- troubleshooting (Section {numref}`g-troubleshooting.md#troubleshooting`
 
 ## Where next?
 
