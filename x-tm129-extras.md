@@ -1,4 +1,4 @@
-# Additional Software for {{MCODE}}
+# Additional Software
 
 The {{MCODE}} ({{PCODE}}) *Robotics* block VCE provides an environment called RoboLab for programming an on-screen, two dimensional robot simulator from within a Jupyter notebook.
 
@@ -27,4 +27,4 @@ The selected *World* button is responsible for the display of the *Simulator wor
 
 A complete set of instructions for working with the simulator are provided in the Jupyter notebooks associated with the Robotics block. The notebooks are pre-installed inside the VCE and should be available when you first access either the hosted or the local VCE.
 
-If you are using the local VCE, and followed the guidance for mounting a shared directory at the default location, the notebooks should be automatically copied over the to the shared folder when the local VCE is first run. Any changes to the notebooks made as you use the VCE will be saved to the shared directory. If the local VCE is shut down, or the local VCE container is deleted, the notebook files will still be available in your shared folder.
+If you are using the local VCE, and followed the guidance for mounting a shared directory at the default location, the notebooks should be automatically copied over to the shared folder when the local VCE is first run. Any changes to the notebooks made as you use the VCE will be saved to the shared directory. If the local VCE is shut down, or the local VCE container is deleted, the notebook files will still be available in your shared folder.
