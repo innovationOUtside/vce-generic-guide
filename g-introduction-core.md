@@ -12,7 +12,7 @@ Your work in the VCE will be saved within the environment: either in the cloud o
 
 You will access the software tools provided by the virtual computing environment (either the hosted VCE or the locally run VCE) via a web browser. For VCEs running Jupyter environments, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
 
-*To make it easier to access a locally running VCE, we suggest that you add a browser bookmark for the default web page published by the locally running VCE container. For the remotely hosted VCE, we suggest that you access Compute Home via a bookmark for the module *Resources* page on the VLE.*
+*To make it easier to access a locally running VCE, we suggest that you add a browser bookmark for the default web page published by the locally running VCE container. For the remotely hosted VCE, we suggest that you access Compute Home via a bookmark for the module `Resources` page on the VLE.*
 
 ## Choosing between the OU hosted and the locally run VCE
 
@@ -50,7 +50,7 @@ Please remember when raising software issues that posting error logs can really 
 
 If you do encounter a problem, the section [](g-additional-support.md#additional-support) describes a general strategy for working through the problem and how to ask for help. A later section, [](g-troubleshooting.md#troubleshooting), provides more specific guidance for working through particular sorts of issues with the different software applications.
 
-## How the VCE computing] guide is structured
+## How the VCE computing guide is structured
 
 This guide includes the following information:
 
