@@ -1,4 +1,4 @@
-# Configuration file for : TM129 Robotics Block 2023J
+# Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
 #############################################
@@ -16,23 +16,20 @@
 #############################################
 
 
-
 #####################
 ##                 ##
 ##     UPDATES     ##
 ##                 ##
 #####################
-title: Virtual Computing Environment (VCE) Software Guide (TM129-23J Robotics Block)
+title: VCE Computing Guide (M348-23J)
 author: The Open University
-
-include_patterns: ["g-*.md", "x-tm129*"] # also include x-modulecode*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*jupyterlab*", "x-tm351-extras*"] # "*classicnb*"
+include_patterns: ["g-*.md", "x-tm351*"] # also include x-modulecode*
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*classicnb*"]
 #####################
 ##                 ##
 ##       END       ##
 ##                 ##
 #####################
-
 
 logo: _static/logo.svg
 lang: en
@@ -46,7 +43,6 @@ only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds
 latex:
-  latex_engine: "xelatex"
   latex_documents:
     targetname: book.tex
 
@@ -70,19 +66,17 @@ html:
 sphinx:
   extra_extensions:
     - ou_book_theme
-    - sphinx_jupyterbook_latex
     #- sphinxcontrib.mermaid
   config:
     html_theme: ou_book_theme
     language: en
     myst_heading_anchors: 3
     numfig: true
-    numfig_format: {'figure':'Figure %s'}
-    numfig_secnum_depth: 1 #eg 0:1 1:2.1 2:3.2.1
     latex_elements:
       pointsize: 12pt # Supported? 10pt, 11pt, 12pt
       geometry: \usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
     html_permalinks: false
+    numfig_format: {'figure':'Figure %s'}
     #########################################
     ##                                     ##
     ##   MODULE AND PRESENTATION UPDATES   ##
@@ -90,17 +84,17 @@ sphinx:
     #########################################
     copyright: "2023 The Open University"
     myst_substitutions:
-      MCODE: TM129
-      NCODE: "129"
-      MNAME: "Technologies in Practice"
+      MCODE: TM351
+      NCODE: "351"
+      MNAME: "Data Management and Analysis"
       PCODE: 23J
       YEAR: "2023"
       jupyter_help_forum: "appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum)"
-      #######################
-      ##                   ##
-      ##         END       ##
-      ##                   ##
-      #######################
+      #####################
+      ##                 ##
+      ##       END       ##
+      ##                 ##
+      #####################
       # DEFAULT VALUES / RULES
       # Alternatively, we could enter these explicitly
       # and then check them against linting rules?
@@ -109,6 +103,7 @@ sphinx:
       local_dirname: "{{'`' + MCODE|upper + 'VCE`'}}"
       container_name: "{{'`' + MCODE|lower + 'vce`'}}"
       vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      vce_db_backups: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '/backups`'}}"
       docker_image_name: "{{'`ou-' + MCODE|lower + '`'}}"
       docker_image_base: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + '`'}}"
       docker_image: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
@@ -140,20 +135,19 @@ parse:
     - colon_fence
     - substitution
 
+
 #####################
 ##                 ##
 ##     UPDATES     ##
 ##                 ##
 #####################
 ou:
-  module_code: TM129
-  module_title: Technologies in Practice
-  block: 3
-  item_title: Robotics VCE Computing Guide
-  block_title: Robotics VCE Computing Guide
+  module_code: TM351
+  module_title: Data Management and Analysis
+  block: 0
+  block_title: VCE Computing Guide
   presentation: "J"
   first_published: 2023
-  image_path_prefix: https://openuniv.sharepoint.com/sites/tmodules/tm129/lmimages/
   isbn:
   edition:
 #####################

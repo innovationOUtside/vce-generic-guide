@@ -108,6 +108,8 @@ sphinx:
       local_dirname: "{{'`' + MCODE|upper + 'VCE`'}}"
       container_name: "{{'`' + MCODE|lower + 'vce`'}}"
       vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      docker_image_name: "{{'`ou-' + MCODE|lower + '`'}}"
+      docker_image_base: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + '`'}}"
       docker_image: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
       winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
       macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"

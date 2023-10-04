@@ -1,4 +1,4 @@
-# Configuration file for : TM129 Robotics Block 2023J
+# Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
 #############################################
@@ -22,11 +22,11 @@
 ##     UPDATES     ##
 ##                 ##
 #####################
-title: Virtual Computing Environment (VCE) Software Guide (TM129-23J Robotics Block)
+title: VCE Computing Guide (TM129 23J Robotics Block)
 author: The Open University
 
 include_patterns: ["g-*.md", "x-tm129*"] # also include x-modulecode*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*jupyterlab*", "x-tm351-extras*"] # "*classicnb*"
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*jupyterlab*"]
 #####################
 ##                 ##
 ##       END       ##
@@ -46,7 +46,6 @@ only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds
 latex:
-  latex_engine: "xelatex"
   latex_documents:
     targetname: book.tex
 
@@ -70,19 +69,14 @@ html:
 sphinx:
   extra_extensions:
     - ou_book_theme
-    - sphinx_jupyterbook_latex
     #- sphinxcontrib.mermaid
   config:
     html_theme: ou_book_theme
     language: en
     myst_heading_anchors: 3
     numfig: true
-    numfig_format: {'figure':'Figure %s'}
-    numfig_secnum_depth: 1 #eg 0:1 1:2.1 2:3.2.1
-    latex_elements:
-      pointsize: 12pt # Supported? 10pt, 11pt, 12pt
-      geometry: \usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
     html_permalinks: false
+    numfig_format: {'figure':'Figure %s'}
     #########################################
     ##                                     ##
     ##   MODULE AND PRESENTATION UPDATES   ##
@@ -149,11 +143,9 @@ ou:
   module_code: TM129
   module_title: Technologies in Practice
   block: 3
-  item_title: Robotics VCE Computing Guide
-  block_title: Robotics VCE Computing Guide
+  block_title: Robotics
   presentation: "J"
   first_published: 2023
-  image_path_prefix: https://openuniv.sharepoint.com/sites/tmodules/tm129/lmimages/
   isbn:
   edition:
 #####################

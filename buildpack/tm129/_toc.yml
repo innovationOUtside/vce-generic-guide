@@ -8,7 +8,7 @@ parts:
   - caption: VCE computing guide
     numbered: true
     chapters:
-      - file: g-introduction
+      - file: g-introduction-tm129
       - file: g-compute_home
       - file: g-local_vce_quickstart
       - file: g-local_vce_detailed
