@@ -18,7 +18,7 @@ We recommend creating the shared folder in your documents folder. On a Windows c
 
 - From the Docker Desktop search bar, {numref}`dockerhub_image_search`:
 
-  - search for {{module_code}} or {{docker_image}}
+  - search for {{docker_image_name}}
 
   - select the image with the tag corresponding to the current presentation code ({{pcode_lc}}) and pull the selected image
 
