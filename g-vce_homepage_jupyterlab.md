@@ -1,4 +1,4 @@
-# Using the VCE
+# Using the VCE with JupyterLab
 
 When the VCE is fully initialised, you will see a default JupyterLab environment layout similar to that shown in {numref}`jupyterlab_home`.
 
@@ -10,6 +10,11 @@ The JupyterLab user interface
 
 A screenshot of the JupyterLab interactive development environment (IDE) syle user interface, showing a file browser sidebar, document and application launcher, opened document and terminal editors and a menu toolbar.
 
+```
+
+```{admonition} Finding the JupyterLab user-interface
+
+In some environments, the VCE landing page may a classic Jupyter notebook. To use the JupyterLab environment, edit the URL in your web browser to `localhost_lab`` or `localhost_lab2`.
 ```
 
 JupyterLab provides an integrated development environment (IDE) that provides access to a file browser and a wide range of file editors, including a fully featured Jupyter notebook editor.
@@ -90,7 +95,6 @@ Screenshot showing code cells with different cell run statius indications: gree 
 
 *A separate, off the shelf extension, [`jupyterlab-contrib/jupyterlab-cell-flash`](https://github.com/jupyterlab-contrib/jupyterlab-cell-flash) can be used to provide an animated "flash" effect to highlight a cell that has just completed execution).*
 
-
 ## Enriched Display
 
 The JupyterLab environment provides a dynamically generated table of contents listing for notebooks from the left hand sidebar palette, {numref}`jl_contents`:
@@ -117,7 +121,7 @@ The [`executablebooks/jupyterlab-myst`](https://github.com/executablebooks/jupyt
 
 For example, the following MyST styled admonition block will be rendered as show in {numref}`jl_myst_warning`:
 
-`````
+`````text
 ```{warning}
 This is a warning block.
 ```
@@ -135,7 +139,7 @@ Screenshot showing how a triple backticked warning block is rendered with a warn
 
 Other blocks include `danger` (red header bar), `note` (blue), `seealso` (lilac), `important` (light grey-green) and `tip` (light green). The header bars also carry distinguishing leading icons. Using the `{admonition} My Title` style block, a title can be added to the block and the can be styled using the appropriate admonition type set as a `:class:` value. For example, the following block will be rendered as show in {numref}`jl_myst_warning_title`
 
-`````
+`````text
 ```{admonition} Take this as a warning!
 :class: warning
 
@@ -160,7 +164,7 @@ The [full MyST syntax](https://mystmd.org/guide/quickstart-myst-markdown) suppor
 
 MyST also supports simple diagramming using [mermaid.js](https://mermaid.js.org/intro/) scripts:
 
-`````
+`````text
 ```{mermaid}
 
 graph LR;
@@ -205,7 +209,7 @@ Screenshot of context sensitive menu for file directory, with "Download Current 
 
 This works for local and hosted environments and provides a convenient way to save the contents of a working TMA related directory, for example, for use as a submission to the ETMA system.
 
-### Unzipping compressed archive files
+### Unzipping compressed archive files in JupyterLab
 
 A common way of transporting large files or bundles of files is to compress them into a single compressed archive file, such as a `.zip` file.
 
