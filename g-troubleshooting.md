@@ -132,19 +132,7 @@ If you are running the local VCE, you can also launch a terminal that is connect
 
 The Docker container that houses the VCE is running a version of Linux.
 
-The table below provides a quick summary of Linux/Unix commands you might find useful.
-
-| Command | Description |
-| -------------------- | ---------------------------------------------------------- |
-| `pwd` | Show the path to the current working directory (folder). |
-| `cd PATH` | Change directory to the specified path (where `..` signifies 'parent of' and a single `.` represents the current directory). |
-| `ls` | List files and folders. |
-| `ls /home/ou` | List contents of the specified directory. Inside the VCE, the `/home/ou` path is the recommended default path for the shared folder. |
-| `head PATH/FILENAME` | Preview the first 10 lines of the specified file. |
-| `tail -n 20 PATH/FILENAME` | Preview the last 20 lines of the specified file. |
-| `man COMMAND` | Display manual pages for *command*, e.g. `man pwd`. |
-| `wget URL` | Download the file from the specified URL to the current directory. |
-| `tar -xvf FILENAME` | Uncompress and unarchive files from a *.tar.gz* or *.tgz* file. |
+See the section [](g-linux-command-line.md#using-the-terminal-command-line) for more information on commands that you can run from the command line inside the VCE container.
 
 ## Problems arising from working with large notebooks
 
