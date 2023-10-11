@@ -15,3 +15,5 @@ The following table provides a quick summary of some of the Linux/Unix commands 
 | `man COMMAND` | Display manual pages for *command*, e.g. `man pwd`. |
 | `wget URL` | Download the file from the specified URL to the current directory. |
 | `tar -xvf FILENAME` | Uncompress and unarchive files from a *.tar.gz* or *.tgz* file. |
+| `unzip FILENAME.zip` | Unzip a compressed file. Use `-d DIRPATH` to unzip into a specifed directory. |
+| `zip -r FILENAME.zip DIRECTORY` | Zip a directory as a `.zip` archive file. |
