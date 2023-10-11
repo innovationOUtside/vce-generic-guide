@@ -113,6 +113,14 @@ You might also want to check that you are trying to connect to the correct port.
 
 `! cat /etc/mongod.conf | grep 'port:'`
 
+You can find the actual location of the configuration file by running the command:
+
+`! ps -xa | grep mongod``
+
+The path to the configuration file is given by the value of the `-f` paramter in the run command:
+
+`/usr/bin/mongod -f /etc/mongod.conf -- run`
+
 If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
 If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
