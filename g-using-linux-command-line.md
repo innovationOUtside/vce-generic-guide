@@ -2,6 +2,8 @@
 
 If you access the terminal or a command line running inside the VCE container, you can use it to run Linux commands directly (see [](g-troubleshooting.md#accessing-a-terminal-command-line-interface-within-the-VCE) for more information on accessing the terminal).
 
+Many Linux commands will display help information if you run the basic command with the `--help` flag.
+
 The following table provides a quick summary of some of the Linux/Unix commands you might find useful.
 
 | Command | Description |
