@@ -28,7 +28,7 @@ For Windows 10 or 11 Home or Pro, Enterprise or Education, all at version 21H2 
 
 - double-click the installation package to run it
 
-- follow the Windows Subsystem for Linux (WSL2) instructions to make sure that WSL2 is installed and enabled (this may require restarting your computer)
+- follow the Windows Subsystem for Linux (WSL2) instructions to make sure that WSL2 is installed (or has been recently updated) and enabled; *note that this may require restarting your computer for the changes to take effect*;
 
   - for older Windows systems, you may need to follow [this guidance](https://learn.microsoft.com/en-us/windows/wsl/install-manual) on how to install WSL2
 

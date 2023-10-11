@@ -14,7 +14,7 @@ A screenshot of the JupyterLab interactive development environment (IDE) syle us
 
 ```{admonition} Finding the JupyterLab user-interface
 
-In some environments, the VCE landing page may a classic Jupyter notebook. To use the JupyterLab environment, edit the URL in your web browser to `localhost_lab`` or `localhost_lab2`.
+In some environments, the VCE landing page may a classic Jupyter notebook. To use the JupyterLab environment, edit the URL in your web browser to {{localhost_lab}} or {{localhost_lab2}}.
 ```
 
 JupyterLab provides an integrated development environment (IDE) that provides access to a file browser and a wide range of file editors, including a fully featured Jupyter notebook editor.
