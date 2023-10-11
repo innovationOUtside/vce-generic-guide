@@ -117,11 +117,9 @@ You can find the actual location of the configuration file by running the comman
 
 `! ps -xa | grep mongod``
 
-The path to the configuration file is given by the value of the `-f` paramter in the run command:
+The path to the configuration file is given by the value of the `-f` parameter in the run command:
 
 `/usr/bin/mongod -f /etc/mongod.conf -- run`
-
-If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
 If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
