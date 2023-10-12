@@ -20,17 +20,17 @@ This guide includes the following information:
 
 - working with the VCE, including uploading and downloading files (Section {numref}`g-vce_homepage_classicnb.md#using-the-vce`)
 
-- Jupyter notebook gotchas - that is features of the notebooks that may not work the way you expect. (Section {numref}`g-jupyter-notebook-gotchas.md#juptyer-notebook-gotchas`)
+- Jupyter notebook gotchas - that is features of the notebooks that may not work the way you expect. (Section {numref}`g-jupyter-notebook-gotchas.md#jupyter-notebook-gotchas`)
 
 - accessibility information (Section {numref}`g-accessibility_classicnb.md#classic-notebook-accessibility`)
 
-- information on finding additional support, and guidance on where to look for or ask for help (Section {numref}`g-additional-support,md#additional-support`)
+- information on finding additional support, and guidance on where to look for or ask for help (Section {numref}`g-additional-support.md#additional-support`)
 
 - troubleshooting (Section {numref}`g-troubleshooting.md#troubleshooting`
 
-# General comments and tips
-In this section you will find some general comments and tips associated with using the VCE.
+## General comments and tips
 
+In this section you will find some general comments and tips associated with using the VCE.
 
 ## Browser requirements
 
