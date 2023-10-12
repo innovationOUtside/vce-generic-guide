@@ -132,7 +132,7 @@ If you are running the local VCE, you can also launch a terminal that is connect
 
 The Docker container that houses the VCE is running a version of Linux.
 
-See the section [](g-linux-command-line.md#using-the-terminal-command-line) for more information on commands that you can run from the command line inside the VCE container.
+See the section [](g-using-linux-command-line.md#using-the-terminal-command-line) for more information on commands that you can run from the command line inside the VCE container.
 
 ## Problems arising from working with large notebooks
 
