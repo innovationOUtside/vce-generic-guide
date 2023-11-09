@@ -4,7 +4,7 @@ In this module, you will use a module specific virtualised computing environment
 
 The VCE provides a customised computing environment appropriate for your module and an interactive browser based user interface to access the software running inside it. The VCE is implemented using the widely supported Docker container approach.
 
-The hosted VCE is straightforward to use, and is suitable for most students ([](g-compute_home.md#compute-home-online-vce)). If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtualised computing environment using Docker containers, then you should choose to download and install the local VCE ([](g-local_vce_quickstart.md#local-vce-quick-start)). Further advice on choosing between the two environments is provided in Subsection {numref}`g-introduction-core.md#Choosing-between-the-OU-hosted-and-the-locally-run-VCE`.
+The hosted VCE is straightforward to use, and is suitable for most students ([](g-compute_home.md#compute-home-online-vce)). If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtualised Linux-based computing environment using Docker containers, then you should choose to download and install the local VCE ([](g-local_vce_quickstart.md#local-vce-quick-start)). Further advice on choosing between the two environments is provided in Subsection {numref}`g-introduction-core.md#Choosing-between-the-OU-hosted-and-the-locally-run-VCE`.
 
 Your work in the VCE will be saved within the environment: either in the cloud (by the hosted VCE) or on your local machine (by the local VCE). If you are using the hosted VCE, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
 
@@ -20,17 +20,17 @@ This guide includes the following information:
 
 - working with the VCE, including uploading and downloading files (Section {numref}`g-vce_homepage_classicnb.md#using-the-vce`)
 
-- Jupyter notebook gotchas - that is features of the notebooks that may not work the way you expect. (Section {numref}`g-jupyter-notebook-gotchas.md#juptyer-notebook-gotchas`)
+- Jupyter notebook gotchas - that is features of the notebooks that may not work the way you expect. (Section {numref}`g-jupyter-notebook-gotchas.md#jupyter-notebook-gotchas`)
 
 - accessibility information (Section {numref}`g-accessibility_classicnb.md#classic-notebook-accessibility`)
 
-- information on finding additional support, and guidance on where to look for or ask for help (Section {numref}`g-additional-support,md#additional-support`)
+- information on finding additional support, and guidance on where to look for or ask for help (Section {numref}`g-additional-support.md#additional-support`)
 
 - troubleshooting (Section {numref}`g-troubleshooting.md#troubleshooting`
 
-# General comments and tips
-In this section you will find some general comments and tips associated with using the VCE.
+## General comments and tips
 
+In this section you will find some general comments and tips associated with using the VCE.
 
 ## Browser requirements
 
