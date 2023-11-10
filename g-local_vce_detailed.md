@@ -333,10 +333,10 @@ It is possible to update to the latest version by doing the following.
 - Click on the *Update to latest* button. This will take you to the *Software updates* page.
 - Click on *Download update* and then *Update and restart*.
 
-Note: we strongly recommend that you **do not update the software within the VCE unless told to do so by the module team**. Software updates and upgrades occasionally introduce changes that result in undesirable software behaviour, sometimes known as ‘breaking changes’, that cannot always be predicted in advance.
+Note: we strongly recommend that you **do not update the software within the VCE unless asked to do so by the module team**. Software updates and upgrades occasionally introduce changes that result in undesirable software behaviour, sometimes known as ‘breaking changes’, that cannot always be predicted in advance.
 
 ## Uninstalling the Docker application
-When you no longer require the Docker application to run the VCE (or VCEs for any other module you study), you can uninstall the application. 
+When you no longer require the Docker application to run the VCE (or VCEs for any other module you study), you may wish to uninstall the application. 
 ### Microsoft Windows
 For Windows devices:
 - click on *Start* then *Settings* then *Apps*
