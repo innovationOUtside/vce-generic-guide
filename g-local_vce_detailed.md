@@ -18,7 +18,7 @@ These instructions describe how to:
 
 - download the module specific Docker container image that contains all the software applications needed for the module
 
-To familiarise yourself with the installation sequence, we recommend that you read through the installation process for your host operating system and the description of testing your installation at least once before carrying out the process on your own computer.
+To familiarise yourself with the installation sequence, we recommend that you read through the installation process for your host operating system and the description of testing your installation at least once before carrying out the process on your own computer. As with all software you only install this software using the verifier installer.
 
 ### Microsoft Windows
 
@@ -318,3 +318,32 @@ The following flags may also be used with the `docker run` command:
 | Automatically remove container when it exits  | `--rm`                                                   |
 | Run container in background      | `-d/--detach`                                            |
 | Set environment variable inside  container     | `-e/--env ENV_VARIABLE="ENV VALUE"`                      |
+## Updating the Docker application
+It is good practice to keep your version of Docker Desktop up to date. If there are updates to Docker Desktop, the *Update to latest* button will appear to the left of the Docker Desktop search toolbar, {numref}`docker_desktop_update`.
+
+```{figure} md_assets/media/docker_update.png
+:name: docker_desktop_update
+:width: 5.44791666666667in
+:height: 2.041666666667in
+
+Checking for updates in Docker Desktop
+
+```
+It is possible to update to the latest version by doing the following.
+- Click on the *Update to latest* button. This will take you to the *Softwares updates* page.
+- Click on *Download update* and then *Update and restart*.
+
+Note: we strongly recommend that you **do not update the software within the VCE unless told to do so by the module team**. Software updates and upgrades occasionally introduce changes that result in undesirable software behaviour, sometimes known as ‘breaking changes’, that cannot always be predicted in advance.
+
+## Uninstalling the Docker application
+When you no longer require the Docker application to run the VCE (or VCEs for any other module you study), it is recommend that that you uninstall the application. 
+### Microsoft Windows
+For Windows devices
+- click on *Start* then *Settings* then *Apps*
+- In the list of Apps & Features, then scroll down to find *Docker Desktop*
+- Click on *Docker Desktop*  and select *Uninstall*.
+### Apple macOS
+For Mac devices
+- Open the *Applications* folder and select the *Docker* application
+- Click on *Move to trash*
+- go to your trash and click *Empty trash*
