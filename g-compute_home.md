@@ -27,3 +27,16 @@ A screenshot showing an indicator panel that is displayed when a hosted VCE cont
 ```
 
 Once the VCE has loaded, you will be presented with the VCE homepage as described in the section *Using the VCE*.
+
+## Notifications about the hosted VCE
+From time to time there maybe periods when the service underlying the hosted VCE is 'at risk' (that is at risk of becoming unavailable) or a period of unavailabilty is planned. Notifications about such periods can be view by clicking on Notifications in the Compute Home user interface.
+
+```{figure} md_assets/media/compute_home_notifications.png
+:name: compute_home_notifications
+
+A Compute Home page where sux notifications about the VCE have been posted.
+
+A screenshot of the Compute Home user interface. A single computing environment is shown as being available, identified by the module code and name, in this example *M348 Applied statistical modeling*, and presentation code (in the example, 23J, corresponding to the October 2023 presentation).
+
+```
+In addition when the system is not currently fully operational, this will be displayed in the top right hand corner of the Compute Home user interface. For example the above screenshot was taken at time when the service had only partially been restored after an outage and was at risk of becoming unavailable again. 
