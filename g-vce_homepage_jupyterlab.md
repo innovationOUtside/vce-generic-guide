@@ -89,11 +89,13 @@ This extension provides a visual indication of the cell run status, {numref}`jl_
 
 Cell status indications
 
-Screenshot showing code cells with different cell run statius indications: gree (success), red (failure), light blue (awaiting execution).
+Screenshot showing code cells with different cell run status indications: green (success), red (failure), light blue (awaiting execution).
 
 ```
 
-*A separate, off the shelf extension, [`jupyterlab-contrib/jupyterlab-cell-flash`](https://github.com/jupyterlab-contrib/jupyterlab-cell-flash) can be used to provide an animated "flash" effect to highlight a cell that has just completed execution).*
+An optional setting [TO DO NAME] an be used to provide an animated "cell flash" effect to highlight a code cell that has just completed execution.
+
+TO DO SETTING?
 
 ## Enriched Display
 

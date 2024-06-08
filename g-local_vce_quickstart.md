@@ -2,7 +2,7 @@
 
 Many Open University modules run over several years. In order to keep the software and applications used in a module VCE current, the module VCE may be updated for each presentation.
 
-When installing or accessing the VCE, you will need to make use of the **module code** ({{module_code}}) and the **module presentation code** ({{presentation_code}}). The module presentation code is constructed from the year and month of presentation. For example, the October 2023 presentation has the code `23J`, where `23` represents the year, and `J` the month (the 10th month of the year, mapped to the tenth letter of the alphabet). *The VCE cribsheet provides a handy summary of these values.*
+When installing or accessing the VCE, you will need to make use of the **module code** ({{module_code}}) and the **module presentation code** ({{presentation_code}}). The module presentation code is constructed from the year and month of presentation. For example, the October 2024 presentation has the code `24J`, where `24` represents the year, and `J` the month (the 10th month of the year, mapped to the tenth letter of the alphabet). *The VCE cribsheet provides a handy summary of these values.*
 
 In many cases, the following quick start instructions should be enough to get you going. Quick start instructions are provided for using the [Docker Desktop graphical user interface](#docker-desktop-quick-start), or, if you prefer, the [command line](#docker-command-line-quick-start).
 

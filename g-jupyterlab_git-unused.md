@@ -20,6 +20,10 @@ We are then prompted for Github credentials. The "password" should actually be a
 
 The repository is cloned into a new directory with the same name as the repository name:
 
+```{warning}
+You may need to create this directory manually; also ensure it is empty.
+```
+
 ![](md_assets/media/jl_git_cloned_dir.png)
 
 If we now enter the repository and select the `git` sidebar palette option, we are provided with a simple git user interface that allows us to stage and view staged files, make commits and make push and pull requests to the parent repository (an authentication prompt is raised for push and pull and actions).
