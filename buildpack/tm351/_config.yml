@@ -21,7 +21,7 @@
 ##     UPDATES     ##
 ##                 ##
 #####################
-title: Virtual Computing Environment (VCE) Software Guide (TM351-23J)
+title: Virtual Computing Environment (VCE) Software Guide (TM351-24J)
 author: The Open University
 include_patterns: ["g-*.md", "x-tm351*"] # also include x-modulecode*
 exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*"]
@@ -44,7 +44,7 @@ only_build_toc_files: true
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: tm351_sw_guide.tex
 
 # Add a bibtex file so that we can create citations
 #bibtex_bibfiles:
@@ -82,13 +82,13 @@ sphinx:
     ##   MODULE AND PRESENTATION UPDATES   ##
     ##                                     ##
     #########################################
-    copyright: "2023 The Open University"
+    copyright: "2024 The Open University"
     myst_substitutions:
       MCODE: TM351
       NCODE: "351"
       MNAME: "Data Management and Analysis"
-      PCODE: 23J
-      YEAR: "2023"
+      PCODE: 24J
+      YEAR: "2024"
       jupyter_help_forum: "appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum)"
       #####################
       ##                 ##

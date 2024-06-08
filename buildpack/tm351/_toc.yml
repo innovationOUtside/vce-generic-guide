@@ -12,12 +12,15 @@ parts:
       - file: g-compute_home
       - file: g-local_vce_quickstart
       - file: g-local_vce_detailed
-      - file: g-vce_homepage_classicnb
-      - file: g-accessibility_classicnb
+      #- file: g-vce_homepage_classicnb
+      #- file: g-accessibility_classicnb
       - file: g-vce_homepage_jupyterlab
-      #- file: g-jupyterlab_git
+      - file: g-vce_homepage_jupyter_nb_v7
+      - file: g-accessibility_jupyterlab-nbv7
+      - file: g-jupyterlab_git
       - file: x-tm351-extras
       - file: g-jupyter-notebook-gotchas
+      - file: g-using-linux-command-line
       - file: g-troubleshooting
       - file: g-additional-support
       - file: g-vce_technical_architecture

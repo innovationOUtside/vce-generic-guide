@@ -2,6 +2,8 @@
 
 The Compute Home online hosted VCE is provides the simplest way of accessing a module's VCE. No local software installation is required other than a modern web browser, although you will need an internet connection  to access the service. In principle, you should be able to access the online VCE using a smartphone or tablet device as well as a laptop or desktop computer. However, you may find the screen size and on-screen keyboard a limiting factor on usability when using mobile devices. We recommend the use of the Chrome web browser for using the Compute Home online VCE.
 
+See the central *OpenComputing Lab* documentation here: https://docs.ocl.open.ac.uk/container-launcher/user/
+
 A link to the online Compute Home service will be typically be found on the module website in the *Resources* section, often under the heading *Computing Resources*. For modules where the VCE is only required in a particular study block, the *Computing Resources* may appear in a particular block resources section. Click the *Compute Home* link to get started. You should see an entry for your particular module. For example, {numref}`your_compute_home_page` shows a VCE launcher link for the October 2021 presentation of the TM129 module.
 
 Click the *Start* button for the *{{mnamecode}} {{PCODE}}* VCE to launch the environment.

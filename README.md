@@ -18,7 +18,7 @@ In the first iteration of the `customisable` guide, there will be legacy example
 
 The guide is written using MyST markdown in a Jupyter Book context. Interactive HTML, PDF and Microsoft Word documents, etc., can be generated from the source files.
 
-The intention is that the guide for a particular module will be generated using custom `_toc.yml` and `_config.yml` files that will then reuse common source files.
+The intention is that the guide for a particular module will be generated using custom `_toc.yml` and `_config.yml` files that will then reuse common source files. See the [`buikdpack`](./buildpack) directory for example `_toc.yml` and `_config.yml` packs for particular modules. Ideally, for a new module, these are the *inly* things that should need changing, other than any module specific materials that need to be produced.
 
 An OU-XML workflow is also available using Mark Hall's [`ou-book-theme`](https://pypi.org/project/ou-book-theme/) package. This generates OU-XML from XML produced by the Jupyter Book xml builder.
 

@@ -32,9 +32,29 @@ You will access PostgreSQL from Python code running inside Jupyter notebooks.
 
 By default, you should be able to connect to the database inside the VCE using port `5432`.
 
+Connections to the PostgreSQL database can be made using a connection string with the form:
+
+`postgresql://USER:PWD@HOST:PORT/DB`
+
 The following connection string can be used when connecting to the database:
 
 `PGCONN='postgresql://testuser:testpass@localhost:5432/testdb'`
+
+In a notebook code cell, you can create a database connection as:
+
+```python
+from sqlalchemy import create_engine
+engine = create_engine(PGCONN)
+```
+
+You can inspect various properties of the database using the `sqlalchemy` inspector. For example, you can view the tables associated with a particular database:
+
+```python
+from sqlalchemy import inspect
+
+inspector = inspect(engine)
+inspector.get_table_names()
+```
 
 You can manage the PostgreSQL server using the following shell commands fron within a terminal running inside the VCE, or prefix the command with a `!` to run it from a Jupyter notebook code cell:
 
@@ -44,11 +64,13 @@ You can manage the PostgreSQL server using the following shell commands fron wit
 
 If you cannot connect to the PostgreSQL database, try restarting using the appropriate command.
 
-You might also want to check that you are trying to connect to the correct port. To check what port PosgreSQL is listening to within the VCE, in a code cell, run:
+You might also want to check that you are trying to connect to the correct port. To check what port PosgreSQL is listening to within the VCE, in a notebook code cell, run:
 
-`! lsof -P -iTCP -sTCP:LISTEN | grep postgres`
+`! pg_lsclusters`
 
-The port should by identifiable at the end of the string (e.g. TCP `:5432 (LISTEN)` shows that PostgreSQL is listening to port `5432`).
+Or run the command directly on the command line without the initial `!`.
+
+The port should by identifiable near the start of the string (e.g. the `main` cluster running on port `5432`).
 
 If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
@@ -87,13 +109,17 @@ You can manage the MongoDB server using the following shell commands fron within
 
 If you cannot connect to the MongoDB database, try restarting using the appropriate command.
 
-You might also want to check that you are trying to connect to the correct port. To check what port PosgreSQL is listening to within the VCE, in a code cell, run:
+You might also want to check that you are trying to connect to the correct port. Assuming that the MongoDB server is running using a configuration file in the default location, you can check the configuration file setting to see which port is specified:
 
-`! lsof -P -iTCP -sTCP:LISTEN | grep mongo`
+`! cat /etc/mongod.conf | grep 'port:'`
 
-The port should by identifiable at the end of the string (e.g. TCP `:27017 (LISTEN)` shows that PostgreSQL is listening to port `27017`).
+You can find the actual location of the configuration file by running the command:
 
-If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
+`! ps -xa | grep mongod``
+
+The path to the configuration file is given by the value of the `-f` parameter in the run command:
+
+`/usr/bin/mongod -f /etc/mongod.conf -- run`
 
 If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 

@@ -14,7 +14,7 @@ A screenshot of the JupyterLab interactive development environment (IDE) syle us
 
 ```{admonition} Finding the JupyterLab user-interface
 
-In some environments, the VCE landing page may a classic Jupyter notebook. To use the JupyterLab environment, edit the URL in your web browser to `localhost_lab`` or `localhost_lab2`.
+In some environments, the VCE landing page may a classic Jupyter notebook. To use the JupyterLab environment, edit the URL in your web browser to {{localhost_lab}} or {{localhost_lab2}}.
 ```
 
 JupyterLab provides an integrated development environment (IDE) that provides access to a file browser and a wide range of file editors, including a fully featured Jupyter notebook editor.
@@ -89,11 +89,13 @@ This extension provides a visual indication of the cell run status, {numref}`jl_
 
 Cell status indications
 
-Screenshot showing code cells with different cell run statius indications: gree (success), red (failure), light blue (awaiting execution).
+Screenshot showing code cells with different cell run status indications: green (success), red (failure), light blue (awaiting execution).
 
 ```
 
-*A separate, off the shelf extension, [`jupyterlab-contrib/jupyterlab-cell-flash`](https://github.com/jupyterlab-contrib/jupyterlab-cell-flash) can be used to provide an animated "flash" effect to highlight a cell that has just completed execution).*
+An optional setting [TO DO NAME] an be used to provide an animated "cell flash" effect to highlight a code cell that has just completed execution.
+
+TO DO SETTING?
 
 ## Enriched Display
 

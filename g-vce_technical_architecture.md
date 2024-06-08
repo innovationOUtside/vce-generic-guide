@@ -1,6 +1,6 @@
 # Appendix VCE technical architecture
 
-Many Open University moduxles require the use of third-party software tools, applications and programming environments. Through the use of virtual computing environments (VCEs), we are able to provide identical environments to students using remotely accessed VCEs hosted on the Open University's Compute Home servers or running locally on your own computer.
+Many Open University modules require the use of third-party software tools, applications and programming environments. Through the use of virtual computing environments (VCEs), we are able to provide identical environments to students using remotely accessed VCEs hosted on the Open University's Compute Home servers or running locally on your own computer.
 
 ```{admonition} Optional content
 :class: warning
