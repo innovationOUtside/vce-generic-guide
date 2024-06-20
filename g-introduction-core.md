@@ -12,11 +12,11 @@ Your work in the VCE will be saved within the environment: either in the cloud (
 
 This guide includes the following information:
 
-- some general comments and tips, inclduing choosing between the hosted or local VCE (Section {numref}`g-introduction-core.md#general-comments-and-tips`)
+- some general comments and tips, including choosing between the hosted or local VCE (Section {numref}`g-introduction-core.md#general-comments-and-tips`)
 
 - accessing the hosted VCE (Section {numref}`g-compute_home.md#compute-home-online-vce`)
 
-- installing the local VCE on your own computer, including testing your installation (Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance`)
+- installing a local VCE on your own computer, including testing your installation (Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance`)
 
 - working with the VCE, including uploading and downloading files (Section {numref}`g-vce_homepage_classicnb.md#using-the-vce`)
 
@@ -28,15 +28,15 @@ This guide includes the following information:
 
 - troubleshooting (Section {numref}`g-troubleshooting.md#troubleshooting`
 
-## General comments and tips
+# General comments and tips
 
 In this section you will find some general comments and tips associated with using the VCE.
 
 ## Browser requirements
 
-You will access the software tools provided by the virtual computing environment (either the hosted VCE or the local VCE) via a web browser. For VCEs running Jupyter environments, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
+You will access the software tools provided by the virtual computing environment (either the hosted VCE or a local VCE) via a web browser. For VCEs running Jupyter environments, the notebooks have been tested extensively with the Chrome web browser. Recent versions of the Firefox, Edge and Safari web browsers should also work; Internet Explorer and older, non-Chromium versions of Edge are *not* supported and notebooks may not work correctly if you use them.
 
-*To make it easier to access a locally running VCE, we suggest that you add a browser bookmark for the default web page published by the locally running VCE container. For the remotely hosted VCE, we suggest that you access Compute Home via a bookmark for the module `Resources` page on the VLE.*
+*To make it easier to access a local VCE, we suggest that you add a browser bookmark for the default web page published by the local VCE container. For the hosted VCE, we suggest that you access Compute Home via a bookmark for the module `Resources` page on the VLE.*
 
 ## Choosing between the OU hosted and the locally run VCE
 
@@ -48,11 +48,11 @@ The hosted VCE and the local VCE provide the same working environment, so your d
 
 ## Backing up your work
 
-It is generally regarded as good practice to make backup copies of any files that you would not like to lose. This applies to the contents of the shared folder that is established when setting up the local VCE, as well as all the folders within the hosted VCE.
+It is generally regarded as good practice to make backup copies of any files that you would not like to lose. This applies to the contents of the shared folder that is established when setting up a local VCE, as well as all the folders within the hosted VCE.
 
-In the local VCE, only the files you save inside the VCE directory that the shared folder has been mounted against (recommended as {{vce_homedir}}) will be saved to the shared folder on your desktop. All files inside the VCE will persist inside the container until the container is deleted or destroyed.
+In a local VCE, only the files you save inside the VCE directory that the shared folder has been mounted against (recommended as {{vce_homedir}}) will be saved to the shared folder on your desktop. All files inside the VCE will persist inside the container until the container is deleted or destroyed.
 
-Backups are regularly made of your files on the hosted VCE. For the local VCE, files will persist in the directory on your host computer that is mounted into the VCE, even if the VCE container is destroyed.
+Backups are regularly made of your files on the hosted VCE. For a local VCE, files will persist in the directory on your host computer that is mounted into the VCE, even if the VCE container is destroyed.
 
 However, it is still good practice, and beneficial to your own peace of mind if nothing else, particularly when working on TMAs or the EMA, for you to back up or grab an archival copy of your files every so often.
 
@@ -77,6 +77,6 @@ If you do encounter a problem, the section [](g-additional-support.md#additional
 
 ## Where next?
 
-The next section, Section {numref}`g-compute_home.md#compute-home-online-vce`, {ref}`g-compute_home.md#compute-home-online-vce`, describes how to get started with the hosted VCE. You do not need to read those sections if you only wish to use the local VCE.
+The next section, Section {numref}`g-compute_home.md#compute-home-online-vce`, {ref}`g-compute_home.md#compute-home-online-vce`, describes how to get started with the hosted VCE. You do not need to read this section if you only wish to use a local VCE.
 
-There are then two sections — Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` ({ref}`g-local_vce_quickstart.md#local-vce-quick-start`) and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`g-local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a locally run version of the VCE on your own computer. You do not need to read those sections if you only wish to use the hosted VCE.
+There are then two sections — Sections {numref}`g-local_vce_quickstart.md#local-vce-quick-start` ({ref}`g-local_vce_quickstart.md#local-vce-quick-start`) and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`g-local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a local VCE on your own computer. You do not need to read those sections if you only wish to use the hosted VCE.
