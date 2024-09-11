@@ -1,8 +1,6 @@
-# JupyterLab and Jupyuter Notebook v7 Accessibility
+# Jupyter Notebook Accessibility
 
-TO DO
-
-The notebooks are rendered within a browser as HTML. Instructional text in notebook Markdown cells are directly readable by screen readers. Code cells are contained within HTML group elements and need to be internally navigated to.
+The Jupyter environments, and the Jupyter notebooks contained within them, are rendered within a browser as HTML. Instructional text in notebook Markdown cells should be directly readable by screen readers. Code cells are contained within HTML group elements and may need to be internally navigated to.
 
 Most of the Jupyter notebook features are keyboard accessible. Several optional extensions provide further support in terms of visual styling and limited audio feedback support.
 
@@ -38,10 +36,6 @@ The JupyterLab *Settings -> Settings Editor -> Keyboard Shortcuts* editor showin
 
 ```
 
-![
-    
-](image.png)
-
 ## Visual Display Settings
 
 A wide range of visual display settings can be set via the *`Settings -> Theme`* menu.
@@ -55,7 +49,7 @@ The JupyterLab "Settings -> Theme" menu, showing a range of availabe settings, i
 
 ```
 
-By default, the JupyterLab / notebook v7. environmant is displayed using a simple black on white theme (*JupyterLab Light*). A "dark" theme (*JupyterLab Light*) is also available.
+By default, the JupyterLab / notebook v7. environment is displayed using a simple black on white theme (*JupyterLab Light*). A "dark" theme (*JupyterLab Light*) is also available.
 
 The menu also provides a means of increasing or decreasing the font size for user interface elements, notebook content (markdown cells) and notebook code cells. Changes to the font size are saved in a persistent settings file (`./.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings`).
 
@@ -72,7 +66,7 @@ Various tools have been pre-installed into the VCE that can optionally provide a
 
 ### Cell execution status
 
-The preinstalled [cell execuction status extension](https://github.com/innovationOUtside/jupyterlab_cell_status_extension) provides an enhanced visual display of the run state of a code cell:
+The preinstalled [cell execution status extension](https://github.com/innovationOUtside/jupyterlab_cell_status_extension) provides an enhanced visual display of the run state of a code cell:
 
 ```{figure} md_assets/media/cell_status_jl.png
 :name: jl_cell_status_indicator
@@ -131,7 +125,6 @@ By default, messages will be displayed as text:
 ```{figure} md_assets/media/ou_logger_text.png
 :name: ou_logger_text
 :width: 5.772553587051618in
-:height: 4.863542213473316in
 
 Example ou-logger message.
 
@@ -139,14 +132,12 @@ Example of ou-logger message displayed on a pink background as notebook streamed
 
 ```
 
-### Text to log speech messages
-
 Logged messages can also be spoken aloud using the browser text-to-speech (TTS) engine.
 
 Enable text and/or TTS output by setting:
 
 ```python
-set_handler("text")
-set_handler("text, tts")
-set_handler("tts")
+set_handler("text") # Just text output
+set_handler("text, tts") # Text and speech output
+set_handler("tts") # Just speech output
 ```

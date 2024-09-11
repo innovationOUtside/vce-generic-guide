@@ -16,7 +16,7 @@ These instructions describe how to:
 
 - download and install the Docker application if it is not already installed and available
 
-- download the module specific Docker container image that contains all the software applications needed for the module
+- download the module specific container image that contains all the software applications needed for the module
 
 To familiarise yourself with the installation sequence, we recommend that you read through the installation process for your host operating system and the description of testing your installation at least once before carrying out the process on your own computer.
 
@@ -102,7 +102,7 @@ In the *Applications* menu, the *Terminal* can usually be found in the *System* 
 
 ## Downloading the VCE Docker image
 
-A Docker image provides a static template for creating an instance of a personal VCE in a running Docker container. The easiest way to download a Docker image is by using the Docker Desktop search toolbar, {numref}`docker_desktop_searchbar`.
+A Docker image provides a static template for creating an instance of a personal VCE in a running container. The easiest way to download a Docker image is by using the Docker Desktop search toolbar, {numref}`docker_desktop_searchbar`.
 
 ```{figure} md_assets/media/image7.png
 :name: docker_desktop_searchbar
@@ -137,11 +137,11 @@ You can also download an image from the command line by running the following co
 
 Enter the complete command using lower-cased characters.
 
-## Running the Docker container
+## Running the container
 
-The VCE is accessed from a running Docker container. A container is a virtual machine instance created from a previously downloaded Docker container image.
+The VCE is accessed from a running container. A container is a virtual machine instance created from a previously downloaded container image.
 
-The simplest way of running and managing containers is to use the Docker Desktop application.
+One of the simplest way of running and managing containers is to use the Docker Desktop application.
 
 ### Creating a new container
 
@@ -166,7 +166,7 @@ From the *Run a new container* dialogue, use settings of the following form:
 
 - *volumes:* using the file dialogue (click on the three dots) select the folder you want to share into the container from your host computer, such as the folder you created in your home computer documents folder previously. This folder can be shared by mounting it against the path {{vce_homedir}} inside the container (use your module code).
 
-Note: the path inside the container is case sensitive. Use upper case for the module directory inside the container.
+Note: the path inside the container is case sensitive. Use upper case for the module directory inside the container. __Click the `+` sign to ensure the path is registered.__
 
 ```{figure} md_assets/media/image10.png
 :name: docker_desktop_new_container_settings_2
@@ -245,7 +245,7 @@ Containers can be managed from the Containers area of the Docker Desktop, {numre
 
 Docker Desktop running container page, highlighting the container controls
 
-Screenshot of Docker Desktop running container view, Several control buttons are highlighted: the Stop button, the Start button, the Restart button and the Delete button.
+Screenshot of Docker Desktop running container view. Several control buttons are highlighted: the Stop button, the Start button, the Restart button and the Delete button.
 
 ```
 

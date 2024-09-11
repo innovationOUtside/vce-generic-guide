@@ -16,10 +16,12 @@ parts:
       #- file: g-accessibility_classicnb
       - file: g-vce_homepage_jupyterlab
       - file: g-vce_homepage_jupyter_nb_v7
+      - file: g-working_with_jupyter_notebooks
       - file: g-accessibility_jupyterlab-nbv7
+      - file: g-file_management
+      #- file: g-jupyter-notebook-gotchas
       - file: g-jupyterlab_git
       - file: x-tm351-extras
-      - file: g-jupyter-notebook-gotchas
       - file: g-using-linux-command-line
       - file: g-troubleshooting
       - file: g-additional-support

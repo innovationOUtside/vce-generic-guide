@@ -22,11 +22,11 @@
 ##     UPDATES     ##
 ##                 ##
 #####################
-title: Virtual Computing Environment (VCE) Software Guide (M348-23J)
+title: Virtual Computing Environment (VCE) Software Guide (M348-24J)
 author: The Open University
 
 include_patterns: ["g-*.md", "x-m348*"] # also include x-modulecode*
-exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*jupyterlab*", "*extras*"] # "*classicnb*",
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*",  "*extras*", "*classicnb*",] #"*jupyterlab*",
 #####################
 ##                 ##
 ##       END       ##
@@ -87,13 +87,13 @@ sphinx:
     ##     UPDATES     ##
     ##                 ##
     #####################
-    copyright: "2023 The Open University"
+    copyright: "2024 The Open University"
     myst_substitutions:
       MCODE: M348
       NCODE: "348"
       MNAME: "Applied Statistical Modelling"
-      PCODE: 23J
-      YEAR: "2023"
+      PCODE: 24J
+      YEAR: "2024"
       jupyter_help_forum: "'Jupyter notebooks' forum"
     #####################
     ##                 ##
@@ -147,7 +147,7 @@ parse:
 ou:
   module_code: M348
   module_title: Applied Statistical Modelling
-  block: 0
+  block: "0"
   item_title: VCE Computing Guide
   block_title: VCE Computing Guide
   presentation: "J"
