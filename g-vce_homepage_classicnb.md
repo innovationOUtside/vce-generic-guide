@@ -29,7 +29,7 @@ A screenshot of a classic Jupyter notebook home page file listing show directori
 
 Many VCEs will include a `READ_ME_FIRST.ipynb` notebook in the `content/` folder that can be used test the VCE installation. You are advised to work through any such notebook.
 
-To leave the Compute Home hosted VCE, click the *Logout* link towards the top right-hand corner of the page. This will shut down the VCE, saving your work before it does so. You will also be automatically logged out of the hosted VCE after a period of inactivity.
+To leave the OpenComputing Lab hosted VCE, click the *Logout* link towards the top right-hand corner of the page. This will shut down the VCE, saving your work before it does so. You will also be automatically logged out of the hosted VCE after a period of inactivity.
 
 When you return to the VCE and reopen a notebook, you will find your work saved from your previous sessions, although you may find you that a new kernel session has been started (see [](g-jupyter-notebook-gotchas.md#jupyter-notebook-gotchas)).
 

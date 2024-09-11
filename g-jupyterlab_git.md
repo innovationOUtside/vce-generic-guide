@@ -4,7 +4,7 @@ The off-the-shelf [`jupyterlab/jupyterlab-git`](https://github.com/jupyterlab/ju
 
 ##  `git` Repository and File Management
 
-If the `git` managed repository is configured by cloning a private remote repository on Github, the user is automatically prompted for their GitHub username and token (tokens can be set from `https://github.com/settings/tokens/new`; the only permissions that need granting are the permissions over working with repositories).
+If the `git` managed repository is configured by cloning a private remote repository on GitHub, the user is automatically prompted for their GitHub username and token (tokens can be set from `https://github.com/settings/tokens/new`; the only permissions that need granting are the permissions over working with repositories).
 
 ![](md_assets/media/jl_git_menu.png)
 
@@ -12,7 +12,7 @@ We can clone a repo from a remote repository, such as GitHub:
 
 ![](md_assets/media/jl_git_repo_clone.png)
 
-We are then prompted for Github credentials. The "password" should actually be a Github API token:
+We are then prompted for GitHub credentials. The "password" should actually be a GitHub API token:
 
 ![](md_assets/media/jl_git_credentials.png)
 
@@ -30,7 +30,7 @@ If we now enter the repository and select the `git` sidebar palette option, we a
 
 ![](md_assets/media/jl_git_file_status.png)
 
-If students create a __private__ Github repository for their module files, they can use this extension to help them manage their files under git control, and maintain control over their  files in their own repository. For students working across multiple devices and environments, the Github repository can act as their central file store if they run a Git client on each device they want to access the files from.
+If students create a __private__ GitHub repository for their module files, they can use this extension to help them manage their files under git control, and maintain control over their  files in their own repository. For students working across multiple devices and environments, the GitHub repository can act as their central file store if they run a Git client on each device they want to access the files from.
 
 ## `git ` Differencing
 

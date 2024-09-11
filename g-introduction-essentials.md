@@ -1,39 +1,5 @@
-# Introduction
-
-In this module, you will use a module specific virtualised computing environment (VCE) for some of the module activities. We offer two ways of accessing the VCE: as an online hosted version using the Open University's OpenComputing Lab service (the 'hosted VCE'), and as a locally run environment that you can install on your own computer (a 'local VCE').
-
-The VCE provides a customised computing environment appropriate for your module and an interactive browser based user interface to access the software running inside it. The VCE is implemented using the widely supported containers approach.
-
-The hosted VCE is straightforward to use, and is suitable for most students ([](g-compute_home.md#compute-home-online-vce)). If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtualised Linux-based computing environment using containers, then you should choose to download and install the local VCE ([](g-local_vce_quickstart.md#local-vce-quick-start)). Further advice on choosing between the two environments is provided in {numref}`hosted-or-vce` {ref}`hosted-or-vce`.
-
-Your work in the VCE will be saved within the environment: either in the cloud (by the hosted VCE) or on your local machine (by the local VCE). If you are using the hosted VCE, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
-
-## How the VCE computing guide is structured
-
-This guide includes the following information:
-
-- some general comments and tips, including choosing between the hosted or local VCE ({numref}`gen-intro:general-comments`)
-
-- accessing the hosted VCE ({numref}`g-compute_home.md#compute-home-online-vce`)
-
-- installing the local VCE on your own computer, including testing your installation ({numref}`g-local_vce_quickstart.md#local-vce-quick-start` and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance`)
-
-- working with the VCE, including uploading and downloading files:
-    - JupyterLab ({numref}`g-vce_homepage_jupyterlab.md#using-the-vce-with-jupyterlab`)
-    - Jupyter notebook v7 ({numref}`g-vce_homepage_jupyter_nb_v7.md#using-the-vce-with-jupyterlab-notebook-v7`)
-
-- working with Jupyter notebooks — a brief overview of working within a Jupyter notebook document ({numref}`g-working_with_jupyter_notebooks.md#working-with-jupyter-notebooks`) as well as notebook "gotchas" - that is, features of the notebooks that may not work the way you expect
-
-- accessibility information ({numref}`g-accessibility_jupyterlab-nbv7.md#jupyter-notebook-accessibility`) (includes selecting language packs, changing theme, setting font sizes, enabling audio alerts, etc.)
-
-- file management — guidance on how to upload, backup and download files, create and uncompress `.zip` file archives, etc. ({numref}`g-file_management.md#file-management`)
-
-- information on finding additional support, and guidance on where to look for or ask for help ({numref}`g-additional-support.md#additional-support`)
-
-- troubleshooting ({numref}`g-troubleshooting.md#troubleshooting`)
-
 (gen-intro:general-comments)=
-## General comments and tips
+# General comments and tips
 
 In this section you will find some general comments and tips associated with using the VCE.
 
@@ -43,8 +9,8 @@ You will access the software tools provided by the virtual computing environment
 
 *To make it easier to access a locally running VCE, we suggest that you add a browser bookmark for the default web page published by the locally running VCE container. For the remotely hosted VCE, we suggest that you access OpenComputing Lab via a bookmark for the module `Resources` page on the VLE.*
 
-(host-or-vce)=
-## Choosing between the OU hosted and the locally run VCE
+(hosted-or-vce)=
+## Choosing the OU hosted or the local VCE
 
 For many students, OpenComputing Lab provides the most convenient way of accessing the {{MCODE}} VCE. All you need to access the hosted VCE is an internet connection and a computer running a modern web browser. For the duration of the module, all your work will be stored online in a personal file storage area. However, at the end of the module, you will lose access to the hosted VCE. 
 
@@ -83,6 +49,12 @@ If you do encounter a problem, the section [](g-additional-support.md#additional
 
 ## Where next?
 
-The next section, {numref}`g-compute_home.md#compute-home-online-vce`, {ref}`g-compute_home.md#compute-home-online-vce`, describes how to get started with the hosted VCE. You do not need to read those sections if you only wish to use the local VCE.
+To get started with the online hosted VCE:
 
-There are then two sections — {numref}`g-local_vce_quickstart.md#local-vce-quick-start` ({ref}`g-local_vce_quickstart.md#local-vce-quick-start`) and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance` ({ref}`g-local_vce_detailed.md#local-vce-detailed-guidance`) — that describe how to install a locally run version of the VCE on your own computer. You do not need to read those sections if you only wish to use the hosted VCE.
+- access the hosted VCE  via the __TM351 remote VCE__ link in the `Resources` tab of the TM351 VLE;
+- refer to the [hosted VCE documentation](https://docs.ocl.open.ac.uk/container-launcher/user/) for guidance on how to use the hosted VCE.
+
+If you are new to working with Jupyter notebooks or JupyterLab check the sections on 
+working with Jupyter notebooks ({numref}`g-working_with_jupyter_notebooks.md#working-with-jupyter-notebooks`) and working with JupyterLab ({numref}`g-vce_homepage_jupyterlab.md#using-the-vce-with-jupyterlab`).
+
+Experienced JupyterLab users may also find it useful to refer to the JupyterLab secrion for information on custom extensions installed in the {{MCODE}} VCE.
