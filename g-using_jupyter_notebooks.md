@@ -9,7 +9,7 @@ Notebook code is executed against a notebook kernel. In OU VCEs, notebook kernel
 Notebooks can be created fromn the JupyterLab *Launcher* menu, from the main `File > New > Notebook` menu, or by right-clicking in the file browser and selecting `New Notebook` from the pop-up menu.
 
 ```{figure} md_assets/media/notebook_file_browser_popup.png
-:name: code_cell_executed
+:name: notebook_file_browser_popup
 :width: 5.772370953630796in
 
 JupyterLab file browser, context sensitve menu raised on file

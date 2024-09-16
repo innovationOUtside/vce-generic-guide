@@ -119,7 +119,6 @@ Search for an image on the {{DOCKER_REPO}} using the module code, as shown in {n
 
 ```{figure} md_assets/media/docker_dashboard_image_search.png
 :name: dockerhub_image_search_b
-:alt: screenshot of Docker hub search on "ou-tm351" using Docker desktop showing result with 24j tag selected
 :width: 5.772222222222222in
 height: 4.6875in
 
