@@ -1,8 +1,8 @@
 # Classic notebook accessibility
 
-The notebooks are rendered within a browser as HTML. Instructional text in notebook Markdown cells are directly readable by screen readers. Code cells are contained within HTML group elements and need to be internally navigated to.
+The notebooks are rendered within a browser as HTML. Instructional text in notebook Markdown cells are directly readable by screen readers. Code cells are contained within HTML group elements and need to be intentionally navigated to.
 
-Most of the Jupyter notebook features are keyboard accessible. Several optional extensions provide further support in terms of visual styling and limited audio feedback support.
+Most of the Jupyter notebook features are keyboard accessible. Several pre-installed extensions provide further support in terms of visual styling and limited audio feedback support.
 
 If you struggle to use the VCE for any reason, including but not limited to incompatibility with any tools you may use to improve software access or usability, please raise an issue in the module forums or contact your tutor.
 

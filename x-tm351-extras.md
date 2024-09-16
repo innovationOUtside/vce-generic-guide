@@ -24,8 +24,6 @@ OpenRefine provides a browser based user interface that allows you to upload and
 
 The OpenRefine application runs in its own browser tab or browser window and should be opened from the JupyterLab *Launcher*.
 
-
-
 ## Working with PostgreSQL
 
 PostgreSQL is a widely used open source relational database. PostgreSQL is preinstalled in the {{MCODE}} VCE and should run automatically when the VCE is started.
@@ -36,25 +34,32 @@ By default, you should be able to connect to the database inside the VCE using p
 
 Connections to the PostgreSQL database can be made using a connection string with the form:
 
-`postgresql://USER:PWD@HOST:PORT/DB`
+`postgresql://USER:PASSWORD@HOST:PORT/DB`
 
-The following connection string can be used when connecting to the database:
+The following connection string can be used when connecting to the test database:
 
 `PGCONN='postgresql://testuser:testpass@localhost:5432/testdb'`
+
+For specific activities, the connection string will be:
+
+{{postgres_connection}}
+
 
 In a notebook code cell, you can create a database connection as:
 
 ```python
 from sqlalchemy import create_engine
-engine = create_engine(PGCONN)
+DB_CONNECTION = create_engine(PGCONN)
 ```
+
+If you have enabled `jupysql` IPython magic in a notebook (`%load_ext sql`), you should then be able to register the database connection with the magic via `%sql DB_CONNECTION` and execute SQL code against the database via a `%%sql` block magic code cell.
 
 You can inspect various properties of the database using the `sqlalchemy` inspector. For example, you can view the tables associated with a particular database:
 
 ```python
 from sqlalchemy import inspect
 
-inspector = inspect(engine)
+inspector = inspect(DB_CONNECTION)
 inspector.get_table_names()
 ```
 
@@ -66,48 +71,50 @@ You can manage the PostgreSQL server using the following shell commands from wit
 
 If you cannot connect to the PostgreSQL database, try restarting using the appropriate command.
 
+If you get an error regarding the permission settings on the PostgreSQL database, try repairing them by running the command:
+
+`sudo PG_VERSION=$PG_VERSION LOCAL_HOME=/home/$USER/${MODULE_CODE}-${MODULE_PRESENTATION} /etc/ou_scripts/repair_pg_migrated_permissions.sh`
+
+
+If you get other connection error reports, check that the database connection string is correct. Clarify which port PostgreSQL is listening to within the VCE by running the following in a notebook code cell:
+
+`! pg_lsclusters`
+
+*Alternatively, run the `pg_lsclusters` command directly on the command line inside the VCE without the leading `!`.*
+
+The port should by identifiable near the start of the string (e.g. the `main` cluster running on port `5432`). Use the reported port number in your database connection string.
+
+If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
+
 If the PostgreSQL database cannot start, for example, because the configuration file has become corrupted or because of a problem in accessing a data directory copied to a shared drive, reset the database configuration to original settings by running the following command on the command-line:
 
 `sudo /etc/ou_scripts/repair_postgres_db_path.sh`
 
-You might also want to check that you are trying to connect to the correct port. To check what port PostgreSQL is listening to within the VCE, in a notebook code cell, run:
+*Note that this is a destructive act and you will lose any updates you have made to your database.*
 
-`! pg_lsclusters`
+### Persisting PostgreSQL databases across OpenComputing Lab sessions and new local VCE sessions
 
-Or run the command directly on the command line without the initial `!`.
-
-The port should by identifiable near the start of the string (e.g. the `main` cluster running on port `5432`).
-
-If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
-
-### Persisting PostgreSQL Databases Across OpenComputing Lab Sessions and New Local VCE Sessions
-
-By default, the first time you launch the {{MCODE}} hosted VCE on OpenComputing Lab, or when you mount a directory on to the $HOME directory inside the local VCE, the PostgreSQL data directory will be copied into a hidden directory in your persistent file area and the database server will be configured to use it.
+By default, the first time you launch the {{MCODE}} hosted VCE on OpenComputing Lab, or when you mount a directory on to the $HOME directory (also referred to by the alias `~`) inside the local VCE, the PostgreSQL data directory will be copied into a hidden directory in your persistent file area and the database server will be configured to use it.
 
 Specifically, this means that if you update the database, the database contents should be persisted in the hidden `~/.db/postgresql` data directory.
 
-If for any reason you want to delete the persisted database contents and reset the persisted database to the original contents, do the following:
+If you do not want to persist any PostgreSQL database changes, you can prevent the database server from using the persistent files and force it to use an ephemeral database data directory which is reset after each hosted session, or whenever a new local VCE container with a shared directory is created. To disable the persistent storage of database files, create in the home directory an empty `.no_local_postgres` file (from a notebook code cell, run `!touch ~/.no_local_postgres`).
 
-- delete the  `~/.db/postgresql` directory:  `rm -r ~/.db/postgresql`
-- delete the sentinel file `~/.local_postgres`:  `rm ~/.local_postgres`
-- delete any `.no_mount` and `.no_local_db_path` files
-- quit the current OpenComputing Lab session
+To recreate previously modified databases, you will then need to restore the modified database from a backup, or re-run any required data ingestion scripts.
 
-Alternatively, you can prevent the database server from use the persistent files and just use an ephemeral database data directory which is reset after each hosted session, or whenever a new local VCE container with a shared directory is created, by creating in the home directory either an empty `.no_local_db_path` file (`touch ~/.no_local_db_path`) or an empty `.no_local_postgres` file (`touch ~/.no_local_postgres`).
+If you do not want *any* databases to use the persisted, mounted data directory, you can alternatively create an empty `.no_local_db_path` file (`! touch ~/.no_local_db_path`).
 
-If you are working with a local VCE, you can persist the database contents *either* using the database data directory mounted into the shared mounted directory, or simply let the database server use a data directory within the container (this will be lost if the container is destroyed, much like a hosted VCE session, but will persist is the container is hibernated or stopped and then restarted). To use an "internal" data directory inside the container, create an empty  `.no_local_db_path` or `.no_local_postgres` file at the root of the directory you mount onto `$HOME` inside the container, as in the case of the hosted VCE.
-
-If you do not want *any* databases to use the persisted, mounted data directory, you can alternatively create an empty `.no_local_db_path` file (`touch ~/.no_local_db_path`).
+If you are working with a local VCE, you can persist the database contents *either* using the database data directory mounted into the shared mounted directory, or simply let the database server use a data directory within the container (this will be lost if the container is destroyed, much like a hosted VCE session, but will persist if the container is hibernated or stopped and then restarted). To use an "internal" data directory inside the container, create an empty `.no_local_db_path` or `.no_local_postgres` file at the root of the directory you mount onto `$HOME` inside the container, as in the case of the hosted VCE.
 
 If you are working with the local VCE and do not mount a shared directory onto `$HOME` inside the container, the database will use its default data directory inside the container, which will persist until the container is destroyed.
 
 ### Backing up and restoring databases using PostgreSQL
 
-To back up a PostgreSQL database such as a movies database into a folder postgres-backup create a shared `backups` folder, in your {{local_dirname}} shared directory or as {{vce_db_backups}} inside the VCE and run the following command from a Notebook code cell (all on a single line):
+To back up a PostgreSQL database such as a movies database into a folder postgres-backup create a shared `backups` folder, in your {{local_dirname}} shared directory or as {{vce_db_backups}} inside the VCE and run the following commands from a Notebook code cell:
 
 ```bash
 ! mkdir -p ~/backups/postgres-backup/
-! pg_dump tm351 > ~/backups/postgres-backup/tm351.sql`
+! pg_dump tm351 > ~/backups/postgres-backup/tm351.sql
 ```
 
 Note that if the `movies` database does not exist, you will get an error if you try to back it up.
@@ -128,11 +135,11 @@ The following connection string can be used when connecting to the database:
 
 `MONGOCONN='mongodb://localhost:27017'`
 
-You can manage the MongoDB server using the following shell commands from within a terminal running inside the VCE, or prefix the command with a `!` to run it from a Jupyter notebook code cell:
+You can manage the MongoDB server using the following shell commands from within a terminal running inside the VCE, or prefix the command with a `!` to run it from a Jupyter notebook code cell as shown in the following examples:
 
-- restart the server: `sudo service mongod restart`
-- start the server: `sudo service mongod start`
-- stop the server: `sudo service mongod stop`
+- restart the server: `!sudo service mongod restart`
+- start the server: `!sudo service mongod start`
+- stop the server: `!sudo service mongod stop`
 
 If you cannot connect to the MongoDB database, try restarting using the appropriate command.
 
@@ -146,30 +153,25 @@ You might also want to check that you are trying to connect to the correct port.
 
 You can find the actual location of the configuration file by running the command:
 
-`! ps -xa | grep mongod``
+`! ps -xa | grep mongod`
 
-The path to the configuration file is given by the value of the `-f` parameter in the run command:
+The path to the configuration file is given by the value of the `-f` parameter in the run command. In a notebook code cell, run:
 
-`/usr/bin/mongod -f /etc/mongod.conf -- run`
+`! /usr/bin/mongod -f /etc/mongod.conf -- run`
 
 If you still cannot connect to the database, try restarting the VCE. (In a local VCE, restart the container from the Docker Desktop.)
 
 ### Persisting MongoDB Databases Across OpenComputing Lab Sessions and New Local VCE Sessions
 
-By default, the first time you launch the {{MCODE}} hosted VCE on OpenComputing Lab, or when you mount a directory on to the $HOME directory inside the local VCE, the PostgreSQL data directory will be copied into a hidden directory in your persistent file area and the database server will be configured to use it.
+By default, the first time you launch the {{MCODE}} hosted VCE on OpenComputing Lab, or when you mount a directory on to the $HOME directory (also referred to by the alias `~`) inside the local VCE, the MongoDB data directory will be copied into a hidden directory in your persistent file area and the database server will be configured to use it.
 
-Specifically, this means that if you update the database, the database contents should be persisted in the hidden `~/.db/postgresql` data directory.
+Specifically, this means that if you update the database, the database contents should be persisted in the hidden `~/.db/mongo` data directory.
 
-If for any reason you want to delete the persisted database contents and reset the persisted database to the original contents, do the following:
+If you do not want to persist any MongoDB database changes, you can prevent the database server from using the persistent files and force it to use an ephemeral database data directory which is reset after each hosted session, or whenever a new local VCE container with a shared directory is created. To disable the persistent storage of database files, create in the home directory an empty `.no_local_mongo` file (in  notebook code cell, run `!touch ~/.no_local_mongo`).
 
-- delete the  `~/.db/mongo` directory:  `rm -r ~/.db/mongo`
-- delete the sentinel file `~/.local_mongo`:  `rm ~/.local_mongo` 
-- delete any `.no_mount` and `.no_local_db_path` files
-- quit the current OpenComputing Lab session
+To recreate previously modified databases, you will then need to restore the modified database from a backup, or re-run any required data ingestion scripts.
 
-Alternatively, you can prevent the database server from use the persistent files and just use an ephemeral database data directory which is reset after each hosted session, or whenever a new local VCE container with a shared directory is created, by creating in the home directory an empty `.no_local_mongo` file (`touch ~/.no_local_mongo`).
-
-If you do not want *any* databases to use the persisted, mounted data directory, you can alternatively create an empty `.no_local_db_path` file (`touch ~/.no_local_db_path`).
+If you do not want *any* databases to use the persisted, mounted data directory, you can alternatively create an empty `.no_local_db_path` file (`! touch ~/.no_local_db_path`).
 
 If you are working with a local VCE, you can persist the database contents *either* using the database data directory mounted into the shared mounted directory, or simply let the database server use a data directory within the container (this will be lost if the container is destroyed, much like a hosted VCE session, but will persist is the container is hibernated or stopped and then restarted). To use an "internal" data directory inside the container, create an empty `.no_local_mongo` file at the root of the directory you mount onto `$HOME` inside the container, as in the case of the hosted VCE.
 

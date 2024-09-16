@@ -2,11 +2,13 @@
 
 Many Open University modules run over several years. In order to keep the software and applications used in a module VCE current, the module VCE may be updated for each presentation.
 
-When installing or accessing the VCE, you will need to make use of the **module code** ({{module_code}}) and the **module presentation code** ({{presentation_code}}). The module presentation code is constructed from the year and month of presentation. For example, the October 2024 presentation has the code `24J`, where `24` represents the year, and `J` the month (the 10th month of the year, mapped to the tenth letter of the alphabet). *The VCE cribsheet provides a handy summary of these values.*
+When installing or accessing the VCE, you will need to make use of the **module code** ({{module_code}}) and the **module presentation code** ({{presentation_code}}).
 
-To run the VCE locally, you will need to install a container platfrom such as Docker on your local computer.
+To run the VCE locally, you will need to install a container platform such as Docker on your local computer.
 
 In many cases, the following quick start instructions should be enough to get you going. Quick start instructions are provided for using the [Docker Desktop graphical user interface](#docker-desktop-quick-start), or, if you prefer, the [command line](#docker-command-line-quick-start).
+
+If you need more detailed guidance, see [](g-local_vce_detailed.md#local-vce-detailed-guidance)
 
 ## Creating a shared folder
 
@@ -20,20 +22,20 @@ We recommend creating the shared folder in your documents folder. On a Windows c
 
 - From the Docker Desktop search bar, {numref}`dockerhub_image_search`:
 
-  - search for {{docker_image_name}}
+  - search for {{docker_image_name}} in the {{ou_docker_repo}} repository
 
   - select the image with the tag corresponding to the current presentation code ({{pcode_lc}}) and pull the selected image
 
-```{figure} md_assets/media/image8.png
+*If the search returns no results, trying updating your copy of Docker Desktop.*
+
+```{figure} md_assets/media/docker_dashboard_image_search.png
 :name: dockerhub_image_search
-:alt: screenshot of a computer Description automatically generated with medium confidence
 :width: 5.772222222222222in
-:height: 4.6875in
+height: 4.6875in
 
-Docker image search results in Docker Desktop (as of October 2023, tags will be lower case by convention, e.g. `23j`).
+Docker image search results for an example image in Docker Desktop
 
-Screenshot showing results of searching for an image in Docker Desktop. A selected image is available in several tagged versions. The `23j` version is shown as selected from a drop down list of available tags.
-
+Screenshot showing results of searching for an example `ou-tm351` image in Docker Desktop. A selected image on the `ouseful-course-containers repository`is available in several tagged versions. The `24j` version is shown as selected from a drop down list of available tags.
 ```
 
 - From the Docker Desktop images list, select the appropriate container and create a new container with the following optional settings, {numref}`docker_desktop_new_container_settings`:
@@ -44,29 +46,29 @@ Screenshot showing results of searching for an image in Docker Desktop. A select
 
   - *volumes:* select a folder you want to share into the container from your host computer; we recommend creating a shared folder called {{local_dirname}} on your computer such as {{winpath}} (Windows) or {{macpath}} (Mac/Linux). This folder should be mounted against the path {{vce_homedir}} inside the container.
 
-```{figure} md_assets/media/image10.png
+```{figure} md_assets/media/docker_container_create.png
 :name: docker_desktop_new_container_settings
 :width: 5.772222222222222in
 :height: 6.627083333333333in
 
-Docker Desktop new container optional settings dialog
+Docker Desktop new container example, optional settings dialog
 
-Screenshot of the Docker Desktop form for configuring a new container with optional settings. The container name is suggested to be `tm129vce`; the port mapping for `:8888/tcp` is suggested as `8129`; the target for a volume mounted into the container is identified as the uppercase case `/home/ou/TM129-23J` as appropriate for the October 2023 presentation image.
+Screenshot of the Docker Desktop form for configuring a new example container with optional settings. The container name is suggested to be `tm351vce`; the port mapping for `:8888/tcp` is suggested as `8351`; the target for a volume mounted into the container is identified as the uppercase case `/home/ou/TM351-24J` as appropriate for the October 2024 presentation image.
 
 ```
 
 - From the running container page, {numref}`docker_desktop_running_container`, click on the link to the mapped port (using the above defaults, this should point to {{localhost_port}}.
 
-  - Use the password / access token {{jupyter_token}}  (all upper case) to access the notebooks.
+  - Use the password / access token {{jupyter_token}} (all upper case) to access the notebooks.
 
-```{figure} md_assets/media/image11.png
+```{figure} md_assets/media/docker_dashboard_running_container.png
 :name: docker_desktop_running_container
 :width: 5.772222222222222in
 :height: 1.1041666666666667in
 
-Docker Desktop running container page
+Docker Desktop running example container page
 
-Screenshot of the Docker Desktop panel for a running container. The link to a mapped port is highlighted. Clicking the link will open a browser onto the mapped network location.
+Screenshot of the Docker Desktop panel for an example TM351 running container. The link to a mapped port is highlighted. Clicking the link will open a browser onto the mapped network location.
 
 ```
 

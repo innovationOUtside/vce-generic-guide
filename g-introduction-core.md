@@ -1,10 +1,10 @@
 # Introduction
 
-In this module, you will use a module specific virtualised computing environment (VCE) for some of the module activities. We offer two ways of accessing the VCE: as an online hosted version using the Open University's OpenComputing Lab service (the 'hosted VCE'), and as a locally run environment that you can install on your own computer (a 'local VCE').
+In this module, you will use a module specific virtual computing environment (VCE) for some of the module activities. We offer two ways of accessing the VCE: as an online hosted version using the Open University's OpenComputing Lab service (the 'hosted VCE'), and as a locally run environment that you can install on your own computer (a 'local VCE').
 
-The VCE provides a customised computing environment appropriate for your module and an interactive browser based user interface to access the software running inside it. The VCE is implemented using the widely supported containers approach.
+The VCE provides a customised Linux-based computing environment appropriate for your module and an interactive browser based user interface to access the software running inside it.
 
-The hosted VCE is straightforward to use, and is suitable for most students ([](g-compute_home.md#compute-home-online-vce)). If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtualised Linux-based computing environment using containers, then you should choose to download and install the local VCE ([](g-local_vce_quickstart.md#local-vce-quick-start)). Further advice on choosing between the two environments is provided in {numref}`hosted-or-vce` {ref}`hosted-or-vce`.
+The hosted VCE is straightforward to use, and is suitable for most students ([](g-compute_home.md#compute-home-online-vce)). If you want to use the VCE when you do not have a connection to the Internet, or if you want to gain experience of installing and running a virtual Linux-based computing environment using containers, then you should choose to download and install the local VCE ([](g-local_vce_quickstart.md#local-vce-quick-start)). Further advice on choosing between the two environments is provided in {numref}`hosted-or-vce` {ref}`hosted-or-vce`.
 
 Your work in the VCE will be saved within the environment: either in the cloud (by the hosted VCE) or on your local machine (by the local VCE). If you are using the hosted VCE, you should regularly download a copy of your work files, particularly any TMA and EMA related work, to your local machine. For the local VCE, you might also want to back up important files to an alternative location.
 
@@ -22,7 +22,7 @@ This guide includes the following information:
     - JupyterLab ({numref}`g-vce_homepage_jupyterlab.md#using-the-vce-with-jupyterlab`)
     - Jupyter notebook v7 ({numref}`g-vce_homepage_jupyter_nb_v7.md#using-the-vce-with-jupyterlab-notebook-v7`)
 
-- working with Jupyter notebooks — a brief overview of working within a Jupyter notebook document ({numref}`g-working_with_jupyter_notebooks.md#working-with-jupyter-notebooks`) as well as notebook "gotchas" - that is, features of the notebooks that may not work the way you expect
+- working with Jupyter notebooks — a brief overview of working within a Jupyter notebook document ({numref}`g-using_jupyter_notebooks.md#using-jupyter-notebooks`) as well as notebook "gotchas" - that is, features of the notebooks that may not work the way you expect
 
 - accessibility information ({numref}`g-accessibility_jupyterlab-nbv7.md#jupyter-notebook-accessibility`) (includes selecting language packs, changing theme, setting font sizes, enabling audio alerts, etc.)
 
@@ -50,7 +50,7 @@ For many students, OpenComputing Lab provides the most convenient way of accessi
 
 If you need to access the VCE in an offline environment, or if you prefer not to use the hosted environment, you can run the VCE locally on your own computer. The local environment also provides a way of using the VCE when the module has finished and the online VCE is no longer available.
 
-The hosted VCE and the local VCE provide the same working environment, so your decision as to which environment to use may depend on convenience as much as anything. Indeed you may want to make use of both environments, accessing each of them at different times or in different circumstances. This is fine. However, when doing so, you will have to manage how you synchronise your files across the two VCEs yourself.
+The hosted VCE and the local VCE provide the same working environment, so your decision as to which environment to use is your own personal preference. Indeed you may want to make use of both environments, accessing each of them at different times or in different circumstances. This is fine. However, when doing so, you will have to manage how you synchronise your files across the two VCEs yourself.
 
 ## Backing up your work
 

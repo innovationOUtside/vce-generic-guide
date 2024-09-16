@@ -16,7 +16,7 @@ For many students, OpenComputing Lab provides the most convenient way of accessi
 
 If you need to access the VCE in an offline environment, or if you prefer not to use the hosted environment, you can run the VCE locally on your own computer. The local environment also provides a way of using the VCE when the module has finished and the online VCE is no longer available.
 
-The hosted VCE and the local VCE provide the same working environment, so your decision as to which environment to use may depend on convenience as much as anything. Indeed you may want to make use of both environments, accessing each of them at different times or in different circumstances. This is fine. However, when doing so, you will have to manage how you synchronise your files across the two VCEs yourself.
+The hosted VCE and the local VCE provide the same working environment, so your decision as to which environment to use is your own personal preference. Indeed you may want to make use of both environments, accessing each of them at different times or in different circumstances. However, when doing so, you will have to manage how you synchronise your files across the two VCEs yourself.
 
 ## Backing up your work
 
@@ -24,9 +24,7 @@ It is generally regarded as good practice to make backup copies of any files tha
 
 In the local VCE, only the files you save inside the VCE directory that the shared folder has been mounted against (recommended as {{vce_homedir}}) will be saved to the shared folder on your desktop. All files inside the VCE will persist inside the container until the container is deleted or destroyed.
 
-Backups are regularly made of your files on the hosted VCE. For the local VCE, files will persist in the directory on your host computer that is mounted into the VCE, even if the VCE container is destroyed.
-
-However, it is still good practice, and beneficial to your own peace of mind if nothing else, particularly when working on TMAs or the EMA, for you to back up or grab an archival copy of your files every so often.
+Backups are regularly made of your files on the hosted VCE, although these will only be recovered in the event of hardware failure. For the local VCE, files will persist in the directory on your host computer that is mounted into the VCE, even if the VCE container is destroyed. In each case, you should maintain your own backups in case you accidently delete, change or overwrite a file or its contents. This is especially important whilst you are working on your assessments where you may try a variety of approaches to answer the questions.
 
 ## Updates and upgrades
 
@@ -55,6 +53,6 @@ To get started with the online hosted VCE:
 - refer to the [hosted VCE documentation](https://docs.ocl.open.ac.uk/container-launcher/user/) for guidance on how to use the hosted VCE.
 
 If you are new to working with Jupyter notebooks or JupyterLab check the sections on 
-working with Jupyter notebooks ({numref}`g-working_with_jupyter_notebooks.md#working-with-jupyter-notebooks`) and working with JupyterLab ({numref}`g-vce_homepage_jupyterlab.md#using-the-vce-with-jupyterlab`).
+working with Jupyter notebooks ({numref}`g-using_jupyter_notebooks.md#using-jupyter-notebooks`) and working with JupyterLab ({numref}`g-vce_homepage_jupyterlab.md#using-the-vce-with-jupyterlab`).
 
 Experienced JupyterLab users may also find it useful to refer to the JupyterLab secrion for information on custom extensions installed in the {{MCODE}} VCE.

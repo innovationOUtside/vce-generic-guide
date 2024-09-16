@@ -84,6 +84,13 @@ If you have problems running code in the module notebooks, or running your own c
 Technical Q&A sites such as [Stack Overflow](http://stackoverflow.com/)
 contain answers to a wide variety of '*How do I ...?*' style questions and are often well worth exploring. Results from searches on Stack Overflow can also be limited to relevant questions by adding appropriate programming language tags to your query, such as *python* or *R*.
 
+Generative AI tools may also help answer your question. They are particuarly good at providing small amounts of sample code to get you started. Microsoft's [Bing copilot](https://www.bing.com/chat) provides access to a free model and is easy to use. Google's [Germini](https://gemini.google.com/app), OpenAI's [ChatGPT](https://chatgpt.com/) and Anthropic's [Claude.ai](https://claude.ai/new) also offer access to free models but require registration to use them. If you use a generative AI tool as part of your work on an assignment you must cite and reference it appropriately, and include a copy of the output in an appendix. 
+
+The OU provides guidence on how to use generative AI as part of your studies here:
+https://about.open.ac.uk/policies-and-reports/policies-and-statements/gen-ai/generative-ai-students
+
+Do not rely solely on the AI output for your assignments, as they frequently produce incorrect answers, partial answers, and answers that are not well tailored to the case study in the question
+
 If you continue to have problems, check the module forums to see if anyone else has encountered — and resolved — the same issue. You may also ask for support in module forums or from your tutor.
 
 The OU Computing Helpdesk will not be able to help with detailed technical queries arising from the module practical activities, so please limit any module-content related enquiries to the module forums or your tutor. The OU Computing Helpdesk can help with more general computing matters, including some support for installation problems that might occur.

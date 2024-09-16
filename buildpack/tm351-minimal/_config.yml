@@ -45,6 +45,13 @@ only_build_toc_files: true
 latex:
   latex_documents:
     targetname: book.tex
+  latex_elements:
+    preamble: |
+      % Keep images in place without floating
+      \usepackage{float}
+      \let\origfigure\figure
+      \let\endorigfigure\endfigure
+      \renewenvironment{figure}[1][]\origfigure[H]{\endorigfigure}
 
 # Add a bibtex file so that we can create citations
 #bibtex_bibfiles:
@@ -91,7 +98,14 @@ sphinx:
       MNAME: "Data Management and Analysis"
       PCODE: 24J
       YEAR: "2024"
+      DOCKER_REPO: "ousefulcoursecontainers"
       jupyter_help_forum: "appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum)"
+      use_notebook_v7: true
+      use_jupyterlab: true
+      kernel_language: Python
+      use_myst: true
+      use_git: true
+      use_local_fs: true
       #####################
       ##                 ##
       ##       END       ##
@@ -106,9 +120,10 @@ sphinx:
       container_name: "{{'`' + MCODE|lower + 'vce`'}}"
       vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
       vce_db_backups: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '/backups`'}}"
+      ou_docker_repo: "{{'`'+ DOCKER_REPO + '`'}}"
       docker_image_name: "{{'`ou-' + MCODE|lower + '`'}}"
-      docker_image_base: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + '`'}}"
-      docker_image: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
+      docker_image_base: "{{'`'+ DOCKER_REPO +'/ou-' + MCODE|lower + '`'}}"
+      docker_image: "{{'`'+ DOCKER_REPO +'/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
       winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
       macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"
       macpath2: "{{'`~/Documents/' + MCODE|upper + 'VCE`'}}"
@@ -136,11 +151,14 @@ sphinx:
       mpcode_l: "{{MCODE|lower + '-' + PCODE|lower}}"
       mpcode_uc: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
       mpcode_lc: "{{'`' + MCODE|lower + '-' + PCODE|lower + '`'}}"
+      postgres_connection: "{{'`postgresql://' + MCODE|lower + ':' + MCODE|lower +'@localhost:5432/'+ MCODE|lower +'`'}}"
 parse:
   myst_enable_extensions:
     - colon_fence
     - substitution
-
+    - dollarmath
+  myst_substitutions:
+    key: value
 
 #####################
 ##                 ##
