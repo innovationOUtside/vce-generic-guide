@@ -8,7 +8,6 @@ Notebook code is executed against a notebook kernel. In OU VCEs, notebook kernel
 
 Notebooks can be created fromn the JupyterLab *Launcher* menu, from the main `File > New > Notebook` menu, or by right-clicking in the file browser and selecting `New Notebook` from the pop-up menu.
 
-
 ```{figure} md_assets/media/notebook_file_browser_popup.png
 :name: code_cell_executed
 :width: 5.772370953630796in
@@ -25,13 +24,11 @@ By default, files are created with a default `UntitledN.ipynb` filename. Noteboo
 
 When a notebook is started, a process is started within a prgoramming language kernel environment.
 
-
 In {{MCODE}}, you will be using notebooks with a {{kernel_language}} language kernel.
 
 As long as the kernel is running (or is hibernated if you hibernate your computer), the values of any variables set within that process will be persisted. That is, the current process *state* will be preserved.
 
 To reset the kernel to an initial empty state, click the notebook toolbar restart button (&#8635;), or select the menu item `Kernel > Restart Kernel`.
-
 
 ## Working with code cells
 
@@ -55,7 +52,7 @@ If your program code "hangs" when you try to run it, you can stop the code execu
 <!-- {% if kernel_language=="Python" %} -->
 ### Running shell commands from a code cell
 
-In a Python/IPython kernel code cell, you can run a shell command by prefixing the command with a `!`. For example, show the current directory by running `$pwd`.
+In a Python/IPython kernel code cell, you can run a shell command by prefixing the command with a `!`. For example, show the current directory by running `! pwd`.
 <!-- {% endif %} -->
 
 ### Code cell execution status indicators
