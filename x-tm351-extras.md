@@ -73,8 +73,9 @@ If you cannot connect to the PostgreSQL database, try restarting using the appro
 
 If you get an error regarding the permission settings on the PostgreSQL database, try repairing them by running the command:
 
-`sudo PG_VERSION=$PG_VERSION LOCAL_HOME=/home/$USER/${MODULE_CODE}-${MODULE_PRESENTATION} /etc/ou_scripts/repair_pg_migrated_permissions.sh`
-
+```bash
+sudo PG_VERSION=$PG_VERSION LOCAL_HOME=/home/$USER/${MODULE_CODE}-${MODULE_PRESENTATION} /etc/ou_scripts/repair_pg_migrated_permissions.sh`
+```
 
 If you get other connection error reports, check that the database connection string is correct. Clarify which port PostgreSQL is listening to within the VCE by running the following in a notebook code cell:
 
