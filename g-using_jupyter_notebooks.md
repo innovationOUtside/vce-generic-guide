@@ -4,6 +4,23 @@ Jupyter notebooks are interactive documents that combine editable "content" cell
 
 Notebook code is executed against a notebook kernel. In OU VCEs, notebook kernels are typically provided by self-contained, pre-configured language environments that contain all the required packages necessary for running the module's coding activities.
 
+## Managing notebooks
+
+Notebooks can be created fromn the JupyterLab *Launcher* menu, from the main `File > New > Notebook` menu, or by right-clicking in the file browser and selecting `New Notebook` from the pop-up menu.
+
+
+```{figure} md_assets/media/notebook_file_browser_popup.png
+:name: code_cell_executed
+:width: 5.772370953630796in
+
+JupyterLab file browser, context sensitve menu raised on file
+
+A screenshot of the context senstive menu raised from a right-click on a file item in the Jupyeter file browser. The menu shows actions relating to both the notebook, and the directory the notebook is in.
+
+```
+
+By default, files are created with a default `UntitledN.ipynb` filename. Notebook files can be renamed by right-clicking on the file in the file browser and selecting `Rename`, or clicikg on the filename in the JupyterLab notebook and selecting `Rename Notebook...` from the pop-up menu,
+
 ## Notebook code kernels
 
 When a notebook is started, a process is started within a prgoramming language kernel environment.
