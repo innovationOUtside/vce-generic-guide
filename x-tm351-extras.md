@@ -38,7 +38,9 @@ Connections to the PostgreSQL database can be made using a connection string wit
 
 The following connection string can be used when connecting to the test database:
 
-`PGCONN='postgresql://testuser:testpass@localhost:5432/testdb'`
+```bash
+PGCONN='postgresql://testuser:testpass@localhost:5432/testdb'
+```
 
 For specific activities, the connection string will be:
 
@@ -74,7 +76,7 @@ If you cannot connect to the PostgreSQL database, try restarting using the appro
 If you get an error regarding the permission settings on the PostgreSQL database, try repairing them by running the command:
 
 ```bash
-sudo PG_VERSION=$PG_VERSION LOCAL_HOME=/home/$USER/${MODULE_CODE}-${MODULE_PRESENTATION} /etc/ou_scripts/repair_pg_migrated_permissions.sh`
+sudo PG_VERSION=$PG_VERSION LOCAL_HOME=/home/$USER/${MODULE_CODE}-${MODULE_PRESENTATION} /etc/ou_scripts/repair_pg_migrated_permissions.sh
 ```
 
 If you get other connection error reports, check that the database connection string is correct. Clarify which port PostgreSQL is listening to within the VCE by running the following in a notebook code cell:
@@ -189,4 +191,6 @@ To backup a MongoDB database such as the accidents, create a shared `backups` fo
 
 To restore a MongoDB database from a previously taken backup, such as a backup of the accidents database, run the command (all on a single line):
 
-`mongorestore --port=27017 --drop ~/backups/mongo-backup/accidents`
+```bash
+mongorestore --port=27017 --drop ~/backups/mongo-backup/accidents
+```

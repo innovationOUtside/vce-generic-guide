@@ -49,11 +49,15 @@ You should first attempt to clear all the output cells using the notebook menu *
 
 Open a terminal in the VCE. Then change directory (`cd`) to the shared folder, and issue the following command (all on one line):
 
-`jupyter nbconvert --to notebook --ClearOutputPreprocessor.enabled=True YOURNOTEBOOK.ipynb`
+```bash
+jupyter nbconvert --to notebook --ClearOutputPreprocessor.enabled=True YOURNOTEBOOK.ipynb
+```
 
 By default, the clean notebook will be named `YOURNOTEBOOK.nbconvert.ipynb`. To clean the notebook and retain the same filename, add the flag `--inplace` to the command line:
 
-`jupyter nbconvert --inplace --to notebook --ClearOutputPreprocessor.enabled=True YOURNOTEBOOK.ipynb`
+```bash
+jupyter nbconvert --inplace --to notebook --ClearOutputPreprocessor.enabled=True YOURNOTEBOOK.ipynb
+```
 
 The notebook server may also run into memory problems if you have a large number of notebooks open. Try stopping all the notebooks and then restarting the notebook you are currently working on. (You will need to rerun the code cells to restore the state of the variables.)
 
