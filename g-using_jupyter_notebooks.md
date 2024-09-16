@@ -145,7 +145,32 @@ $$
 
 #### Mermaid diagram descriptions
 
-Jupyter notebook markdown cells also support Mermaid diagr
+Jupyter notebook markdown cells also support text generated diagrams using [mermaid.js](https://mermaid.js.org/intro/) scripts:
+
+`````text
+```mermaid
+
+graph LR;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+    D-->E;
+```
+`````
+
+The rendered cell then displays the corresponding mermaid rendered image, {numref}`jl_mermaid`:
+
+```{figure} md_assets/media/mermaid_diag.png
+:name: jl_mermaid
+:width: 5.772370953630796in
+
+Example of a rendered mermaid diagram.
+
+Screenshot showing a simple box and arrows chart flowing left to right. A box labeled A is connected by lines and arrows to two boxes, B and C. Boxes B and C are then connected to box D, which in turn is connected to a box E.
+```
+
+Being able to *write* diagram descriptions within a markdown cell that are then automatically rendered provides an accessible, text-based way for creating (and editing) diagrams. It removes the need for graphical image editors and can simplify the process of diagram creation. Access to the raw "source code" of the diagram also allows tutors to modify or extend diagrams, as well as easily create and share their own diagrams back with students. See the [`mermaid.js` documentation](https://mermaid.js.org/intro/) for a full description of available diagram types.
 
 <!-- {% if use_myst %} -->
 ### Rich MyST syntax
