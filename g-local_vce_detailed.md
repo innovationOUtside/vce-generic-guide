@@ -254,7 +254,7 @@ See [](#managing-docker-from-the-terminal-command-line) for more examples of con
 
 Containers can be managed from the Containers area of the Docker Desktop, {numref}`running_container_page`.
 
-```{figure} md_assets/media/image14.png
+```{figure} md_assets/media/docker-container-controls.png
 :name: running_container_page
 :width: 5.64379593175853in
 :height: 1.4401454505686788in
@@ -281,14 +281,14 @@ Screenshot of the Docker Desktop containers page. All but one container listings
 
 ### Opening a terminal inside a running container
 
-You can open a terminal inside a running container from a running container tab inside Docker Desktop, {numref}`docker_desktop_terminal`.
+You can open a terminal inside a running container from a running container view inside Docker Desktop by selecting the `Exec` tab, {numref}`docker_desktop_terminal`.
 
-```{figure} md_assets/media/image16.png
+```{figure} md_assets/media/docker_desktop_terminal.png
 :name: docker_desktop_terminal
 :width: 5.772222222222222in
 :height: 2.5083333333333333in
 
-Opening a terminal into a container using Docker Desktop
+Opening a terminal into a running container using Docker Desktop via the Exec tab
 
 ```
 
