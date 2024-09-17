@@ -1,6 +1,6 @@
 {
     "name": "OU Document Generator",
-    "image": "outm351dev/ou-doc-builder",
+    "image": "outm351dev/ou-doc-builder:legacy",
     // BUILD: docker buildx build -f .devcontainer/Dockerfile --platform linux/amd64,linux/arm64 . --tag  outm351dev/ou-doc-builder --push
     /*
     "build": {
