@@ -14,8 +14,8 @@ RUN  apt-get update \
                 imagemagick \
         && apt-get clean
 
-RUN pip install jupyter-book ou-book-theme pandoc pdfsak \
-        pymupdf sphinx-jupyterbook-latex ou-print-pack-tools 
+RUN pip install jupyter-book==0.15.1 Sphinx==5.0.2 ou-book-theme pandoc pdfsak \
+        pymupdf sphinx-jupyterbook-latex==0.5.2 ou-print-pack-tools 
 
 # Build instructions for the container
 # docker buildx build -f .devcontainer/Dockerfile --platform linux/amd64,linux/arm64 . --tag  outm351dev/ou-doc-builder --push
