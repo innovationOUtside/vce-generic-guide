@@ -6,6 +6,25 @@ Example module configurations can be found in the [`buildpack`](buildpack/) dire
 
 To build files for a module, run: `./build_pdf_docx.sh MODULECODE` (for example, `./build_pdf_docx.sh tm351`). The files are built into `./buildpack/MODULECODE/genarated/` (for example, `./buildpack/tm351/generated/`)
 
+## Using With .devcontainer
+
+A legacy `.devcontainer` is defined using legacy tools but that does still build. You should be able to lanch this repo with the devcontainer either locally or in GitHun Codespaces.
+
+For the TM351-2J presentation the buildpack is in `buildpack/tm351-minimal`. Build the PDF as:
+
+```bash
+# Build unbranded PDF
+./build_pdf_docx.sh tm351-minimal
+# Creates ./buildpack/tm351-minimal/generated/tm351-minimal.pdf
+
+# Missing dependencies for logo tool
+pip install ou-print-pack-tools lxml_html_clean
+
+#Add logo using https://github.com/innovationOUtside/ou-print-pack-tools
+ou_pdf_brandify -o buildpack/tm351-minimal/_generated -s 0.2
+# Generates ./buildpack/tm351-minimal/_generated/tm351-minimal-logo.pdf
+```
+
 ## Branches
 
 The `generic` branch includes an original draft of a generic guide for OU virtual computing environment (VCE) users (OpenComputing Lab, local containers) deployed with the classic Jupyter notebook UI as a the default UI. __This branch should be regarded as deprecated.__

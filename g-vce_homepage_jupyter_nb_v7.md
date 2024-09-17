@@ -6,7 +6,6 @@ The Jupyter notebook v7 home page, {numref}`nb7_homepage_file_IDE`. provides a f
 
 ```{figure} md_assets/media/nb7_homepage_file_IDE.png
 :name: nb7_homepage_file_IDE
-:alt: A screenshot of the Jupyter nb7 homepage with collapsible, IDE style file browser
 :width: 5.772222222222222in
 :height: 1.851388888888889in
 

@@ -1,16 +1,13 @@
 # Working With Jupyter Notebooks
 
-The JupyterLab and Jupyter Notebook user interfaces both provide environments for working with Jupyter notebooks.
+Jupyter notebooks are interactive documents that combine editable "content" cells, which may contain structured content written using markdown formatted text, executable "code" cells and executed code cell outputs within a single document.
 
-Jupyter notebooks are cell based interactive documents that combine editable "content" cells, which may contain structured content written using markdown formatted text, executable "code" cells and executed code cell outputs in a single document.
 
-## Visual Design of Environments
+## Installed Extensions
 
-The Jupyter environments used in OU VCEs are typically modified using several extensions:
+The Jupyter environments used in OU VCEs are modified using a range of custom and third party developed extensions. If you want to recreate elements of the OU VCEs, these extensions can be installed in other Jupyter environments.
 
-- [`innovationOUtside/jupyterlab_ou_brand_extension`](https://github.com/innovationOUtside/jupyterlab_ou_brand_extension)
-
-This extension adds OU logos to the JupyterLab environment, {numref}`jl_branding`; *(the favicon has been updated to the new OU logo since the screenshot below was taken)*:
+The [`jupyterlab_ou_brand_extension`](https://github.com/innovationOUtside/jupyterlab_ou_brand_extension) adds OU logos to the JupyterLab environment, {numref}`jl_branding`.
 
 
 ```{figure} md_assets/media/ou_jl_branding.png
@@ -22,16 +19,12 @@ JupyterLab environment with OU branding
 A screenshot of the JupyterLab environment that is branded with an OU logo in the top left hand corner of the JupyterLab user interface and an Open University logo as the icon for a browser tab that displays the JupyterLab interface.
 ```
 
-Part of the reason for using an OU branded JupyterLab environment is to give you the sense of a "place to go" when working on VCE based activities or materials. You should follow appropriate behaviour when working inside the environment, particularly if the documents that are produced are shared with others, either through live collaboration, or submitted as assessment materials.
-
-- [`innovationOUtside/jupyterlab_empinken_extension`](https://github.com/innovationOUtside/jupyterlab_empinken_extension)
-
-This extension supports four thematically coloured background cells that identify how to interpret different sections of a notebook, {numref}`jl_empinken`. Cell backgrounds are persistent and are toggled from notebook toolbar buttons.
+The [`jupyterlab_empinken_extension`](https://github.com/innovationOUtside/jupyterlab_empinken_extension) supports four thematically coloured background cells that indicate how to interpret different sections of a notebook, as shown in {numref}`jl_empinken`. Cell backgrounds are persistent and are toggled from notebook toolbar buttons.
 
 - *activity* (blue): cells that describe activities or exercises;
-- *learner* (yellow): calls yo action, where you are expected to modify the cell contents;
-- *tutor* (pink): warning text, or text added as feedback by a tutor on assessed material;
-- *solution/success* (green): occasionally used to signify a "correct" answer to a task.
+- *learner* (yellow): cells that students are expected to modify as part of their learning or assessment.;
+- *tutor* (pink): important information, or text added as feedback by a tutor on assessed material;
+- *solution/success* (green): used to indicate a worked solution or successful outcome.
 
 ```{figure} md_assets/media/empinken-new-buttons.png
 :name: jl_empinken
@@ -43,7 +36,7 @@ Four coloured cell types (both markdown and code cells) are shown: blue, yellow,
 
 ```
 
-The toggle buttons can be individually enabled / disabled; the colours applied to each cell type are also user customisable via user settings, {numref}`jl_empinken_prefs`:
+The toggle buttons can be individually enabled / disabled; the colours applied to each cell type are also user customisable via user settings as shown in {numref}`jl_empinken_prefs`.
 
 ```{figure} md_assets/media/empinken_jl_prefs.png
 :name: jl_empinken_prefs
@@ -54,9 +47,7 @@ Options are shown that allow a user to control whether a toolbar button is displ
 
 ```
 
-- [`innovationOUtside/jupyterlab_cell_status_extension`](https://github.com/innovationOUtside/jupyterlab_cell_status_extension)
-
-This extension provides visual and/or audible indications of the cell run status, {numref}`jl_cell_status_indicators`. The visual indicator highlights queued/currently running cells, successfully run cells and run cells that errored:
+The [`jupyterlab_cell_status_extension`](https://github.com/innovationOUtside/jupyterlab_cell_status_extension) provides visual and/or audible indications of the cell run status. The visual indications shown in {numref}`jl_cell_status_indicators` highlight a successfully run cell, a run cell that resulted in an error and a queued/currently running cell. An optional animated "cell flash" effect highlights a code cell that has just completed execution.
 
 ```{figure} md_assets/media/cell_status_jl.png
 :name: jl_cell_status_indicators
@@ -68,11 +59,9 @@ Screenshot showing code cells with different cell run status indications: green 
 
 ```
 
-The optional audible alerts signal successful or unsuccessful cell execution, as well as spoken error messages.
+This extension also supports a range of audible alerts that signal successful or unsuccessful cell execution, as well as spoken error messages.
 
-A further optional setting can be used to provide an animated "cell flash" effect to highlight a code cell that has just completed execution.
-
-*For further information on changing the settings, see {numref}`g-accessibility_jupyterlab-nbv7.md#jupyter-notebook-accessibility` {ref}`g-accessibility_jupyterlab-nbv7.md#jupyter-notebook-accessibility`.*
+*For further information the audio accessibility features, as well as guidance on changing the settings, see {numref}`g-accessibility_jupyterlab-nbv7.md#jupyter-notebook-accessibility` {ref}`g-accessibility_jupyterlab-nbv7.md#jupyter-notebook-accessibility`.*
 
 ## Enriched Display
 
@@ -88,7 +77,9 @@ Sidebar showing a table of contents navigation tool generated from the headings 
 
 ```
 
+<!-- {% if use_notebook_v7 %} -->
 *In the Jupyter Notebook v7 environment, open the table of contents from the Notebook `View -> Table of Contents` menu (`shift-command-k` keyboard shortcut).*
+<!-- {% endif %} -->
 
 The table of contents offers two main benefits:
 
@@ -116,7 +107,7 @@ Screenshot showing how a triple backticked warning block is rendered with a warn
 
 ```
 
-Other blocks include `danger` (red header bar), `note` (blue), `seealso` (lilac), `important` (light grey-green) and `tip` (light green). The header bars also carry distinguishing leading icons. Using the `{admonition} My Title` style block, a title can be added to the block and the can be styled using the appropriate admonition type set as a `:class:` value. For example, the following block will be rendered as shown in {numref}`jl_myst_warning_title`
+Other blocks include `danger` (red header bar), `note` (blue), `seealso` (lilac), `important` (light grey-green) and `tip` (light green). The header bars also carry distinguishing leading icons. Using the `{admonition} My Title` style block, a title can be added to the block and styled using the appropriate admonition type set as a `:class:` value. For example, the following block will be rendered as shown in {numref}`jl_myst_warning_title`
 
 `````text
 ```{admonition} Take this as a warning!

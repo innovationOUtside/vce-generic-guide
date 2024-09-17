@@ -53,7 +53,6 @@ The primary user interface for the {{MCODE}} ({{PCODE}}) VCE is the classic Jupy
 
 ```{figure} md_assets/media/nb_classic_homepage.png
 :name: nb_classic_homepage
-:alt: A screenshot of a computer Description automatically generated with low confidence
 :width: 5.772222222222222in
 :height: 1.851388888888889in
 

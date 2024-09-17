@@ -8,14 +8,23 @@ RUN  apt-get update \
                 texlive-fonts-extra \
                 texlive-luatex \
                 texlive-xetex \
+                texlive-pictures \
+                texlive-plain-generic \
                 latexmk \
                 pandoc \
+                #pandoc-citeproc \
+                pandoc-data \
                 librsvg2-bin \
                 imagemagick \
+                git \
         && apt-get clean
 
-RUN pip install jupyter-book==0.15.1 Sphinx==5.0.2 ou-book-theme pandoc pdfsak \
+# Legacy build
+RUN pip install "myst-parser==0.18.1" "myst-nb==0.17.2" "jupyter-book==0.15.1" "ou-book-theme==0.5.1" pandoc pdfsak \
         pymupdf sphinx-jupyterbook-latex==0.5.2 ou-print-pack-tools 
 
+#RUN pip install jupyterlab-myst jupytext git+https://github.com/innovationOUtside/ipython_magic_tikz.git
+
+
 # Build instructions for the container
-# docker buildx build -f .devcontainer/Dockerfile --platform linux/amd64,linux/arm64 . --tag  outm351dev/ou-doc-builder --push
+# docker buildx build -f .devcontainer/Dockerfile --platform linux/amd64,linux/arm64 . --tag  outm351dev/ou-doc-builder:legacy --push

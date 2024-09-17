@@ -11,7 +11,7 @@ You shouldn't need to work though the following unless there are specific proble
 
 ## Containers and the VCE
 
-The VCE runs in a virtualised container as a *guest* Linux (Ubuntu) operating system on a host computer such as OpenComputing Lab or your own computer. The containers typically operate in a 'headless' mode (that is, without a graphical desktop interface) and run a variety of application services. The applications are exposed as interactive, graphical web applications via an HTTP interface that you can access through a web browser.
+The VCE is a virtual environment that runs inside a container as a *guest* Linux (Ubuntu) operating system on a host computer such as OpenComputing Lab or your own computer. The containers typically operate in a 'headless' mode (that is, without a graphical desktop interface) and run a variety of application services. The applications are exposed as interactive, graphical web applications via an HTTP interface that you can access through a web browser.
 
 The local and hosted VCEs both runs as a single user environment. The hosted VCE launches a separate containerised environment for each student using a JupyterHub multi-user server.
 

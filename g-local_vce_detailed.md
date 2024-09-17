@@ -104,7 +104,7 @@ In the *Applications* menu, the *Terminal* can usually be found in the *System* 
 
 A Docker image provides a static template for creating an instance of a personal VCE in a running container. The easiest way to download a Docker image is by using the Docker Desktop search toolbar, {numref}`docker_desktop_searchbar`.
 
-```{figure} md_assets/media/image7.png
+```{figure} md_assets/media/docker_desktop_search_bar.png
 :name: docker_desktop_searchbar
 :width: 5.772222222222222in
 :height: 1.1388888888888888in
@@ -115,21 +115,25 @@ Screenshot of the Docker Desktop search toolbar.
 
 ```
 
-Search for an image using the module code, as shown in {numref}`dockerhub_image_search_b`.
+Search for an image on the {{DOCKER_REPO}} using the module code, as shown in {numref}`dockerhub_image_search_b`.
 
-```{figure} md_assets/media/image8.png
+```{figure} md_assets/media/docker_dashboard_image_search.png
 :name: dockerhub_image_search_b
-:alt: screenshot of a computer Description automatically generated with medium confidence
 :width: 5.772222222222222in
 height: 4.6875in
 
-*Docker image search results in Docker Desktop (as of October 2023, tags will be lower case by convention, e.g. `23j`).*
+*Docker image search results for an example image in Docker Desktop.*
 
-Screenshot showing results of searching for an image in Docker Desktop. A selected image is available in several tagged versions. The `23j` version is shown as selected from a drop down list of available tags.
+Screenshot showing results of searching for an example `ou-tm351` image in Docker Desktop. A selected image on the `ouseful-course-containers repository`is available in several tagged versions. The `24j` version is shown as selected from a drop down list of available tags.
 
 ```
 
-- search for {{docker_image_name}} and select the {{docker_image_base}} image from the search results; then from the drop down tag list select the tag that matches the presentation code for this presentation of the module: {{pcode_lc}}. Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download (up to 20 minutes depending on your network connection).* You should only need to download the image once.
+- search for {{docker_image_name}} in the {{ou_docker_repo}} repository and select the {{docker_image_base}} image from the search results; then from the drop down tag list select the tag that matches the presentation code for this presentation of the module: {{pcode_lc}}. Clicking the *Pull* button will then download the image from the Docker Hub repository to your computer. *The Docker image may take some time to download (up to 20 minutes depending on your network connection).* You should only need to download the image once.
+
+
+```{admonition} Module presentation codes
+The module presentation code is constructed from the year and month of presentation. For example, the October 2024 presentation has the code `24J`, where `24` represents the year, and `J` the month (the 10th month of the year, mapped to the tenth letter of the alphabet). *The VCE cribsheet provides a handy summary of these values.*
+```
 
 You can also download an image from the command line by running the following command from the command line:
 
@@ -147,14 +151,14 @@ One of the simplest way of running and managing containers is to use the Docker 
 
 From the *Images* view in the Docker Desktop, identify the appropriate image and click the play button, {numref}`docker_desktop_images`.
 
-```{figure} md_assets/media/image9.png
+```{figure} md_assets/media/docker_desktop_image_play.png
 :name: docker_desktop_images
 :width: 5.772222222222222in
 :height: 1.8916666666666666in
 
-Docker Desktop images page
+Docker Desktop images page - starting an example image
 
-Screenshot of the Docker Desktop images view. The TM129 image is identified and the associate play button for creating a running container from it is indicated.
+Screenshot of the Docker Desktop images view. An example TM351 image is identified and the associated play button for creating a running container from it is indicated.
 
 ```
 
@@ -168,14 +172,14 @@ From the *Run a new container* dialogue, use settings of the following form:
 
 Note: the path inside the container is case sensitive. Use upper case for the module directory inside the container. __Click the `+` sign to ensure the path is registered.__
 
-```{figure} md_assets/media/image10.png
+```{figure} md_assets/media/docker_container_create.png
 :name: docker_desktop_new_container_settings_2
 :width: 5.772222222222222in
 :height: 6.627083333333333in
 
-Docker Desktop new container optional settings dialog
+Docker Desktop new example container, optional settings dialog
 
-Screenshot of the Docker Desktop form for configuring a new container with optional settings. The container name is suggested to be `tm129vce`; the port mapping for `:8888/tcp` is suggested as `8129`; the target for a volume mounted into the container is identified as the uppercase case /`home/ou/TM129-23J` as appropriate for the October 2023 presentation image.
+Screenshot of the Docker Desktop form for configuring a new example container with optional settings. The container name is suggested to be `tm351vce`; the port mapping for `:8888/tcp` is suggested as `8351`; the target for a volume mounted into the container is identified as the uppercase case `/home/ou/TM351-24J` as appropriate for the October 2024 presentation image.
 
 ```
 
@@ -190,14 +194,26 @@ Note:
 
 You can view the user interface published by the running container, click on the forwarded link that appears in the container status area at the top of the container information page, {numref}`docker_desktop_running_container_2`.
 
-```{figure} md_assets/media/image11.png
+```{figure} md_assets/media/docker_dashboard_running_container.png
 :name: docker_desktop_running_container_2
 :width: 5.772222222222222in
 :height: 1.1041666666666667in
 
-Docker Desktop running container page
+Docker Desktop running example container page
 
 Screenshot of the Docker Desktop panel for a running container. The link to a mapped port is highlighted. Clicking the link will open a browser onto the mapped network location.
+
+```
+
+You can check the paths associated with shared (mounted) directories via the `Bind mounts` tab:
+
+```{figure} md_assets/media/docker_dashboard_bind_mounts.png
+:name: docker_desktop_bind_mounts
+:width: 5.772222222222222in
+
+Docker Desktop showing container bind mounts
+
+Screenshot of the Docker Desktop panel for an example running container. The "Bind mounts" tab is selected showing which directories on the host computer are mapped to which directories inside the container.
 
 ```
 
@@ -238,7 +254,7 @@ See [](#managing-docker-from-the-terminal-command-line) for more examples of con
 
 Containers can be managed from the Containers area of the Docker Desktop, {numref}`running_container_page`.
 
-```{figure} md_assets/media/image14.png
+```{figure} md_assets/media/docker-container-controls.png
 :name: running_container_page
 :width: 5.64379593175853in
 :height: 1.4401454505686788in
@@ -265,14 +281,14 @@ Screenshot of the Docker Desktop containers page. All but one container listings
 
 ### Opening a terminal inside a running container
 
-You can open a terminal inside a running container from a running container tab inside Docker Desktop, {numref}`docker_desktop_terminal`.
+You can open a terminal inside a running container from a running container view inside Docker Desktop by selecting the `Exec` tab, {numref}`docker_desktop_terminal`.
 
-```{figure} md_assets/media/image16.png
+```{figure} md_assets/media/docker_desktop_terminal.png
 :name: docker_desktop_terminal
 :width: 5.772222222222222in
 :height: 2.5083333333333333in
 
-Opening a terminal into a container using Docker Desktop
+Opening a terminal into a running container using Docker Desktop via the Exec tab
 
 ```
 
