@@ -22,7 +22,7 @@ Your work in the VCE will be saved within the environment: either in the cloud (
 
 - working with Jupyter notebooks — a brief overview of working within a Jupyter notebook document ({numref}`g-using_jupyter_notebooks.md#using-jupyter-notebooks`) as well as notebook "gotchas" - that is, features of the notebooks that may not work the way you expect
 
-- additional software applications provided in the VCE that are specific to {{MCODE}} (OpenRefine, PostgreSQL and MongoDB) {numref}`x-tm351-extras.md#additional-software`
+- additional software applications provided in the VCE that are specific to {{MCODE}} (OpenRefine, PostgreSQL and MongoDB) ({numref}`x-tm351-extras.md#additional-software`)
 
 - information on finding additional support, and guidance on where to look for or ask for help ({numref}`g-additional-support.md#additional-support`)
 
@@ -36,8 +36,8 @@ Your work in the VCE will be saved within the environment: either in the cloud (
 
 ### Advanced user information:
 
-- practical advice on using the Linux terminal / command line ({numref}`g-using-linux-command-line.md#using-the-terminal-command-line` {ref}`g-using-linux-command-line.md#using-the-terminal-command-line`)
+- practical advice on using the Linux terminal / command line ({numref}`g-using-linux-command-line.md#using-the-terminal-command-line`)
 
-- working with `git` and remote `git` repositories in {numref}`g-jupyterlab_git.md#using-git-and-github-in-jupyterlab` {ref}`g-jupyterlab_git.md#using-git-and-github-in-jupyterlab`. 
+- working with `git` and remote `git` repositories ({numref}`g-jupyterlab_git.md#using-git-and-github-in-jupyterlab`). 
 
 - (optional) choosing between the hosted or local VCE ({numref}`hosted-or-vce`) and guidance on installing the local VCE on your own computer, including testing your installation ({numref}`g-local_vce_quickstart.md#local-vce-quick-start` and {numref}`g-local_vce_detailed.md#local-vce-detailed-guidance`)

@@ -52,7 +52,6 @@ To get started with the online hosted VCE:
 - access the hosted VCE  via the __TM351 remote VCE__ link in the `Resources` tab of the TM351 VLE;
 - refer to the [hosted VCE documentation](https://docs.ocl.open.ac.uk/container-launcher/user/) for guidance on how to use the hosted VCE.
 
-If you are new to working with Jupyter notebooks or JupyterLab check the sections on 
-working with Jupyter notebooks ({numref}`g-using_jupyter_notebooks.md#using-jupyter-notebooks`) and working with JupyterLab ({numref}`g-vce_homepage_jupyterlab.md#using-the-vce-with-jupyterlab`).
+If you are new to working with Jupyter notebooks and/or JuoyterLab, check the sections on working with the JupyterLab environment ({numref}`g-vce_homepage_jupyterlab.md#using-the-vce-with-jupyterlab`) and with Jupyter notebook document ({numref}`g-using_jupyter_notebooks.md#using-jupyter-notebooks`) .
 
-Experienced JupyterLab users may also find it useful to refer to the JupyterLab secrion for information on custom extensions installed in the {{MCODE}} VCE.
+Experienced JupyterLab users may also find it useful to refer to the JupyterLab section for information on custom extensions installed in the {{MCODE}} VCE.
