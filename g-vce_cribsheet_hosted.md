@@ -11,3 +11,5 @@ Important settings:
 
 - Jupyter notebook server password / access token: {{jupyter_token}}
 - Home directory path inside VCE container: {{vce_homedir}}
+
+Docker image for local running: {{docker_image}}
