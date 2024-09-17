@@ -28,13 +28,13 @@ In {{MCODE}}, you will be using notebooks with a {{kernel_language}} language ke
 
 As long as the kernel is running (or is hibernated if you hibernate your computer), the values of any variables set within that process will be persisted. That is, the current process *state* will be preserved.
 
-To reset the kernel to an initial empty state, click the notebook toolbar restart button (&#8635;), or select the menu item `Kernel > Restart Kernel`.
+To reset the kernel to an initial empty state, click the notebook toolbar restart button (↻), or select the menu item `Kernel > Restart Kernel`.
 
 ## Working with code cells
 
 A new Jupyter notebook is created with a single code cell as a default.
 
-Click in the cell to select and edit it, and then run the cell and move on to the next cell either by the keyboard command — `shift-Enter` — or by clicking the play button (&#9205;) in the notebook toolbar.
+Click in the cell to select and edit it, and then run the cell and move on to the next cell either by the keyboard command — `shift-Enter` — or by clicking the play button (▶) in the notebook toolbar.
 
 On running a code cell, outputs from any `print()` or `display()` statements, as well as the value of any object returned from the last executable code line, will be displayed as code cell output, {numref}`code_cell_executed`
 
@@ -47,7 +47,7 @@ A screenshot of an executed notebook code cell with lines of code demonstrating 
 
 You can clear an individual cell's output by right-clicking on the cell and selecting `Clear Cell Output` from the pop-up menu. Clear the output on all cells by selecting `Clear Outputs of All Cells`.
 
-If your program code "hangs" when you try to run it, you can stop the code execution by clicking the stop button (&#9209;) in the notebook toolbar or from the `Kernel > Interrupt Kernel` menu option.
+If your program code "hangs" when you try to run it, you can stop the code execution by clicking the stop button (■) in the notebook toolbar or from the `Kernel > Interrupt Kernel` menu option.
 
 <!-- {% if kernel_language=="Python" %} -->
 ### Running shell commands from a code cell
