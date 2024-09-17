@@ -82,13 +82,13 @@ sphinx:
     ##   MODULE AND PRESENTATION UPDATES   ##
     ##                                     ##
     #########################################
-    copyright: "2023 The Open University"
+    copyright: "2024 The Open University"
     myst_substitutions:
       MCODE: TM351
       NCODE: "351"
       MNAME: "Data Management and Analysis"
-      PCODE: 23J
-      YEAR: "2023"
+      PCODE: 24J
+      YEAR: "2024"
       jupyter_help_forum: "appropriate module forum (for example, a specialist technical or computer support forum or a particular study block forum)"
       #####################
       ##                 ##
