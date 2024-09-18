@@ -4,6 +4,22 @@ The [`jupyterlab-contrib/jupyterlab-filesystem-access`](https://github.com/jupyt
 
 This extension allows you to select a directory from your local filesystem (which is to say, the files on your own computer) and access that directory from within Jupyter environment *wherever that environment is actually hosted*, {numref}`jl_local_file_list`
 
+From the "Open new folder" button in the *Local Fiel System" tab, open a directory on your desktop. *You may be prompted for permission.* Sharing the folder allows the browser to read and open the contents of the folder on the desktop in the Jupyter environment.
+
+```{figure} md_assets/media/jl_shared_fs.png
+:name: jl_shared_fs
+:width: 5.772370953630796in
+
+Shared desktop filesystem.
+
+Screenshot showing how to mount a directory from the desktop into the JupyterLab UI.
+
+```
+
+*No files are copied: the browser is just given permission to read to them from that directory.*
+ 
+You can also create files in the Jupyter environment and save them back to the desktop. For example, in the local file system browser, right click and select *New File*. You may be prompted for permission to write to the shared directory (the browser cannot write outside that directory). The file should appear in your desktop folder. If you open and edit the file in the Jupyter environment, then save it, it should be saved to your desktop.
+ 
 ```{figure} md_assets/media/jl_local_file_list.png
 :name: jl_local_file_list
 :width: 5.772370953630796in

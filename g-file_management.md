@@ -32,7 +32,7 @@ To uncompress a zipped file, from the file browser, right click on the zipped fi
 
 ### Working with archive files on the command line (advanced)
 
-Archive files can also be created or opened from the command line. Open a terminal {% if emphasise_ui=="jupyterlab"}by clicking on the JupyterLab *Terminal* Launcher button{% elif  emphasise_ui=="notebook_v7"%}via the *New* button on the Jupyter Notebook homepage{% endif %}, and then, in the terminal:
+Archive files can also be created or opened from the command line. Open a terminal using the JupyterLab *Terminal* Launcher button (or in the notebook UI, via the *New* button on the Jupyter Notebook homepage), and then, in the terminal:
 
 - to unzip a file called `filename.zip`, use the command `unzip filename.zip` and press enter: the file will be unzipped into the current directory. *Depending on the contents of the zip file, the unzipped files may be contained in a newly created directory within the current directory.* Close the terminal. (If the `.zip` file is not in the current directory, use the `cd PATH` command to change directory to the required location before running the `unzip` command, or specify the path to the file (`unzip PATH/TO/filename.zip`).)
 - to zip a directory `./my_directory` in the current directory, and all that directory's contents, use the command: `zip -r my_directory_archrchive.zip my_directory/`. 
