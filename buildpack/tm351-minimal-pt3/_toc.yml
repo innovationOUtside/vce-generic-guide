@@ -1,0 +1,19 @@
+# Table of contents file for: TM351-23J
+
+format: jb-book
+root: g-vce_cribsheet_hosted
+#options:  # The options key will be applied to all chapters, but not sub-sections
+#  numbered: True
+parts:
+  - caption: Installing the VCE Locally (Optional)
+    numbered: true
+    chapters:
+      - file: g-local_vce_quickstart
+      - file: g-local_vce_detailed
+      - file: g-troubleshooting-local-docker
+      - file: g-vce_cribsheet
+  - caption: Technical Appendix
+    numbered: True
+    chapters:
+      - file: g-vce_technical_architecture
+      - file: g-vce_extensions

@@ -1,0 +1,13 @@
+# Table of contents file for: TM351-23J
+
+format: jb-book
+root: g-vce_cribsheet_hosted
+#options:  # The options key will be applied to all chapters, but not sub-sections
+#  numbered: True
+parts:
+  - caption: Advanced Usage
+    numbered: true
+    chapters:
+      - file: g-using-linux-command-line
+      - file: g-jupyterlab_git
+      - file: g-local_fs

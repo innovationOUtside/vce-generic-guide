@@ -53,7 +53,6 @@ By default, the Jupyter environment is displayed using a simple black on white t
 
 The menu also provides a means of increasing or decreasing the font size for user interface elements, notebook content (markdown cells) and notebook code cells. Changes to the font size are saved in a persistent settings file (`./.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings`).
 
-
 The *`Settings -> Language`* menu provides access to alternative user interface language packs. By default, language packs for English (default), French and Chinese are preinstalled.
 
 ```{hint}
@@ -68,7 +67,7 @@ Various tools have been pre-installed into the VCE that can optionally provide a
 
 The preinstalled [cell execution status extension](https://github.com/innovationOUtside/jupyterlab_cell_status_extension) provides an enhanced visual display of the run state of a code cell:
 
-```{figure} md_assets/media/cell_status_jl.png
+```{figure} md_assets/media/jl_cell_status_indicator.png
 :name: jl_cell_status_indicator
 :width: 4in
 

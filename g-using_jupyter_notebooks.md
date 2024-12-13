@@ -59,7 +59,7 @@ In a Python/IPython kernel code cell, you can run a shell command by prefixing t
 
 The [`jupyterlab_cell_status_extension`](https://github.com/innovationOUtside/jupyterlab_cell_status_extension) provides visual and/or audible indications of the cell run status. The visual indications shown in {numref}`jl_cell_status_indicators` highlight a successfully run cell, a run cell that resulted in an error and a queued/currently running cell. An optional animated "cell flash" effect highlights a code cell that has just completed execution.
 
-```{figure} md_assets/media/cell_status_jl.png
+```{figure} md_assets/media/jl_cell_status_indicator.png
 :name: jl_cell_status_indicators
 :width: 4in
 
@@ -106,6 +106,13 @@ Notebook markdown cells
 Screenshot showing markdown cells in edit and rendered mode.
 
 The cells include a level 1 heading, emphasised and strong text elements, and list and sublist items.
+```
+
+```{admonition} Disabling the spellchecker
+:class: note
+
+The spellchecker cannot be disabled, but can be configured so that it is unlikely to be called. From the from the `Settings > Settings Editor` menu, find the spellchecker extension, then set the *Time delay before spellchecking starts (debouncer)* to a big number (the default setting is 200ms).
+ 
 ```
 
 You can view the rendered form of a markdown cell by "running" it in the same way that you would run a code cell, using `SHIFT-ENTER`, or from clicking the notebook play button.

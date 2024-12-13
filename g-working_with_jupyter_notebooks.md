@@ -49,7 +49,7 @@ Options are shown that allow a user to control whether a toolbar button is displ
 
 The [`jupyterlab_cell_status_extension`](https://github.com/innovationOUtside/jupyterlab_cell_status_extension) provides visual and/or audible indications of the cell run status. The visual indications shown in {numref}`jl_cell_status_indicators` highlight a successfully run cell, a run cell that resulted in an error and a queued/currently running cell. An optional animated "cell flash" effect highlights a code cell that has just completed execution.
 
-```{figure} md_assets/media/cell_status_jl.png
+```{figure} md_assets/media/jl_cell_status_indicator.png
 :name: jl_cell_status_indicators
 :width: 4in
 
