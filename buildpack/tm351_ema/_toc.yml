@@ -1,0 +1,11 @@
+# Table of contents file for: TM351-23J
+
+format: jb-book
+root: dummy
+#options:  # The options key will be applied to all chapters, but not sub-sections
+#  numbered: True
+parts:
+  - caption: TMA02 ECA
+    numbered: false
+    chapters:
+      - file: 00a-scenario

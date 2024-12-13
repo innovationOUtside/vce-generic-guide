@@ -82,6 +82,6 @@ cp -rf _build/ouxml $BUILDPACK/$OUT/
 cp _build/latex/book.pdf $BUILDPACK/$OUT/$MODULE.pdf
 
 # Brand PDF
-ou_nb_brandify -o $BUILDPACK/$OUT -y 2023
+ou_pdf_brandify -y 2024 -o $BUILDPACK/$OUT -S C -s 0.2
 
 

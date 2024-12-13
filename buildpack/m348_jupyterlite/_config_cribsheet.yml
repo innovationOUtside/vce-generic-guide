@@ -1,0 +1,162 @@
+# Configuration file for : M348 2023J
+
+# Learn more at https://jupyterbook.org/customize/config.html
+
+#############################################
+##                                         ##
+##     MODULE AND PRESENTATION UPDATES     ##
+##                                         ##
+#############################################
+##                                         ##
+##  - update `title` (presentation code)   ##
+##  - check `include_patterns`             ##
+##  - update `sphinx/copyright`            ##
+##  - update `sphinx/myst_customisations`  ##
+##  - update `ou/`                         ##
+##                                         ##
+#############################################
+
+
+#####################
+##                 ##
+##     UPDATES     ##
+##                 ##
+#####################
+title: VCE Computing Guide — JupyterLite (M348-24J)
+author: The Open University
+
+include_patterns: ["g-*.md", "x-m348*"] # also include x-modulecode*
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*", "*jupyterlab*", "*extras*"] # "*classicnb*",
+#####################
+##                 ##
+##       END       ##
+##                 ##
+#####################
+
+logo: _static/logo.svg
+lang: en
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+only_build_toc_files: true
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_engine: "xelatex"
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+#bibtex_bibfiles:
+#  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book # Online location of your book
+  path_to_book: docs # Optional path to your book, relative to the repository root
+  branch: master # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  # use_issues_button: true
+  # use_repository_button: true
+  favicon: _static/favicon.svg
+
+sphinx:
+  extra_extensions:
+    - ou_book_theme
+    - sphinx_jupyterbook_latex
+    #- sphinxcontrib.mermaid
+  config:
+    html_theme: ou_book_theme
+    language: en
+    myst_heading_anchors: 3
+    numfig: true
+    numfig_format: {'figure':'Figure %s'}
+    numfig_secnum_depth: 1 #eg 0:1 1:2.1 2:3.2.1
+    latex_elements:
+      pointsize: 12pt # Supported? 10pt, 11pt, 12pt
+      geometry: \usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+    html_permalinks: false
+    #####################
+    ##                 ##
+    ##     UPDATES     ##
+    ##                 ##
+    #####################
+    copyright: "2024 The Open University"
+    myst_substitutions:
+      MCODE: M348
+      NCODE: "348"
+      MNAME: "Applied Statistical Modelling"
+      PCODE: 24J
+      YEAR: "2024"
+      jupyter_help_forum: "'Jupyter notebooks' forum"
+    #####################
+    ##                 ##
+    ##       END       ##
+    ##                 ##
+    #####################
+      # DEFAULT VALUES / RULES
+      # Alternatively, we could enter these explicitly
+      # and then check them against linting rules?
+      module_code: "{{'`' + MCODE|upper + '`'}}"
+      presentation_code: "{{'`' + PCODE|upper + '`'}}"
+      local_dirname: "{{'`' + MCODE|upper + 'VCE`'}}"
+      container_name: "{{'`' + MCODE|lower + 'vce`'}}"
+      vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      docker_image_name: "{{'`ou-' + MCODE|lower + '`'}}"
+      docker_image_base: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + '`'}}"
+      docker_image: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
+      winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
+      macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"
+      macpath2: "{{'`~/Documents/' + MCODE|upper + 'VCE`'}}"
+      localhost_port: "{{'`http://localhost:8' + NCODE + '`'}}"
+      localhost_port2: "{{'`http://127.0.0.1:8' + NCODE + '`'}}"
+      jupyter_token: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      host_port: "{{'`8' + NCODE + '`'}}"
+      port_map: "{{'`8' + NCODE + ':8888`'}}"
+      dir_map: "{{'`\"$(pwd):/home/ou/' + MCODE|upper + '-' + PCODE|upper+'\"`'}}"
+      # UTILITY SUBSTITUTIONS
+      mcode_l: "{{MCODE|lower}}"
+      mcode_u: "{{MCODE|upper}}"
+      mnamecode: "{{MNAME}} {{MCODE}}"
+      mcode_lc: "{{'`' + MCODE|lower + '`'}}"
+      mcode_uc: "{{'`' + MCODE|upper + '`'}}"
+      pcode_l: "{{PCODE|lower}}"
+      pcode_u: "{{PCODE|upper}}"
+      pcode_lc: "{{'`' + PCODE|lower + '`'}}"
+      pcode_uc: "{{'`' + PCODE|upper + '`'}}"
+      mpcode_u: "{{MCODE|upper + '-' + PCODE|upper}}"
+      mpcode_l: "{{MCODE|lower + '-' + PCODE|lower}}"
+      mpcode_uc: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
+      mpcode_lc: "{{'`' + MCODE|lower + '-' + PCODE|lower + '`'}}"
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - substitution
+
+#####################
+##                 ##
+##     UPDATES     ##
+##                 ##
+#####################
+ou:
+  module_code: M348
+  module_title: Applied Statistical Modelling
+  block: 0
+  item_title: VCE Computing Guide
+  block_title: VCE Computing Guide
+  presentation: "J"
+  first_published: 2024
+  image_path_prefix: https://openuniv.sharepoint.com/sites/mmodules/m348/lmimages/
+  isbn:
+  edition:
+#####################
+##                 ##
+##       END       ##
+##                 ##
+#####################

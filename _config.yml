@@ -1,8 +1,38 @@
-# Book settings
+# Configuration file for : M348 2023J
+
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Virtual Computing Environment (VCE) Software Guide
+#############################################
+##                                         ##
+##     MODULE AND PRESENTATION UPDATES     ##
+##                                         ##
+#############################################
+##                                         ##
+##  - update `title` (presentation code)   ##
+##  - check `include_patterns`             ##
+##  - update `sphinx/copyright`            ##
+##  - update `sphinx/myst_customisations`  ##
+##  - update `ou/`                         ##
+##                                         ##
+#############################################
+
+
+#####################
+##                 ##
+##     UPDATES     ##
+##                 ##
+#####################
+title: JupyterLite Virtual Computing Environment (VCE) Software Guide (M348-24J)
 author: The Open University
+
+include_patterns: ["g-*.md", "x-m348*"] # also include x-modulecode*
+exclude_patterns: ["[-_A-Z]*.md", "_*.md", "*unused*",  "*extras*", "*classicnb*",] #"*jupyterlab*",
+#####################
+##                 ##
+##       END       ##
+##                 ##
+#####################
+
 logo: _static/logo.svg
 lang: en
 
@@ -11,14 +41,17 @@ lang: en
 execute:
   execute_notebooks: force
 
+only_build_toc_files: true
+
 # Define the name of the latex output file for PDF builds
 latex:
+  latex_engine: "xelatex"
   latex_documents:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+#bibtex_bibfiles:
+#  - references.bib
 
 # Information about where the book exists on the web
 repository:
@@ -36,21 +69,37 @@ html:
 sphinx:
   extra_extensions:
     - ou_book_theme
+    - sphinx_jupyterbook_latex
     #- sphinxcontrib.mermaid
   config:
     html_theme: ou_book_theme
     language: en
     myst_heading_anchors: 3
     numfig: true
-    html_permalinks: false
     numfig_format: {'figure':'Figure %s'}
-    copyright: "2023 The Open University" # PRESENTATION CUSTOMISATION
+    numfig_secnum_depth: 1 #eg 0:1 1:2.1 2:3.2.1
+    latex_elements:
+      pointsize: 12pt # Supported? 10pt, 11pt, 12pt
+      geometry: \usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+    html_permalinks: false
+    #####################
+    ##                 ##
+    ##     UPDATES     ##
+    ##                 ##
+    #####################
+    copyright: "2024 The Open University"
     myst_substitutions:
-      MCODE: XY987 # MODULE CUSTOMISATION
-      NCODE: "987" # MODULE CUSTOMISATION
-      MNAME: "Test Module Name" # MODULE CUSTOMISATION
-      PCODE: 54Z # MODULE CUSTOMISATION ; PRESENTATION CUSTOMISATION
-      YEAR: "2023" # PRESENTATION CUSTOMISATION
+      MCODE: M348
+      NCODE: "348"
+      MNAME: "Applied Statistical Modelling"
+      PCODE: 24J
+      YEAR: "2024"
+      jupyter_help_forum: "'Jupyter notebooks' forum"
+    #####################
+    ##                 ##
+    ##       END       ##
+    ##                 ##
+    #####################
       # DEFAULT VALUES / RULES
       # Alternatively, we could enter these explicitly
       # and then check them against linting rules?
@@ -59,7 +108,9 @@ sphinx:
       local_dirname: "{{'`' + MCODE|upper + 'VCE`'}}"
       container_name: "{{'`' + MCODE|lower + 'vce`'}}"
       vce_homedir: "{{'`/home/ou/' + MCODE|upper + '-' + PCODE|upper + '`'}}"
-      docker_image: "{{'`ousefulcoursecontainer/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
+      docker_image_name: "{{'`ou-' + MCODE|lower + '`'}}"
+      docker_image_base: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + '`'}}"
+      docker_image: "{{'`ousefulcoursecontainers/ou-' + MCODE|lower + ':' + PCODE|lower +'`'}}"
       winpath: "{{'`C:/Users/your_username/Documents/'+ MCODE|upper + 'VCE`'}}"
       macpath: "{{'`/Users/your_username/Documents/' + MCODE|upper + 'VCE`'}}"
       macpath2: "{{'`~/Documents/' + MCODE|upper + 'VCE`'}}"
@@ -68,7 +119,7 @@ sphinx:
       jupyter_token: "{{'`' + MCODE|upper + '-' + PCODE|upper + '`'}}"
       host_port: "{{'`8' + NCODE + '`'}}"
       port_map: "{{'`8' + NCODE + ':8888`'}}"
-      dir_map: "{{'`\"$(pwd)'+ MCODE|upper + 'VCE:/home/ou/' + MCODE|upper + '-' + PCODE|upper+'\"`'}}"
+      dir_map: "{{'`\"$(pwd):/home/ou/' + MCODE|upper + '-' + PCODE|upper+'\"`'}}"
       # UTILITY SUBSTITUTIONS
       mcode_l: "{{MCODE|lower}}"
       mcode_u: "{{MCODE|upper}}"
@@ -88,14 +139,24 @@ parse:
     - colon_fence
     - substitution
 
-exclude_patterns: ["BUILD.md"]
-
+#####################
+##                 ##
+##     UPDATES     ##
+##                 ##
+#####################
 ou:
-  module_code: AB123 # MODULE CUSTOMISATION
-  module_title: Open University VCE Software Guide
-  block: 1
-  block_title: Introduction
-  presentation: "J" # PRESENTATION CUSTOMISATION
-  first_published: 2023 # PRESENTATION CUSTOMISATION
+  module_code: M348
+  module_title: Applied Statistical Modelling
+  block: "0"
+  item_title: VCE Computing Guide (JupyterLite)
+  block_title: VCE Computing Guide (JupyterLite)
+  presentation: "J"
+  first_published: 2024
+  image_path_prefix: https://openuniv.sharepoint.com/sites/mmodules/m348/lmimages/
   isbn:
   edition:
+#####################
+##                 ##
+##       END       ##
+##                 ##
+#####################
